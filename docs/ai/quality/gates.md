@@ -5,7 +5,7 @@
 Run:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File docs/ai/scripts/validate-runtime.ps1
+python docs/ai/scripts/validate_runtime.py
 ```
 
 The gate checks:

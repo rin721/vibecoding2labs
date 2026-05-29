@@ -59,3 +59,23 @@ requirements:
       - evidence_012
     next_action: "Verify docs exist, runtime validation passes, then mark docs slice completed pending developer acceptance."
     updated_at: "2026-05-29T17:34:47+08:00"
+  - id: req_round_001_python_scripts
+    round_id: round_001
+    source: developer_message
+    raw_text: "将项目中脚本，替换成py"
+    normalized_text: "Replace project scripts with Python equivalents."
+    type: infrastructure_maintenance
+    priority_or_version: P0-round_001
+    status: confirmed
+    decision: "Replace the runtime validator script with a Python implementation and update references."
+    related_research: []
+    related_task_analysis:
+      - task_002_python_scripts
+    related_architecture: []
+    related_slice:
+      - slice_002_python_scripts
+    conflicts: []
+    evidence:
+      - evidence_014
+    next_action: "Run Python runtime validation and confirm no legacy validator script remains."
+    updated_at: "2026-05-29T17:43:05+08:00"

@@ -53,7 +53,7 @@ approval_required_actions:
 risk_level: low
 agency_level: controlled_execution
 verification_commands:
-  - "powershell -NoProfile -ExecutionPolicy Bypass -File docs/ai/scripts/validate-runtime.ps1"
+  - "python docs/ai/scripts/validate_runtime.py"
   - "Test-Path README.md; Test-Path docs/index.md; Test-Path docs/project-overview.md; Test-Path docs/usage-guide.md; Test-Path docs/maintenance-guide.md; Test-Path docs/agent-workflow-guide.md"
 manual_checks:
   - "Human docs explain project purpose, usage, maintenance, and Agent workflow."

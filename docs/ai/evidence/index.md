@@ -28,7 +28,7 @@
 - Date: `2026-05-29T17:29:21+08:00`
 - Type: `runtime_validation`
 - Status: `completed`
-- Command: `powershell -NoProfile -ExecutionPolicy Bypass -File docs/ai/scripts/validate-runtime.ps1`
+- Command: legacy runtime validation command, superseded by `python docs/ai/scripts/validate_runtime.py`
 - Result: `Runtime validation passed.`
 - Summary: Required runtime artifacts exist, status points to the bootstrap
   slice, and no runtime entry requires reading the original compiler prompt.
@@ -39,7 +39,7 @@
 - Type: `physical_readability_issue`
 - Status: `resolved`
 - Finding: `pwsh` was not available in the local Windows environment.
-- Adjustment: Runtime validation commands were changed to `powershell`.
+- Adjustment: Runtime validation now uses the Python validator.
 - Related invariant: `INV-16`
 
 ## evidence_012: Human Documentation Slice
@@ -57,7 +57,7 @@
   - `docs/maintenance-guide.md`
   - `docs/agent-workflow-guide.md`
 - Validation:
-  - `powershell -NoProfile -ExecutionPolicy Bypass -File docs/ai/scripts/validate-runtime.ps1` -> `Runtime validation passed.`
+  - `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
   - File existence checks -> all six human documentation files returned `OK`.
   - Markdown local link check -> `Markdown local links OK`.
 - Summary: Human-facing tutorial and overview documentation exists and runtime validation passes.
@@ -70,4 +70,28 @@
 - Finding: The validator still assumed the bootstrap slice was current.
 - Adjustment: The validator now checks that `status/current.yaml` `current_slice`
   matches `tasks/current-slice.yaml` `id`.
-- Validation: `powershell -NoProfile -ExecutionPolicy Bypass -File docs/ai/scripts/validate-runtime.ps1` -> `Runtime validation passed.`
+- Validation: `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
+
+## evidence_014: Python Runtime Script Replacement
+
+- Date: `2026-05-29T17:44:56+08:00`
+- Type: `runtime_script_update`
+- Status: `completed`
+- Requirement: `req_round_001_python_scripts`
+- Slice: `slice_002_python_scripts`
+- Files:
+  - `docs/ai/scripts/validate_runtime.py`
+  - `README.md`
+  - `docs/usage-guide.md`
+  - `docs/maintenance-guide.md`
+  - `docs/ai/manifest.yaml`
+  - `docs/ai/quality/gates.md`
+  - `docs/ai/schemas/core.schema.yaml`
+  - `docs/ai/tasks/current-slice.yaml`
+  - `docs/ai/tasks/slices/slice_002_python_scripts.yaml`
+- Validation:
+  - `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
+  - `python -m py_compile docs/ai/scripts/validate_runtime.py` -> passed.
+  - script inventory check under `docs/ai/scripts` -> only `validate_runtime.py` found.
+  - Markdown local link check -> `Markdown local links OK`.
+- Summary: Runtime validator was replaced with Python and command references were updated.

@@ -132,7 +132,7 @@ nodes:
     outputs:
       - docs/ai/quality/gates.md
       - docs/ai/evidence/index.md
-      - docs/ai/scripts/validate-runtime.ps1
+      - docs/ai/scripts/validate_runtime.py
     allowed_files:
       - docs/ai/quality/**
       - docs/ai/evidence/**

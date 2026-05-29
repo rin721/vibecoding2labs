@@ -36,10 +36,10 @@ docs/ai/handoff/current.md
 
 ## 3. 运行基础验证
 
-在 PowerShell 里运行：
+在终端里运行：
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File docs/ai/scripts/validate-runtime.ps1
+python docs/ai/scripts/validate_runtime.py
 ```
 
 看到下面输出就说明运行期入口完整：
@@ -143,4 +143,3 @@ Get-ChildItem -Recurse -File docs | Select-String -Pattern "round_001|current_sl
 - `docs/maintenance-guide.md` 存在并说明后续维护方式。
 - `docs/agent-workflow-guide.md` 存在并说明人机协作流程。
 - 运行期验证通过。
-

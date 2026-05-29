@@ -22,7 +22,7 @@
 验证运行期入口是否完整：
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File docs/ai/scripts/validate-runtime.ps1
+python docs/ai/scripts/validate_runtime.py
 ```
 
 查看 Git 状态：
@@ -51,4 +51,3 @@ git status --short --branch
 ```
 
 Agent 应先读取状态和当前切片，再进入需求确认、研究验证、任务分析、架构确认、模式确认和执行切片，不应该直接写业务代码。
-

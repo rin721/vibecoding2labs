@@ -17,5 +17,17 @@ tasks:
       - "docs/index.md indexes human-facing docs."
       - "Detailed usage, overview, maintenance, and Agent workflow docs exist."
       - "Runtime validation passes and evidence is recorded."
-next_action: "Wait for developer acceptance or requested documentation edits."
+  - id: task_002_python_scripts
+    title: "Replace runtime scripts with Python"
+    status: pending_acceptance
+    requirements:
+      - req_round_001_python_scripts
+    slices:
+      - slice_002_python_scripts
+    acceptance_criteria:
+      - "Runtime validator exists as a Python script."
+      - "Legacy PowerShell validator file is removed."
+      - "Runtime validation passes through Python."
+      - "Command references point to the Python script."
+next_action: "Wait for developer acceptance or requested edits for the documentation and Python script replacement slices."
 no_prompt_runtime_dependency: true

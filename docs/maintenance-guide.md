@@ -16,7 +16,7 @@
 
 ```powershell
 git status --short --branch
-powershell -NoProfile -ExecutionPolicy Bypass -File docs/ai/scripts/validate-runtime.ps1
+python docs/ai/scripts/validate_runtime.py
 ```
 
 然后读取：
@@ -104,4 +104,3 @@ docs/ai/handoff/current.md
 - 相关 schema、templates、roles、skills 和质量门禁
 
 升级后仍然不能把原始编译器提示词恢复成日常运行依赖。
-

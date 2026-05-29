@@ -36,3 +36,21 @@
   status/evidence files.
 - Evidence: `evidence_012`
 - No prompt runtime dependency: true
+
+## decision_003: Python Runtime Validator
+
+- Date: `2026-05-29T17:43:05+08:00`
+- Status: `accepted_for_low_risk_execution`
+- Source: developer request, "将项目中脚本，替换成py"
+- Decision: Replace the runtime validation script with
+  `docs/ai/scripts/validate_runtime.py` and update command references.
+- Rationale: Python is available in the local environment and is more portable
+  across Windows, macOS, and Linux for this repository's lightweight validator.
+- Alternatives:
+  - Keep the PowerShell validator: rejected by developer request.
+  - Add both PowerShell and Python validators: rejected because the request was
+    to replace scripts with Python.
+- Confirmation level: `auto_recordable` for low-risk runtime script
+  maintenance.
+- Evidence: `evidence_014`
+- No prompt runtime dependency: true

@@ -26,8 +26,8 @@ knowledgebase_entry: docs/ai/knowledge/index.md
 skills_entry: docs/ai/skills/index.md
 validation:
   current_status: passed
-  validation_command_or_manual_check: powershell -NoProfile -ExecutionPolicy Bypass -File docs/ai/scripts/validate-runtime.ps1
-  validated_at: "2026-05-29T17:29:21+08:00"
+  validation_command_or_manual_check: python docs/ai/scripts/validate_runtime.py
+  validated_at: "2026-05-29T17:43:05+08:00"
 migration_notes:
   - Initial runtime infrastructure compiled into physical artifacts.
   - Runtime artifacts must be repaired directly instead of falling back to the original compiler prompt.

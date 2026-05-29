@@ -4,7 +4,7 @@ created_at: "2026-05-29T17:18:17+08:00"
 timestamp_format: ISO-8601
 path_convention: "Repository relative paths use `/`."
 id_pattern: "^[a-z]+(_[a-z0-9]+)*_[0-9]{3}$|^(round|req|task|slice|evidence|decision|auth|kb|skill)_[A-Za-z0-9_\\-]+$"
-validation_command_or_manual_check: "powershell -NoProfile -ExecutionPolicy Bypass -File docs/ai/scripts/validate-runtime.ps1"
+validation_command_or_manual_check: "python docs/ai/scripts/validate_runtime.py"
 migration_notes:
   - "This lightweight schema bundle is a field contract and can be upgraded to JSON Schema."
 schemas:

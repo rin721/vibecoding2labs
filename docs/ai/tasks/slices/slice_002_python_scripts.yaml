@@ -26,12 +26,15 @@ allowed_files:
   - docs/ai/tasks/current-slice.yaml
   - docs/ai/tasks/bootstrap-tree.yaml
   - docs/ai/tasks/tree.yaml
+  - docs/ai/tasks/slices/slice_001_docs_guides.yaml
   - docs/ai/tasks/slices/slice_002_python_scripts.yaml
   - docs/ai/requirements/ledger.yaml
   - docs/ai/rounds/round_001.yaml
   - docs/ai/decisions/records.md
   - docs/ai/evidence/index.md
   - docs/ai/handoff/current.md
+  - docs/ai/knowledge/index.md
+  - docs/ai/knowledge/entries/kb_003_python_runtime_script.md
 forbidden_files:
   - "business implementation files"
   - "dependency lockfiles"
@@ -51,13 +54,13 @@ verification_commands:
   - "Get-ChildItem -Recurse -File docs/ai/scripts | Select-Object Name,Extension"
 manual_checks:
   - "Runtime script files use Python."
-  - "Runtime validation command references Python script."
+  - "Runtime validation command references the Python script."
 acceptance_criteria:
   - "docs/ai/scripts/validate_runtime.py exists."
   - "Legacy PowerShell validator file is removed."
   - "Validation command references use Python."
   - "Runtime validation passes through Python."
-rollback_plan: "Restore the previous PowerShell script and command references if Python validation cannot run in the target environment."
+rollback_plan: "Restore the previous validator implementation and command references if Python validation cannot run in the target environment."
 max_iteration_count: 3
 max_retry_count: 3
 retry_count: 0
