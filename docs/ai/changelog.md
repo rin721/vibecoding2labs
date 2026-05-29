@@ -17,3 +17,7 @@
   infrastructure mode, create Agent driving facilities, slice work, implement,
   test, document, update state/evidence, use `next step`, close, and continue
   into round `n+1`.
+- Added a compiler-runtime assimilation workflow skill and SOP so future Vibe
+  Coding compiler or generator specifications can be deeply distilled into the
+  existing repository infrastructure without creating `prompt.md` or restoring
+  a raw prompt runtime dependency.

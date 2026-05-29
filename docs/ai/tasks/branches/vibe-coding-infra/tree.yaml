@@ -4,7 +4,7 @@ branch_id: branch_vibe_coding_infra
 branch_type: vibe_coding_infra
 round_id: infra_001
 created_at: "2026-05-29T17:54:03+08:00"
-updated_at: "2026-05-29T21:04:30+08:00"
+updated_at: "2026-05-29T21:30:00+08:00"
 status: pending_acceptance
 purpose: "Task tree branch for building and iterating this repository's Vibe Coding infrastructure."
 tasks:
@@ -85,5 +85,18 @@ tasks:
       - "A canonical SOP defines task-line routing, requirement confirmation, current-source research, task analysis, architecture, mode confirmation, agent driving infrastructure, task tree and slices, implementation/test/docs/state loop, next-step protocol, closure, and round n+1."
       - "Runtime rule index and knowledge entries point to the new workflow."
       - "Runtime validation passes."
-next_action: "Wait for developer acceptance or requested edits for the full-project lifecycle workflow."
+  - id: task_007_compiler_runtime_assimilation
+    title: "Assimilate compiler and generator specifications into runtime artifacts"
+    status: pending_acceptance
+    requirements:
+      - req_infra_007_compiler_runtime_assimilation
+    slices:
+      - slice_007_compiler_runtime_assimilation
+    acceptance_criteria:
+      - "A four-dimensional analysis explains why the provided compiler specification should be distilled into runtime artifacts instead of copied into prompt.md."
+      - "A project skill and canonical SOP exist for compiler-runtime assimilation."
+      - "Runtime rule index adds `INV-18-COMPILER-CONTEXT-ASSIMILATION` and assimilation gates."
+      - "Knowledge, architecture, task slice, status, evidence, validator, and handoff references are synchronized."
+      - "Runtime validation passes."
+next_action: "Wait for developer acceptance or requested edits for the compiler-runtime assimilation workflow."
 no_prompt_runtime_dependency: true

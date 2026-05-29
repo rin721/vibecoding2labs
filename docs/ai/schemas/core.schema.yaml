@@ -100,6 +100,14 @@ schemas:
       candidate_mode: [standard_light, risk_scaled_strict, standard_light_risk_escalated, enterprise_high_assurance, custom]
       confirmed_mode: [standard_light, risk_scaled_strict, standard_light_risk_escalated, enterprise_high_assurance, custom, null]
     evidence_fields: [developer_confirmation]
+  - schema_id: CompilerRuntimeAssimilation
+    version: 0.1.0
+    required_fields: [source_context, repository_fit, extracted_layers, runtime_artifact_targets, no_prompt_runtime_dependency, validation, evidence, next_condition]
+    optional_fields: [deferred_semantics, escalation_conditions]
+    enum_fields:
+      repository_fit: [branch_vibe_coding_infra, branch_mainline_idea, split_required, out_of_scope]
+      no_prompt_runtime_dependency: [true]
+    evidence_fields: [validation, evidence]
   - schema_id: ExecutionSlice
     version: 0.1.0
     required_fields: [id, branch_id, round_id, task_id, phase, module, goal, inputs, outputs, allowed_files, forbidden_files, allowed_tools, approval_required_actions, risk_level, agency_level, verification_commands, manual_checks, acceptance_criteria, rollback_plan, max_iteration_count, max_retry_count, retry_count, last_failure_reason, next_human_decision, audit_evidence, human_override, status, knowledge_updates, skill_updates, next_condition, updated_at]

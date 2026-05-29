@@ -1,6 +1,6 @@
 schema_id: RequirementLedger
 ledger_id: req_ledger_001
-updated_at: "2026-05-29T21:04:30+08:00"
+updated_at: "2026-05-29T21:30:00+08:00"
 requirements:
   - id: req_bootstrap_001
     round_id: bootstrap
@@ -171,3 +171,25 @@ requirements:
       - evidence_019
     next_action: "Validate the full-project lifecycle workflow and request developer acceptance or edits."
     updated_at: "2026-05-29T21:04:30+08:00"
+  - id: req_infra_007_compiler_runtime_assimilation
+    round_id: infra_001
+    branch_id: branch_vibe_coding_infra
+    source: developer_message
+    raw_text: "新增 Vibe Coding 仓库基建设施建立任务线：请你深度分析并深度提炼下面内容语境并赋到当前项目仓库，以下是一份基建仓库生成器，不过当前项目以及是一个基建仓库了。"
+    normalized_text: "Deeply analyze and distill the provided Vibe Coding multi-round infrastructure compiler specification into this already-initialized infrastructure repository by adding recoverable runtime artifacts, while avoiding a new prompt.md or raw compiler prompt runtime dependency."
+    type: infrastructure_compiler_runtime_assimilation
+    priority_or_version: P0-infra_001
+    status: confirmed
+    decision: "Proceed with docs/ai runtime artifacts only: analysis, architecture note, project skill, canonical SOP template, knowledge entry, task slice, validator, status, evidence, and handoff updates."
+    related_research: []
+    related_task_analysis:
+      - task_007_compiler_runtime_assimilation
+    related_architecture:
+      - docs/ai/architecture/compiler-runtime-assimilation.md
+    related_slice:
+      - slice_007_compiler_runtime_assimilation
+    conflicts: []
+    evidence:
+      - evidence_020
+    next_action: "Validate the compiler-runtime assimilation workflow and request developer acceptance or edits."
+    updated_at: "2026-05-29T21:30:00+08:00"

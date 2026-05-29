@@ -189,3 +189,38 @@
   selection before business implementation.
 - Evidence: `evidence_019`
 - No prompt runtime dependency: true
+
+## decision_009: Compiler Runtime Assimilation Workflow
+
+- Date: `2026-05-29T21:30:00+08:00`
+- Status: `accepted_for_low_risk_execution`
+- Source: developer request to deeply analyze, distill, and assign a Vibe
+  Coding multi-round infrastructure compiler specification into this repository,
+  with the clarification that the current project is already an infrastructure
+  repository.
+- Decision: Add a compiler-runtime assimilation project skill, canonical SOP,
+  analysis, architecture note, knowledge entry, slice, validator coverage, and
+  runtime state updates. Future compiler, generator, prompt-generation, or macro
+  governance specifications must be routed to `branch_vibe_coding_infra` and
+  translated into local runtime artifacts rather than copied into `prompt.md` or
+  used as a daily recovery dependency.
+- Rationale: The provided source is valuable as semantic input, but the runtime
+  repository already has `AGENTS.md` and `docs/ai/*` artifacts. The reliable
+  path is to strengthen those artifacts and preserve `INV-02` instead of
+  reintroducing a large hidden prompt dependency.
+- Alternatives:
+  - Generate a new `prompt.md`: rejected because the current repository is
+    already initialized and runtime recovery must not depend on raw compiler
+    text.
+  - Only keep the analysis in chat: rejected because future agents need
+    physical skills, knowledge, state, evidence, and handoff entries.
+  - Fold this entirely into the full-project lifecycle workflow: rejected
+    because compiler/generator assimilation is a distinct infrastructure task
+    line that updates repository governance rather than product lifecycle work.
+- Confirmation level: `auto_recordable` for docs/ai runtime artifacts inside
+  the explicit "assign to current repository" request; `hard_confirmation`
+  remains required for any future change that expands agency, changes
+  permissions, touches production, installs dependencies, or creates business
+  implementation.
+- Evidence: `evidence_020`
+- No prompt runtime dependency: true

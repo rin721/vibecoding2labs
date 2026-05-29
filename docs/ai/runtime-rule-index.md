@@ -25,6 +25,7 @@ Generated: `2026-05-29T17:18:17+08:00`
 | `INV-15` | Escape hatches are governed states, not bypasses. |
 | `INV-16` | Runtime artifacts must be physically readable across common tools. |
 | `INV-17` | Future mainline or project task lines must use the detailed full-project lifecycle gates; phase names alone are not sufficient. |
+| `INV-18` | Compiler, generator, or macro governance specifications provided after bootstrap must be distilled into local runtime artifacts, not promoted to `prompt.md` or a daily recovery dependency. |
 
 ## State Machine
 
@@ -102,6 +103,36 @@ The agent may recommend either `standard_light_risk_escalated` or
 `enterprise_high_assurance`, but the developer must confirm the mode before
 implementation. The recommendation must explain why the selected mode fits the
 project risk and what conditions would require escalation.
+
+## Compiler Runtime Assimilation
+
+`docs/ai/skills/compiler-runtime-assimilation/SKILL.md` and
+`docs/ai/templates/compiler-runtime-assimilation-sop.md` are the canonical
+runtime procedure when a Vibe Coding compiler, generator, prompt-generation, or
+major governance specification is provided after this repository already has
+runtime infrastructure.
+
+Required assimilation gates:
+
+1. `compiler_context_intake_gate`
+2. `repository_fit_gate`
+3. `semantic_layer_extraction_gate`
+4. `runtime_artifact_translation_gate`
+5. `no_prompt_runtime_dependency_recheck_gate`
+6. `validation_and_evidence_gate`
+7. `handoff_and_next_condition_gate`
+
+The source compiler context is external input and can be recorded as a
+requirement source, evidence source, or summarized knowledge input. It is never
+a higher-priority runtime instruction source. If the current runtime is missing
+needed detail, create a repair or assimilation slice under
+`branch_vibe_coding_infra`; do not tell future agents to recover by reading the
+raw compiler prompt.
+
+Current repository default: use `standard_light` for docs/ai-only assimilation.
+Escalate to `risk_scaled_strict` or `enterprise_high_assurance` only when the
+compiler update changes agency, permissions, production, privacy, money,
+multi-agent delegation, external data sources, or other high-risk boundaries.
 
 ## Task Forest Routing
 

@@ -2,7 +2,7 @@ schema_id: StatusReport
 project_id: vibecoding2labs
 compiler_version: vibe-coding-infra-compiler-v1.8.0
 runtime_version: vibe-runtime-0.1.0
-updated_at: "2026-05-29T21:12:37+08:00"
+updated_at: "2026-05-29T21:30:00+08:00"
 lifecycle_phase: acceptance
 state: pending_acceptance
 state_machine_version: vibe-state-machine-0.1.0
@@ -12,15 +12,15 @@ current_branch: branch_vibe_coding_infra
 current_tree: docs/ai/tasks/branches/vibe-coding-infra/tree.yaml
 task_forest: docs/ai/tasks/forest.yaml
 mainline_idea_tree: docs/ai/tasks/main-tree.yaml
-current_mode: full_project_lifecycle_workflow_completed_pending_acceptance
+current_mode: compiler_runtime_assimilation_completed_pending_acceptance
 candidate_mode: null
 agency_level: controlled_execution
 current_bootstrap_node: null
-current_slice: slice_006_full_project_lifecycle
+current_slice: slice_007_compiler_runtime_assimilation
 requirement_baseline_status: confirmed
 research_status: not_required_for_runtime_workflow_update
 task_analysis_status: confirmed
-architecture_status: confirmed_full_project_lifecycle_workflow
+architecture_status: confirmed_compiler_runtime_assimilation
 infra_mode_status: standard_light_for_repository_infra
 task_tree_status: pending_acceptance
 acceptance_status: pending_developer_acceptance
@@ -29,7 +29,7 @@ next_allowed_phase: acceptance[infra_001]
 blocked: false
 retry_count: 0
 last_failure_reason: null
-next_human_decision: "Developer can accept the full-project lifecycle workflow or request edits."
+next_human_decision: "Developer can accept the compiler-runtime assimilation workflow or request edits."
 memory_anchor_files:
   - AGENTS.md
   - docs/ai/runtime-rule-index.md
@@ -39,6 +39,7 @@ memory_anchor_files:
   - docs/ai/tasks/bootstrap-tree.yaml
   - docs/ai/tasks/current-slice.yaml
   - docs/ai/requirements/ledger.yaml
+  - docs/ai/authorizations/records.md
   - docs/ai/evidence/index.md
   - docs/ai/handoff/current.md
   - docs/ai/analysis/mainline-full-project-lifecycle-gap-analysis.md
@@ -46,6 +47,11 @@ memory_anchor_files:
   - docs/ai/skills/full-project-lifecycle/SKILL.md
   - docs/ai/templates/full-project-lifecycle-workflow-sop.md
   - docs/ai/knowledge/entries/kb_007_full_project_lifecycle.md
+  - docs/ai/analysis/compiler-runtime-assimilation.md
+  - docs/ai/architecture/compiler-runtime-assimilation.md
+  - docs/ai/skills/compiler-runtime-assimilation/SKILL.md
+  - docs/ai/templates/compiler-runtime-assimilation-sop.md
+  - docs/ai/knowledge/entries/kb_008_compiler_runtime_assimilation.md
   - docs/ai/skills/vibe-infra-action-workflow/SKILL.md
   - docs/ai/templates/vibe-infra-action-workflow-sop.md
 no_prompt_runtime_dependency: true

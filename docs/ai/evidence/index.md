@@ -275,3 +275,44 @@
   mode recommendation and confirmation, Agent driving infrastructure, task tree
   and execution slices, implementation, tests, documentation, state/evidence
   sync, next-step continuation, closure, and round `n+1`.
+
+## evidence_020: Compiler Runtime Assimilation Workflow
+
+- Date: `2026-05-29T21:30:00+08:00`
+- Type: `runtime_compiler_assimilation_update`
+- Status: `completed`
+- Requirement: `req_infra_007_compiler_runtime_assimilation`
+- Slice: `slice_007_compiler_runtime_assimilation`
+- Analysis:
+  - `docs/ai/analysis/compiler-runtime-assimilation.md`
+- Architecture:
+  - `docs/ai/architecture/compiler-runtime-assimilation.md`
+- Files:
+  - `docs/ai/skills/compiler-runtime-assimilation/SKILL.md`
+  - `docs/ai/templates/compiler-runtime-assimilation-sop.md`
+  - `docs/ai/knowledge/entries/kb_008_compiler_runtime_assimilation.md`
+  - `docs/ai/skills/index.md`
+  - `docs/ai/knowledge/index.md`
+  - `docs/ai/architecture/index.md`
+  - `docs/ai/runtime-rule-index.md`
+  - `docs/ai/schemas/core.schema.yaml`
+  - `docs/ai/tasks/slices/slice_007_compiler_runtime_assimilation.yaml`
+  - `docs/ai/tasks/current-slice.yaml`
+  - `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
+  - `docs/ai/tasks/forest.yaml`
+  - `docs/ai/requirements/ledger.yaml`
+  - `docs/ai/authorizations/records.md`
+  - `docs/ai/decisions/records.md`
+  - `docs/ai/status/current.yaml`
+  - `docs/ai/manifest.yaml`
+  - `docs/ai/handoff/current.md`
+  - `docs/ai/changelog.md`
+  - `docs/ai/scripts/validate_runtime.py`
+- Validation:
+  - `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
+  - `rg -n "compiler_runtime_assimilation|INV-18|compiler_context_intake_gate|no_prompt_runtime_dependency_recheck_gate|skill_compiler_runtime_assimilation|kb_008" docs/ai` -> matched the runtime rule index, manifest, requirement, status, task tree, current slice, slice file, architecture index and note, analysis, skill index, project skill, template, knowledge index, knowledge entry, evidence, handoff, rounds file, and validator.
+  - `Test-Path prompt.md, package.json, package-lock.json, pnpm-lock.yaml, yarn.lock, pyproject.toml, requirements.txt, src, app, components, tools` -> all returned `False`.
+- Summary: The repository now has a compiler-runtime assimilation task line for
+  distilling compiler, generator, or macro governance specifications into local
+  runtime artifacts without creating `prompt.md` or restoring raw compiler
+  prompt dependency.

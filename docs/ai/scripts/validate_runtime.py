@@ -29,6 +29,11 @@ REQUIRED_ARTIFACTS = [
     "docs/ai/analysis/mainline-full-project-lifecycle-gap-analysis.md",
     "docs/ai/architecture/full-project-lifecycle-workflow.md",
     "docs/ai/knowledge/entries/kb_007_full_project_lifecycle.md",
+    "docs/ai/skills/compiler-runtime-assimilation/SKILL.md",
+    "docs/ai/templates/compiler-runtime-assimilation-sop.md",
+    "docs/ai/analysis/compiler-runtime-assimilation.md",
+    "docs/ai/architecture/compiler-runtime-assimilation.md",
+    "docs/ai/knowledge/entries/kb_008_compiler_runtime_assimilation.md",
     "docs/ai/handoff/current.md",
 ]
 
@@ -157,12 +162,49 @@ def main() -> None:
             + ", ".join(missing_lifecycle_terms)
         )
 
+    assimilation_text = "\n".join(
+        [
+            read_text("docs/ai/runtime-rule-index.md"),
+            read_text("docs/ai/skills/compiler-runtime-assimilation/SKILL.md"),
+            read_text("docs/ai/templates/compiler-runtime-assimilation-sop.md"),
+            read_text(
+                "docs/ai/knowledge/entries/kb_008_compiler_runtime_assimilation.md"
+            ),
+            read_text("docs/ai/architecture/compiler-runtime-assimilation.md"),
+        ]
+    )
+    required_assimilation_terms = [
+        "compiler_runtime_assimilation",
+        "INV-18",
+        "compiler_context_intake_gate",
+        "repository_fit_gate",
+        "semantic_layer_extraction_gate",
+        "runtime_artifact_translation_gate",
+        "no_prompt_runtime_dependency_recheck_gate",
+        "validation_and_evidence_gate",
+        "handoff_and_next_condition_gate",
+        "skill_compiler_runtime_assimilation",
+        "kb_008",
+    ]
+    missing_assimilation_terms = [
+        term for term in required_assimilation_terms if term not in assimilation_text
+    ]
+    if missing_assimilation_terms:
+        fail(
+            "Compiler-runtime assimilation artifacts are missing required terms: "
+            + ", ".join(missing_assimilation_terms)
+        )
+
     skills_index = read_text("docs/ai/skills/index.md")
     knowledge_index = read_text("docs/ai/knowledge/index.md")
     if "skill_full_project_lifecycle" not in skills_index:
         fail("Skill index must reference skill_full_project_lifecycle.")
     if "kb_007" not in knowledge_index:
         fail("Knowledge index must reference kb_007.")
+    if "skill_compiler_runtime_assimilation" not in skills_index:
+        fail("Skill index must reference skill_compiler_runtime_assimilation.")
+    if "kb_008" not in knowledge_index:
+        fail("Knowledge index must reference kb_008.")
 
     forest = read_text("docs/ai/tasks/forest.yaml")
     selected_tree = read_text(status_tree)

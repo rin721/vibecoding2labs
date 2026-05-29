@@ -2,7 +2,7 @@ project_id: vibecoding2labs
 compiler_version: vibe-coding-infra-compiler-v1.8.0
 runtime_version: vibe-runtime-0.1.0
 generated_at: "2026-05-29T17:18:17+08:00"
-updated_at: "2026-05-29T21:12:37+08:00"
+updated_at: "2026-05-29T21:30:00+08:00"
 runtime_artifacts:
   agent_entry: AGENTS.md
   runtime_rule_index: docs/ai/runtime-rule-index.md
@@ -13,6 +13,7 @@ runtime_artifacts:
   vibe_coding_infra_tree: docs/ai/tasks/branches/vibe-coding-infra/tree.yaml
   current_slice: docs/ai/tasks/current-slice.yaml
   requirements_ledger: docs/ai/requirements/ledger.yaml
+  authorization_records: docs/ai/authorizations/records.md
   decision_records: docs/ai/decisions/records.md
   evidence_index: docs/ai/evidence/index.md
   knowledgebase_entry: docs/ai/knowledge/index.md
@@ -25,6 +26,10 @@ runtime_artifacts:
   full_project_lifecycle_template: docs/ai/templates/full-project-lifecycle-workflow-sop.md
   full_project_lifecycle_analysis: docs/ai/analysis/mainline-full-project-lifecycle-gap-analysis.md
   full_project_lifecycle_architecture: docs/ai/architecture/full-project-lifecycle-workflow.md
+  compiler_runtime_assimilation_skill: docs/ai/skills/compiler-runtime-assimilation/SKILL.md
+  compiler_runtime_assimilation_template: docs/ai/templates/compiler-runtime-assimilation-sop.md
+  compiler_runtime_assimilation_analysis: docs/ai/analysis/compiler-runtime-assimilation.md
+  compiler_runtime_assimilation_architecture: docs/ai/architecture/compiler-runtime-assimilation.md
   handoff_entry: docs/ai/handoff/current.md
 required_artifacts:
   - AGENTS.md
@@ -39,13 +44,15 @@ required_artifacts:
   - docs/ai/templates/vibe-infra-action-workflow-sop.md
   - docs/ai/skills/full-project-lifecycle/SKILL.md
   - docs/ai/templates/full-project-lifecycle-workflow-sop.md
+  - docs/ai/skills/compiler-runtime-assimilation/SKILL.md
+  - docs/ai/templates/compiler-runtime-assimilation-sop.md
   - docs/ai/handoff/current.md
 knowledgebase_entry: docs/ai/knowledge/index.md
 skills_entry: docs/ai/skills/index.md
 validation:
   current_status: passed
   validation_command_or_manual_check: python docs/ai/scripts/validate_runtime.py
-  validated_at: "2026-05-29T21:12:37+08:00"
+  validated_at: "2026-05-29T21:30:00+08:00"
 migration_notes:
   - Initial runtime infrastructure compiled into physical artifacts.
   - Runtime artifacts must be repaired directly instead of falling back to the original compiler prompt.
@@ -53,4 +60,5 @@ migration_notes:
   - Capability source refreshes must derive current-year wording from runtime/source-refresh time instead of hard-coding a year.
   - The Vibe infrastructure action workflow trigger is implemented as a project skill with a canonical SOP template and a mandatory human confirmation gate before phase-two physical output.
   - The full-project lifecycle workflow is implemented as a project skill and canonical SOP so future mainline ideas pass through detailed routing, requirement, research, task analysis, architecture, mode, agent-infra, slice, test, documentation, state, next-step, closure, and round n+1 gates.
+  - Compiler or generator specifications provided after bootstrap must be distilled into runtime artifacts through the compiler-runtime assimilation workflow instead of becoming prompt.md or a daily recovery dependency.
 no_prompt_runtime_dependency: true

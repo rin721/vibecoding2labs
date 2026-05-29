@@ -6,9 +6,9 @@
 - Current round: `infra_001`
 - Current branch: `branch_vibe_coding_infra`
 - Current tree: `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
-- Current mode: `full_project_lifecycle_workflow_completed_pending_acceptance`
+- Current mode: `compiler_runtime_assimilation_completed_pending_acceptance`
 - Agency level: `controlled_execution`
-- Current slice: `slice_006_full_project_lifecycle` pending developer acceptance
+- Current slice: `slice_007_compiler_runtime_assimilation` pending developer acceptance
 
 ## Completed
 
@@ -47,12 +47,18 @@
   create task trees and slices, implement, test, document, update state and
   evidence, use the `next step` protocol, close the task tree, and continue into
   round `n+1`.
+- Added a compiler-runtime assimilation analysis, architecture note, project
+  skill, canonical SOP, and knowledge entry so future compiler, generator, or
+  macro governance specifications are routed to `branch_vibe_coding_infra` and
+  distilled into local runtime artifacts instead of becoming `prompt.md` or a
+  raw prompt runtime dependency.
 
 ## Unfinished
 
 - Developer acceptance of the documentation, script replacement, task forest
-  branching, refreshed catalog-only capability, trigger-bound workflow SOP, and
-  full-project lifecycle workflow slices is pending.
+  branching, refreshed catalog-only capability, trigger-bound workflow SOP,
+  full-project lifecycle workflow, and compiler-runtime assimilation slices is
+  pending.
 - No future mainline product implementation has started. A future mainline idea
   must use the full-project lifecycle workflow before implementation.
 
@@ -64,6 +70,7 @@
 - `docs/ai/tasks/bootstrap-tree.yaml`
 - `docs/ai/tasks/current-slice.yaml`
 - `docs/ai/requirements/ledger.yaml`
+- `docs/ai/authorizations/records.md`
 - `docs/ai/evidence/index.md`
 - `docs/ai/knowledge/index.md`
 - `docs/ai/skills/index.md`
@@ -93,17 +100,25 @@
 - `docs/ai/skills/full-project-lifecycle/SKILL.md`
 - `docs/ai/templates/full-project-lifecycle-workflow-sop.md`
 - `docs/ai/knowledge/entries/kb_007_full_project_lifecycle.md`
+- `docs/ai/analysis/compiler-runtime-assimilation.md`
+- `docs/ai/architecture/compiler-runtime-assimilation.md`
+- `docs/ai/skills/compiler-runtime-assimilation/SKILL.md`
+- `docs/ai/templates/compiler-runtime-assimilation-sop.md`
+- `docs/ai/knowledge/entries/kb_008_compiler_runtime_assimilation.md`
 
 ## Next Condition
 
-Ask the developer to accept the full-project lifecycle workflow or request
-edits. Do not start a mainline idea task tree until the active Vibe Coding
-infrastructure branch slices are accepted, edited, migrated, or explicitly
-closed.
+Ask the developer to accept the compiler-runtime assimilation workflow or
+request edits. Do not start a mainline idea task tree until the active Vibe
+Coding infrastructure branch slices are accepted, edited, migrated, or
+explicitly closed.
 
 ## Forbidden Actions
 
 - Do not read the original compiler prompt as a normal recovery path.
+- Do not create `prompt.md` as a runtime authority when a compiler or generator
+  specification is provided after bootstrap; distill it into local runtime
+  artifacts through the compiler-runtime assimilation workflow.
 - Do not start a mainline idea task tree until `branch_vibe_coding_infra`
   active slices are accepted, migrated, discarded, or partially closed with
   confirmation.
