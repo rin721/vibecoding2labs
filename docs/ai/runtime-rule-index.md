@@ -28,6 +28,7 @@ Generated: `2026-05-29T17:18:17+08:00`
 | `INV-18` | Compiler, generator, or macro governance specifications provided after bootstrap must be distilled into local runtime artifacts, not promoted to `prompt.md` or a daily recovery dependency. |
 | `INV-19` | Future project ideas require a persistent requirement discovery loop before baseline confirmation; an agent must decompose the idea into domains, candidates, questions, a requirement plan, and a durable intake record instead of jumping from idea to MVP summary. |
 | `INV-20` | Future project rounds require detailed downstream lifecycle gates after requirement-baseline confirmation; research, task analysis, architecture, mode, Agent infrastructure, slices, implementation, verification, closure, and n+1 must use durable records and evidence, not narrative summaries. |
+| `INV-21` | Future raw project ideas must use the declarative requirement_workflow_engine when present; `REQUIREMENTS_GATHERING` locks business code generation, package manifests, dependency installation, and application skeleton creation until requirement baseline and downstream confirmations authorize implementation. |
 
 ## State Machine
 
@@ -123,10 +124,40 @@ Before `requirement_baseline_confirmation_gate`, project ideas must run the
 The default durable working artifact for this sub-procedure is a
 `requirement_discovery_record`, usually created from
 `docs/ai/templates/project-requirement-discovery-record.yaml` under
-`docs/ai/requirements/intake/<round_id>.yaml`. AI-inferred requirements remain
-candidate data until confirmed by the developer. Confirmed, rejected, deferred,
-out-of-scope, or research-needed items are synchronized to
+`docs/ai/requirements/intake/round_<nnn>_<feature_slug>.yaml`. AI-inferred
+requirements remain candidate data until confirmed by the developer. Confirmed,
+rejected, deferred, out-of-scope, or research-needed items are synchronized to
 `docs/ai/requirements/ledger.yaml`.
+
+## Requirement Workflow Engine
+
+`docs/ai/skills/requirement-workflow-engine/SKILL.md`,
+`docs/ai/templates/requirement-workflow-engine-sop.md`,
+`docs/ai/requirements/workflow_engine.yaml`,
+`docs/ai/requirements/template_discovery.yaml`, and
+`docs/ai/requirements/state_machine.yaml` are the canonical strategy C control
+plane for raw project idea intake.
+
+When a future mainline idea enters requirement discovery, agents must:
+
+1. Capture the raw idea as source data.
+2. Select a probe template from `template_discovery.yaml` (`commerce`, `saas`,
+   `blog`, or `generic_app`).
+3. Create or update
+   `docs/ai/requirements/intake/round_<nnn>_<feature_slug>.yaml`.
+4. Enter `REQUIREMENTS_GATHERING` from `state_machine.yaml`.
+5. Ask 5-7 numbered, domain-bound questions.
+6. Persist developer answers into the intake YAML.
+7. Generate follow-up questions from confirmed answers until coverage is
+   complete or a named blocker requires human decision.
+8. Request requirement-baseline confirmation only after the readiness gate
+   passes.
+
+During `REQUIREMENTS_GATHERING`, business code generation, package manifests,
+lockfiles, dependency installation, and application skeleton creation are
+forbidden. The agent may only update requirement intake, ledger, decision,
+task, status, evidence, and handoff artifacts inside the approved runtime
+scope.
 
 After `requirement_baseline_confirmation_gate`, project rounds must run the
 `project_lifecycle_downstream_detail` sub-procedure. The required downstream

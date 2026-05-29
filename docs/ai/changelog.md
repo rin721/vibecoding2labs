@@ -31,3 +31,9 @@
   Coding compiler or generator specifications can be deeply distilled into the
   existing repository infrastructure without creating `prompt.md` or restoring
   a raw prompt runtime dependency.
+- Added a strategy C declarative requirement workflow engine with
+  `workflow_engine.yaml`, `template_discovery.yaml`, `state_machine.yaml`, a
+  project skill, SOP, schema, validator coverage, and knowledge entry so raw
+  project ideas enter `REQUIREMENTS_GATHERING`, ask 5-7 numbered
+  template-driven questions, persist answers, generate follow-ups, and keep
+  business code generation locked until the proper confirmation gates pass.

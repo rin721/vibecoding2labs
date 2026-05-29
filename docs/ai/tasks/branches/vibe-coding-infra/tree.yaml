@@ -4,7 +4,7 @@ branch_id: branch_vibe_coding_infra
 branch_type: vibe_coding_infra
 round_id: infra_001
 created_at: "2026-05-29T17:54:03+08:00"
-updated_at: "2026-05-29T22:00:59+08:00"
+updated_at: "2026-05-29T22:24:00+08:00"
 status: pending_acceptance
 purpose: "Task tree branch for building and iterating this repository's Vibe Coding infrastructure."
 tasks:
@@ -128,5 +128,21 @@ tasks:
       - "The full-project lifecycle points to downstream detailing after requirement-baseline confirmation."
       - "Knowledge, task slice, status, evidence, validator, and handoff references are synchronized."
       - "Runtime validation passes."
-next_action: "Wait for developer acceptance or requested edits for the downstream lifecycle detailing workflow."
+  - id: task_010_requirement_workflow_engine
+    title: "Implement declarative requirement workflow engine"
+    status: pending_acceptance
+    requirements:
+      - req_infra_010_requirement_workflow_engine
+    slices:
+      - slice_010_requirement_workflow_engine
+    acceptance_criteria:
+      - "Requirement workflow engine YAML exists."
+      - "Template discovery YAML exists with commerce, SaaS, blog, and generic app templates."
+      - "State machine YAML exists with REQUIREMENTS_GATHERING and code_generation_allowed false."
+      - "A project skill and canonical SOP exist for the requirement workflow engine."
+      - "Schema and validator coverage include the new engine artifacts."
+      - "Knowledge, task tree, current slice, evidence, status, validator, and handoff references are synchronized."
+      - "Runtime validation passes."
+      - "No prompt.md, package manifest, lockfile, dependency installation, application skeleton, or business code is created."
+next_action: "Wait for developer acceptance or requested edits for the strategy C requirement workflow engine."
 no_prompt_runtime_dependency: true

@@ -32,9 +32,16 @@ a readiness check for hard baseline confirmation.
 - `docs/ai/handoff/current.md`
 - `docs/ai/templates/project-requirement-discovery-sop.md`
 - `docs/ai/templates/project-requirement-discovery-record.yaml`
+- `docs/ai/requirements/workflow_engine.yaml`
+- `docs/ai/requirements/template_discovery.yaml`
+- `docs/ai/requirements/state_machine.yaml`
 
 ## Gate Order
 
+0. When `docs/ai/requirements/workflow_engine.yaml` exists, run the
+   requirement workflow engine first. Its template catalog, state machine, and
+   `REQUIREMENTS_GATHERING` permission lock control question batches,
+   follow-up generation, and write boundaries.
 1. Run `idea_seed_intake_gate`.
    Capture the developer's raw idea, target outcome, known constraints, and
    unknowns. Treat the idea as a seed, not as a confirmed requirement set.
@@ -67,6 +74,9 @@ a readiness check for hard baseline confirmation.
 ## Developer Guidance Rules
 
 - Ask specific questions tied to missing requirement domains.
+- Prefer project-type probe templates from
+  `docs/ai/requirements/template_discovery.yaml` before inventing a new
+  question set.
 - Provide concrete options only as decision aids; do not silently choose for the
   developer.
 - Preserve AI-inferred details as candidates until confirmed.
@@ -80,6 +90,10 @@ a readiness check for hard baseline confirmation.
 Do not implement product code, install dependencies, create package manifests,
 select a final technology stack, or create a mainline task tree from a raw idea
 alone.
+
+When the state machine is in `REQUIREMENTS_GATHERING`, code generation,
+package manifests, dependency installation, and application skeleton creation
+are explicitly locked.
 
 Do not ask for a single broad confirmation when critical requirement domains
 are still unknown.

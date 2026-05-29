@@ -237,3 +237,25 @@ requirements:
       - evidence_022
     next_action: "Validate the downstream lifecycle detailing workflow and request developer acceptance or edits."
     updated_at: "2026-05-29T22:00:59+08:00"
+  - id: req_infra_010_requirement_workflow_engine
+    round_id: infra_001
+    branch_id: branch_vibe_coding_infra
+    source: developer_confirmation
+    raw_text: "确认方案 C，进入阶段二"
+    normalized_text: "Implement strategy C as a complete declarative requirement workflow engine for Vibe Coding requirement discovery: create a probe template catalog, a REQUIREMENTS_GATHERING state lock, a workflow engine graph, PM-style question loop rules, follow-up triggers, schema/validator coverage, and synchronized runtime state."
+    type: infrastructure_requirement_workflow_engine
+    priority_or_version: P0-infra_001
+    status: confirmed
+    decision: "Proceed with docs/ai runtime artifacts only. Implement the complete workflow engine as declarative YAML, skill, SOP, schema, validator, knowledge, task, evidence, status, and handoff updates without creating business code, package manifests, dependencies, or application skeletons."
+    related_research: []
+    related_task_analysis:
+      - task_010_requirement_workflow_engine
+    related_architecture:
+      - docs/ai/architecture/requirement-workflow-engine.md
+    related_slice:
+      - slice_010_requirement_workflow_engine
+    conflicts: []
+    evidence:
+      - evidence_023
+    next_action: "Validate the strategy C requirement workflow engine and request developer acceptance or edits."
+    updated_at: "2026-05-29T22:24:00+08:00"

@@ -50,3 +50,37 @@
 - Risk level: `low`
 - Next decision: developer can accept the compiler-runtime assimilation
   workflow or request edits.
+
+## auth_003: Strategy C Requirement Workflow Engine Scope
+
+- Date: `2026-05-29T22:24:00+08:00`
+- Source: developer confirmation, "确认方案 C，进入阶段二"
+- Scope:
+  - `docs/ai/requirements/**`
+  - `docs/ai/analysis/*`
+  - `docs/ai/architecture/*`
+  - `docs/ai/skills/*`
+  - `docs/ai/templates/*`
+  - `docs/ai/knowledge/*`
+  - `docs/ai/tasks/*`
+  - `docs/ai/status/*`
+  - `docs/ai/evidence/*`
+  - `docs/ai/scripts/validate_runtime.py`
+  - `docs/ai/schemas/core.schema.yaml`
+  - `docs/ai/manifest.yaml`
+  - `docs/ai/runtime-rule-index.md`
+  - `docs/ai/changelog.md`
+  - `docs/ai/handoff/current.md`
+  - `docs/ai/decisions/records.md`
+- Excluded:
+  - `prompt.md`
+  - business implementation files
+  - dependency installation or lockfile updates
+  - package manifests
+  - application skeleton creation
+  - production configuration
+  - destructive file operations
+- Confirmation status: `explicit_confirmed_strategy_C_phase_two`
+- Risk level: `low`
+- Next decision: developer can accept the strategy C requirement workflow
+  engine or request edits.

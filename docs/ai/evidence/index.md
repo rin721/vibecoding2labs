@@ -409,3 +409,52 @@
   turning post-baseline stages into durable research, task analysis,
   architecture, mode, Agent infrastructure, slice, implementation, verification,
   closure, and next-round records instead of narrative summaries.
+
+## evidence_023: Strategy C Requirement Workflow Engine
+
+- Date: `2026-05-29T22:24:00+08:00`
+- Type: `runtime_requirement_workflow_engine_update`
+- Status: `completed`
+- Requirement: `req_infra_010_requirement_workflow_engine`
+- Slice: `slice_010_requirement_workflow_engine`
+- Trigger: Developer confirmed strategy C and phase-two execution.
+- Analysis:
+  - `docs/ai/analysis/requirement-workflow-engine-gap-analysis.md`
+- Architecture:
+  - `docs/ai/architecture/requirement-workflow-engine.md`
+- Files:
+  - `docs/ai/requirements/workflow_engine.yaml`
+  - `docs/ai/requirements/template_discovery.yaml`
+  - `docs/ai/requirements/state_machine.yaml`
+  - `docs/ai/skills/requirement-workflow-engine/SKILL.md`
+  - `docs/ai/templates/requirement-workflow-engine-sop.md`
+  - `docs/ai/templates/project-requirement-discovery-record.yaml`
+  - `docs/ai/knowledge/entries/kb_011_requirement_workflow_engine.md`
+  - `docs/ai/skills/index.md`
+  - `docs/ai/knowledge/index.md`
+  - `docs/ai/architecture/index.md`
+  - `docs/ai/runtime-rule-index.md`
+  - `docs/ai/schemas/core.schema.yaml`
+  - `docs/ai/tasks/slices/slice_010_requirement_workflow_engine.yaml`
+  - `docs/ai/tasks/current-slice.yaml`
+  - `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
+  - `docs/ai/tasks/main-tree.yaml`
+  - `docs/ai/tasks/forest.yaml`
+  - `docs/ai/requirements/ledger.yaml`
+  - `docs/ai/authorizations/records.md`
+  - `docs/ai/decisions/records.md`
+  - `docs/ai/status/current.yaml`
+  - `docs/ai/manifest.yaml`
+  - `docs/ai/handoff/current.md`
+  - `docs/ai/changelog.md`
+  - `docs/ai/scripts/validate_runtime.py`
+- Validation:
+  - `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
+  - `python -m py_compile docs/ai/scripts/validate_runtime.py` -> passed.
+  - `rg -n "requirement_workflow_engine|RequirementDiscoveryWorkflowEngine|REQUIREMENTS_GATHERING|template_discovery|skill_requirement_workflow_engine|kb_011" docs/ai` -> matched the runtime rule index, manifest, status, requirements, task tree, current slice, slice file, analysis, architecture, skill index, project skill, SOP, state machine, template catalog, engine definition, schema, knowledge index, knowledge entry, evidence, handoff, and validator.
+  - `Test-Path prompt.md, package.json, package-lock.json, pnpm-lock.yaml, yarn.lock, pyproject.toml, requirements.txt, src, app, components, tools` -> all returned `False`.
+- Summary: Strategy C is represented as a complete declarative requirement
+  workflow engine with project-type probes, a requirement gathering state lock,
+  question loops, follow-up triggers, and validator coverage while avoiding
+  dependency installation, package manifests, application skeletons, and
+  business code.

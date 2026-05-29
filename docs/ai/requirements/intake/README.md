@@ -7,8 +7,13 @@ Use `docs/ai/templates/project-requirement-discovery-record.yaml` as the
 starting shape and store records as:
 
 ```text
-docs/ai/requirements/intake/<round_id>.yaml
+docs/ai/requirements/intake/round_<nnn>_<feature_slug>.yaml
 ```
+
+Future agents should select a probe template from
+`docs/ai/requirements/template_discovery.yaml` and honor the
+`REQUIREMENTS_GATHERING` lock in `docs/ai/requirements/state_machine.yaml`
+before creating or updating a record.
 
 Rules:
 

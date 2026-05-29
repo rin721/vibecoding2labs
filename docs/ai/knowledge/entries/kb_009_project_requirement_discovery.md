@@ -29,6 +29,12 @@ confirmed, rejected, deferred, out-of-scope, or research-needed items into the
 requirement ledger. It is designed to guide the developer toward more complete
 requirements through small, targeted question batches.
 
+The discovery workflow is now backed by the requirement workflow engine:
+`docs/ai/requirements/workflow_engine.yaml`, the probe template catalog
+`docs/ai/requirements/template_discovery.yaml`, and the
+`REQUIREMENTS_GATHERING` state lock in
+`docs/ai/requirements/state_machine.yaml`.
+
 ## Evidence
 
 - `docs/ai/analysis/project-requirement-discovery-gap-analysis.md`

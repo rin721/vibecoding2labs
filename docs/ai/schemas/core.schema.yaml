@@ -66,12 +66,32 @@ schemas:
     evidence_fields: [evidence]
   - schema_id: ProjectRequirementDiscoveryRecord
     version: 0.1.0
-    required_fields: [record_id, round_id, branch_id, status, source, storage_rules, idea_interpretation, domain_surface_map, requirement_inventory, question_backlog, requirement_plan, baseline_readiness, ledger_sync, evidence, next_action, updated_at]
+    required_fields: [record_id, round_id, branch_id, status, source, storage_rules, workflow_engine, probe_template_id, idea_interpretation, domain_surface_map, requirement_inventory, question_backlog, question_rounds, coverage_matrix, followup_triggers, requirement_plan, baseline_readiness, ledger_sync, evidence, next_action, updated_at]
     optional_fields: [created_at]
     enum_fields:
       status: [discovery, collecting_answers, ready_for_baseline_confirmation, blocked, archived]
       baseline_status: [not_ready, ready, blocked]
     evidence_fields: [evidence]
+  - schema_id: RequirementDiscoveryTemplateCatalog
+    version: 0.1.0
+    required_fields: [catalog_id, version, updated_at, purpose, batch_policy, storage, templates, selection_rules]
+    optional_fields: []
+    enum_fields: {}
+    evidence_fields: []
+  - schema_id: RequirementDiscoveryStateMachine
+    version: 0.1.0
+    required_fields: [machine_id, version, updated_at, purpose, active_lock, states, transition_rules]
+    optional_fields: []
+    enum_fields:
+      state: [IDEA_CAPTURED, REQUIREMENTS_GATHERING, HUMAN_DECISION_REQUIRED, BASELINE_READY, BASELINE_CONFIRMED, DOWNSTREAM_RESEARCH, IMPLEMENTATION_AUTHORIZED, BLOCKED]
+    evidence_fields: []
+  - schema_id: RequirementDiscoveryWorkflowEngine
+    version: 0.1.0
+    required_fields: [engine_id, version, strategy, updated_at, purpose, scope, inputs, outputs, entry_conditions, nodes, loop_controls, permission_invariants]
+    optional_fields: []
+    enum_fields:
+      strategy: [complete_declarative_workflow_engine]
+    evidence_fields: []
   - schema_id: ProjectLifecycleDownstreamRecord
     version: 0.1.0
     required_fields: [record_id, round_id, branch_id, status, source_baseline, research, task_analysis, architecture, infra_mode, agent_driving_infra, task_tree_and_slices, implementation_iteration_ledger, verification_evidence_packet, acceptance_closure_packet, next_round_reentry, evidence, updated_at]

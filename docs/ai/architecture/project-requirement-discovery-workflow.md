@@ -22,6 +22,9 @@ or implementation.
 | Project skill | `docs/ai/skills/project-requirement-discovery/SKILL.md` | Tells agents when and how to run project requirement discovery. |
 | SOP template | `docs/ai/templates/project-requirement-discovery-sop.md` | Defines the gates, outputs, question batches, persistence rules, and readiness checks. |
 | Intake record template | `docs/ai/templates/project-requirement-discovery-record.yaml` | Provides the durable per-round structure for idea interpretation, requirement domains, questions, answers, and baseline readiness. |
+| Requirement workflow engine | `docs/ai/requirements/workflow_engine.yaml` | Declares the full requirement-discovery node graph, loop controls, outputs, and permission invariants. |
+| Probe template catalog | `docs/ai/requirements/template_discovery.yaml` | Provides reusable commerce, SaaS, blog, and generic app question templates and follow-up triggers. |
+| Requirement state machine | `docs/ai/requirements/state_machine.yaml` | Locks `REQUIREMENTS_GATHERING` so code generation, manifests, dependencies, and app skeletons are forbidden while requirements are open. |
 | Intake directory guide | `docs/ai/requirements/intake/README.md` | Documents the default storage location for future per-round discovery records. |
 | Requirement ledger | `docs/ai/requirements/ledger.yaml` | Stores confirmed, pending, deferred, rejected, or research-needed requirements after discovery sync. |
 | Full-project lifecycle skill | `docs/ai/skills/full-project-lifecycle/SKILL.md` | Calls requirement discovery before baseline confirmation. |

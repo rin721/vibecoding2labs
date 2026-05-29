@@ -295,3 +295,30 @@
   implementation choices.
 - Evidence: `evidence_022`
 - No prompt runtime dependency: true
+
+## decision_012: Strategy C Requirement Workflow Engine
+
+- Date: `2026-05-29T22:24:00+08:00`
+- Status: `accepted_for_confirmed_C_execution`
+- Source: developer confirmation, "确认方案 C，进入阶段二"
+- Decision: Implement strategy C as a complete declarative requirement
+  workflow engine under `docs/ai/requirements/`, with a workflow node graph,
+  reusable probe templates, a `REQUIREMENTS_GATHERING` state lock, PM-style
+  question loops, follow-up triggers, schema/validator coverage, task state,
+  knowledge, evidence, and handoff updates.
+- Rationale: The existing requirement discovery SOP is detailed, but strategy C
+  needs a machine-readable control plane that future agents can inspect before
+  asking questions or writing requirement records. Implementing it as
+  declarative runtime infrastructure gives strong control without turning the
+  repository into an executable framework or dependency-bearing project.
+- Alternatives:
+  - Strategy A, SOP-only update: rejected because the developer confirmed C.
+  - Strategy B, template plus state lock only: rejected because the developer
+    confirmed the stronger complete workflow engine.
+  - Build an executable workflow framework: rejected because this repository
+    should stay docs/ai runtime infrastructure and must not create package
+    manifests, install dependencies, or scaffold application code.
+- Confirmation level: `hard_confirmation` for strategy C phase-two execution;
+  `auto_recordable` for docs/ai runtime artifacts inside the confirmed scope.
+- Evidence: `evidence_023`
+- No prompt runtime dependency: true

@@ -9,7 +9,7 @@
   `docs/ai/templates/full-project-lifecycle-workflow-sop.md`,
   `docs/ai/runtime-rule-index.md`
 - Version: `0.1.0`
-- Updated at: `2026-05-29T22:00:59+08:00`
+- Updated at: `2026-05-29T22:24:00+08:00`
 - Deprecated: `false`
 
 ## Fact
@@ -29,11 +29,14 @@ The workflow explicitly distinguishes the two infrastructure modes:
 recommend a mode and explain the risk rationale, but the developer must confirm
 the mode before implementation work proceeds.
 
-The lifecycle now delegates raw idea elaboration to
-`skill_project_requirement_discovery` before requirement-baseline confirmation.
-That sub-procedure requires idea interpretation, domain surface mapping,
-requirement inventory, question backlog creation, collection rounds,
-requirement planning, durable intake records, and baseline readiness checks.
+The lifecycle now delegates raw idea elaboration to the requirement workflow
+engine and `skill_project_requirement_discovery` before requirement-baseline
+confirmation. That sub-procedure enters `REQUIREMENTS_GATHERING`, locks
+business code generation, selects a probe template, and requires idea
+interpretation, domain surface mapping, requirement inventory, numbered
+question batches, question backlog creation, collection rounds, follow-up
+triggers, requirement planning, durable intake records, and baseline readiness
+checks.
 
 After requirement-baseline confirmation, the lifecycle delegates post-baseline
 execution to `skill_project_lifecycle_downstream_detailing`. That sub-procedure
@@ -50,6 +53,11 @@ closure packet, and next-round reentry state.
 - `docs/ai/architecture/full-project-lifecycle-workflow.md`
 - `docs/ai/skills/full-project-lifecycle/SKILL.md`
 - `docs/ai/templates/full-project-lifecycle-workflow-sop.md`
+- `docs/ai/requirements/workflow_engine.yaml`
+- `docs/ai/requirements/template_discovery.yaml`
+- `docs/ai/requirements/state_machine.yaml`
+- `docs/ai/skills/requirement-workflow-engine/SKILL.md`
+- `docs/ai/templates/requirement-workflow-engine-sop.md`
 - `docs/ai/templates/project-requirement-discovery-sop.md`
 - `docs/ai/templates/project-lifecycle-downstream-gates-sop.md`
 - `docs/ai/evidence/index.md`
@@ -61,4 +69,4 @@ closure packet, and next-round reentry state.
 - No prompt runtime dependency check: `passed`
 - Related requirements: `req_infra_006_full_project_lifecycle`
 - Related tasks: `task_006_full_project_lifecycle`
-- Related skills: `skill_full_project_lifecycle`, `skill_project_requirement_discovery`, `skill_project_lifecycle_downstream_detailing`
+- Related skills: `skill_full_project_lifecycle`, `skill_requirement_workflow_engine`, `skill_project_requirement_discovery`, `skill_project_lifecycle_downstream_detailing`

@@ -36,16 +36,23 @@ Required output:
 - Known constraints.
 - Unknowns that must be resolved before implementation.
 
-Before moving to requirement baseline work, run the project requirement
-discovery SOP:
+Before moving to requirement baseline work, run the requirement workflow engine
+and project requirement discovery SOP:
 
+- `docs/ai/skills/requirement-workflow-engine/SKILL.md`
+- `docs/ai/templates/requirement-workflow-engine-sop.md`
+- `docs/ai/requirements/workflow_engine.yaml`
+- `docs/ai/requirements/template_discovery.yaml`
+- `docs/ai/requirements/state_machine.yaml`
 - `docs/ai/skills/project-requirement-discovery/SKILL.md`
 - `docs/ai/templates/project-requirement-discovery-sop.md`
 - `docs/ai/templates/project-requirement-discovery-record.yaml`
 
-The discovery sub-procedure must produce idea interpretation, domain surface
-mapping, requirement inventory, question backlog, requirement collection rounds,
-requirement planning, persistence sync, and baseline readiness evidence.
+The discovery sub-procedure must enter `REQUIREMENTS_GATHERING`, lock business
+code generation, select a probe template, produce idea interpretation, domain
+surface mapping, requirement inventory, numbered question batches, question
+backlog, requirement collection rounds, follow-up triggers, requirement
+planning, persistence sync, and baseline readiness evidence.
 
 ## 2. Requirement Analysis Gate
 

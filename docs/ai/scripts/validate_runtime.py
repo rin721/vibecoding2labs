@@ -33,6 +33,14 @@ REQUIRED_ARTIFACTS = [
     "docs/ai/templates/project-requirement-discovery-sop.md",
     "docs/ai/templates/project-requirement-discovery-record.yaml",
     "docs/ai/requirements/intake/README.md",
+    "docs/ai/requirements/workflow_engine.yaml",
+    "docs/ai/requirements/template_discovery.yaml",
+    "docs/ai/requirements/state_machine.yaml",
+    "docs/ai/skills/requirement-workflow-engine/SKILL.md",
+    "docs/ai/templates/requirement-workflow-engine-sop.md",
+    "docs/ai/analysis/requirement-workflow-engine-gap-analysis.md",
+    "docs/ai/architecture/requirement-workflow-engine.md",
+    "docs/ai/knowledge/entries/kb_011_requirement_workflow_engine.md",
     "docs/ai/analysis/project-requirement-discovery-gap-analysis.md",
     "docs/ai/architecture/project-requirement-discovery-workflow.md",
     "docs/ai/knowledge/entries/kb_009_project_requirement_discovery.md",
@@ -182,6 +190,9 @@ def main() -> None:
             read_text("docs/ai/skills/project-requirement-discovery/SKILL.md"),
             read_text("docs/ai/templates/project-requirement-discovery-sop.md"),
             read_text("docs/ai/templates/project-requirement-discovery-record.yaml"),
+            read_text("docs/ai/requirements/workflow_engine.yaml"),
+            read_text("docs/ai/requirements/template_discovery.yaml"),
+            read_text("docs/ai/requirements/state_machine.yaml"),
             read_text(
                 "docs/ai/knowledge/entries/kb_009_project_requirement_discovery.md"
             ),
@@ -210,6 +221,47 @@ def main() -> None:
         fail(
             "Project requirement discovery artifacts are missing required terms: "
             + ", ".join(missing_discovery_terms)
+        )
+
+    requirement_engine_text = "\n".join(
+        [
+            read_text("docs/ai/runtime-rule-index.md"),
+            read_text("docs/ai/requirements/workflow_engine.yaml"),
+            read_text("docs/ai/requirements/template_discovery.yaml"),
+            read_text("docs/ai/requirements/state_machine.yaml"),
+            read_text("docs/ai/skills/requirement-workflow-engine/SKILL.md"),
+            read_text("docs/ai/templates/requirement-workflow-engine-sop.md"),
+            read_text("docs/ai/analysis/requirement-workflow-engine-gap-analysis.md"),
+            read_text("docs/ai/architecture/requirement-workflow-engine.md"),
+            read_text("docs/ai/knowledge/entries/kb_011_requirement_workflow_engine.md"),
+        ]
+    )
+    required_requirement_engine_terms = [
+        "requirement_workflow_engine",
+        "RequirementDiscoveryWorkflowEngine",
+        "RequirementDiscoveryTemplateCatalog",
+        "RequirementDiscoveryStateMachine",
+        "REQUIREMENTS_GATHERING",
+        "code_generation_allowed: false",
+        "template_discovery.yaml",
+        "workflow_engine.yaml",
+        "state_machine.yaml",
+        "commerce",
+        "saas",
+        "blog",
+        "generic_app",
+        "skill_requirement_workflow_engine",
+        "kb_011",
+    ]
+    missing_requirement_engine_terms = [
+        term
+        for term in required_requirement_engine_terms
+        if term not in requirement_engine_text
+    ]
+    if missing_requirement_engine_terms:
+        fail(
+            "Requirement workflow engine artifacts are missing required terms: "
+            + ", ".join(missing_requirement_engine_terms)
         )
 
     downstream_text = "\n".join(
@@ -298,6 +350,10 @@ def main() -> None:
         fail("Skill index must reference skill_project_requirement_discovery.")
     if "kb_009" not in knowledge_index:
         fail("Knowledge index must reference kb_009.")
+    if "skill_requirement_workflow_engine" not in skills_index:
+        fail("Skill index must reference skill_requirement_workflow_engine.")
+    if "kb_011" not in knowledge_index:
+        fail("Knowledge index must reference kb_011.")
     if "skill_project_lifecycle_downstream_detailing" not in skills_index:
         fail(
             "Skill index must reference "

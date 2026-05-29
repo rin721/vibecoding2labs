@@ -13,6 +13,16 @@ the flow into a generic MVP proposal. The agent must discover the project shape,
 persist what is known, mark what is inferred, and guide the developer through
 the missing decisions.
 
+When the declarative requirement workflow engine is present, it is the
+controlling surface for this SOP:
+
+- Engine: `docs/ai/requirements/workflow_engine.yaml`
+- Probe templates: `docs/ai/requirements/template_discovery.yaml`
+- State lock: `docs/ai/requirements/state_machine.yaml`
+
+`REQUIREMENTS_GATHERING` forbids business code generation, package manifests,
+dependency installation, and application skeleton creation.
+
 ## 1. `idea_seed_intake_gate`
 
 Capture the raw seed.
@@ -104,6 +114,8 @@ Build a prioritized question backlog.
 Question rules:
 
 - Ask 3 to 7 high-leverage questions in the first batch.
+- When a matching project template exists, ask 5 to 7 numbered questions from
+  that template unless the developer requests a smaller batch.
 - Tie each question to a requirement domain and a blocking decision.
 - Provide 2 to 4 concrete options when options help the developer decide.
 - Include a free-form path when the developer may have a different intent.
@@ -127,9 +139,11 @@ After each developer response:
 2. Move answered items from `pending_confirmation` to `confirmed`, `deferred`,
    `out_of_scope`, `rejected`, or `decision_needed`.
 3. Detect contradictions with prior answers.
-4. Add new questions only when the answer opens a new requirement domain.
-5. Synchronize stable facts to the requirement ledger.
-6. Ask the next smallest useful batch of questions.
+4. Apply follow-up trigger rules from `template_discovery.yaml`.
+5. Add new questions only when the answer opens a new requirement domain or
+   increases the required detail inside an already-open domain.
+6. Synchronize stable facts to the requirement ledger.
+7. Ask the next smallest useful batch of questions.
 
 This gate may repeat across turns.
 

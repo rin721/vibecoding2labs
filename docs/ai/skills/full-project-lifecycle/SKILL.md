@@ -31,6 +31,11 @@ round `n+1` until the task tree is closed or the developer redirects it.
 - `docs/ai/evidence/index.md`
 - `docs/ai/handoff/current.md`
 - `docs/ai/templates/full-project-lifecycle-workflow-sop.md`
+- `docs/ai/skills/requirement-workflow-engine/SKILL.md`
+- `docs/ai/templates/requirement-workflow-engine-sop.md`
+- `docs/ai/requirements/workflow_engine.yaml`
+- `docs/ai/requirements/template_discovery.yaml`
+- `docs/ai/requirements/state_machine.yaml`
 - `docs/ai/skills/project-requirement-discovery/SKILL.md`
 - `docs/ai/templates/project-requirement-discovery-sop.md`
 - `docs/ai/templates/project-requirement-discovery-record.yaml`
@@ -44,11 +49,13 @@ round `n+1` until the task tree is closed or the developer redirects it.
    `branch_vibe_coding_infra`, `branch_mainline_idea`, or another confirmed
    branch.
 2. Capture the developer's target idea for the current round.
-3. Run project requirement discovery before treating the idea as a requirement
-   baseline candidate: interpret the idea, map requirement domains, inventory
-   developer-stated and AI-inferred requirements, build a question backlog,
-   collect answers across rounds, persist the discovery record, plan remaining
-   requirement work, and check baseline readiness.
+3. Run the requirement workflow engine and project requirement discovery before
+   treating the idea as a requirement baseline candidate: enter
+   `REQUIREMENTS_GATHERING`, select a probe template, interpret the idea, map
+   requirement domains, inventory developer-stated and AI-inferred
+   requirements, ask 5-7 numbered questions, build a question backlog, collect
+   answers across rounds, persist the discovery record, generate follow-ups,
+   plan remaining requirement work, and check baseline readiness.
 4. Analyze requirements into problem, users, scope, non-goals, constraints,
    risks, acceptance criteria, and open questions.
 5. Stop for hard confirmation of the requirement baseline.

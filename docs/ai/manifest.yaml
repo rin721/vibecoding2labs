@@ -2,7 +2,7 @@ project_id: vibecoding2labs
 compiler_version: vibe-coding-infra-compiler-v1.8.0
 runtime_version: vibe-runtime-0.1.0
 generated_at: "2026-05-29T17:18:17+08:00"
-updated_at: "2026-05-29T22:00:59+08:00"
+updated_at: "2026-05-29T22:24:00+08:00"
 runtime_artifacts:
   agent_entry: AGENTS.md
   runtime_rule_index: docs/ai/runtime-rule-index.md
@@ -30,6 +30,13 @@ runtime_artifacts:
   project_requirement_discovery_template: docs/ai/templates/project-requirement-discovery-sop.md
   project_requirement_discovery_record_template: docs/ai/templates/project-requirement-discovery-record.yaml
   project_requirement_intake_directory: docs/ai/requirements/intake/README.md
+  requirement_workflow_engine: docs/ai/requirements/workflow_engine.yaml
+  requirement_discovery_template_catalog: docs/ai/requirements/template_discovery.yaml
+  requirement_discovery_state_machine: docs/ai/requirements/state_machine.yaml
+  requirement_workflow_engine_skill: docs/ai/skills/requirement-workflow-engine/SKILL.md
+  requirement_workflow_engine_template: docs/ai/templates/requirement-workflow-engine-sop.md
+  requirement_workflow_engine_analysis: docs/ai/analysis/requirement-workflow-engine-gap-analysis.md
+  requirement_workflow_engine_architecture: docs/ai/architecture/requirement-workflow-engine.md
   project_requirement_discovery_analysis: docs/ai/analysis/project-requirement-discovery-gap-analysis.md
   project_requirement_discovery_architecture: docs/ai/architecture/project-requirement-discovery-workflow.md
   project_lifecycle_downstream_detailing_skill: docs/ai/skills/project-lifecycle-downstream-detailing/SKILL.md
@@ -60,6 +67,11 @@ required_artifacts:
   - docs/ai/templates/project-requirement-discovery-sop.md
   - docs/ai/templates/project-requirement-discovery-record.yaml
   - docs/ai/requirements/intake/README.md
+  - docs/ai/requirements/workflow_engine.yaml
+  - docs/ai/requirements/template_discovery.yaml
+  - docs/ai/requirements/state_machine.yaml
+  - docs/ai/skills/requirement-workflow-engine/SKILL.md
+  - docs/ai/templates/requirement-workflow-engine-sop.md
   - docs/ai/skills/project-lifecycle-downstream-detailing/SKILL.md
   - docs/ai/templates/project-lifecycle-downstream-gates-sop.md
   - docs/ai/templates/project-lifecycle-downstream-record.yaml
@@ -72,7 +84,7 @@ skills_entry: docs/ai/skills/index.md
 validation:
   current_status: passed
   validation_command_or_manual_check: python docs/ai/scripts/validate_runtime.py
-  validated_at: "2026-05-29T22:00:59+08:00"
+  validated_at: "2026-05-29T22:24:00+08:00"
 migration_notes:
   - Initial runtime infrastructure compiled into physical artifacts.
   - Runtime artifacts must be repaired directly instead of falling back to the original compiler prompt.
@@ -81,6 +93,7 @@ migration_notes:
   - The Vibe infrastructure action workflow trigger is implemented as a project skill with a canonical SOP template and a mandatory human confirmation gate before phase-two physical output.
   - The full-project lifecycle workflow is implemented as a project skill and canonical SOP so future mainline ideas pass through detailed routing, requirement, research, task analysis, architecture, mode, agent-infra, slice, test, documentation, state, next-step, closure, and round n+1 gates.
   - The project requirement discovery workflow is implemented as a project skill, canonical SOP, and durable intake record template so raw ideas are decomposed into requirement domains, question backlogs, requirement plans, and baseline readiness before confirmation.
+  - Strategy C is implemented as a declarative requirement workflow engine with a template discovery catalog, REQUIREMENTS_GATHERING state lock, PM-style question loop, follow-up triggers, and validator coverage.
   - The project lifecycle downstream detailing workflow is implemented as a project skill, canonical SOP, and durable record template so post-baseline research, task analysis, architecture, mode, Agent infrastructure, slices, implementation, verification, closure, and n+1 reentry remain evidence-backed and recoverable.
   - Compiler or generator specifications provided after bootstrap must be distilled into runtime artifacts through the compiler-runtime assimilation workflow instead of becoming prompt.md or a daily recovery dependency.
 no_prompt_runtime_dependency: true

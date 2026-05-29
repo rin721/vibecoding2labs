@@ -13,6 +13,14 @@ storage_rules:
   ai_inferences_are_confirmed: false
   confirmed_items_sync_to: docs/ai/requirements/ledger.yaml
   open_questions_sync_to: docs/ai/handoff/current.md
+workflow_engine:
+  engine_id: requirement_discovery_workflow_engine_001
+  definition: docs/ai/requirements/workflow_engine.yaml
+  state_machine: docs/ai/requirements/state_machine.yaml
+  template_catalog: docs/ai/requirements/template_discovery.yaml
+  active_state: REQUIREMENTS_GATHERING
+  code_generation_allowed: false
+probe_template_id: null
 idea_interpretation:
   product_intent: null
   system_category: null
@@ -87,6 +95,24 @@ question_backlog:
     status: pending
     developer_answer: null
     ledger_sync_target: null
+question_rounds:
+  - round_index: 1
+    asked_at: "YYYY-MM-DDTHH:MM:SS+08:00"
+    template_id: null
+    questions: []
+    developer_answers: []
+    durable_update: null
+coverage_matrix:
+  - domain: goal_and_users
+    status: pending_confirmation
+    blocking: true
+    evidence: []
+followup_triggers:
+  - trigger_id: replace_with_trigger_id
+    source_question_id: null
+    matched_answer_terms: []
+    generated_question_ids: []
+    status: pending
 requirement_plan:
   ready_domains: []
   domains_needing_answers: []
