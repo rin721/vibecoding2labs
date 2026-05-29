@@ -1,33 +1,13 @@
-schema_id: TaskTree
-tree_id: task_tree_round_001
-round_id: round_001
-created_at: "2026-05-29T17:34:47+08:00"
-status: pending_acceptance
-blocked_by: null
-tasks:
-  - id: task_001_human_docs
-    title: "Create usage tutorial and detailed overview documentation"
-    status: pending_acceptance
-    requirements:
-      - req_round_001_docs
-    slices:
-      - slice_001_docs_guides
-    acceptance_criteria:
-      - "README.md gives a fast project overview."
-      - "docs/index.md indexes human-facing docs."
-      - "Detailed usage, overview, maintenance, and Agent workflow docs exist."
-      - "Runtime validation passes and evidence is recorded."
-  - id: task_002_python_scripts
-    title: "Replace runtime scripts with Python"
-    status: pending_acceptance
-    requirements:
-      - req_round_001_python_scripts
-    slices:
-      - slice_002_python_scripts
-    acceptance_criteria:
-      - "Runtime validator exists as a Python script."
-      - "Legacy PowerShell validator file is removed."
-      - "Runtime validation passes through Python."
-      - "Command references point to the Python script."
-next_action: "Wait for developer acceptance or requested edits for the documentation and Python script replacement slices."
+schema_id: TaskTreeCompatibilityPointer
+entry_id: task_tree_pointer_001
+updated_at: "2026-05-29T17:54:03+08:00"
+status: migrated_to_task_forest
+reason: "The repository now uses a task forest so Vibe Coding infrastructure work does not pollute the mainline idea task tree."
+task_forest: docs/ai/tasks/forest.yaml
+current_branch: branch_vibe_coding_infra
+current_tree: docs/ai/tasks/branches/vibe-coding-infra/tree.yaml
+mainline_idea_tree: docs/ai/tasks/main-tree.yaml
+vibe_coding_infra_tree: docs/ai/tasks/branches/vibe-coding-infra/tree.yaml
+compatibility_note: "Read this file as an entry pointer. The authoritative task tree for current work is selected by docs/ai/tasks/forest.yaml and docs/ai/status/current.yaml."
 no_prompt_runtime_dependency: true
+

@@ -7,6 +7,9 @@ runtime_artifacts:
   runtime_rule_index: docs/ai/runtime-rule-index.md
   status_entry: docs/ai/status/current.yaml
   bootstrap_task_tree: docs/ai/tasks/bootstrap-tree.yaml
+  task_forest: docs/ai/tasks/forest.yaml
+  mainline_idea_tree: docs/ai/tasks/main-tree.yaml
+  vibe_coding_infra_tree: docs/ai/tasks/branches/vibe-coding-infra/tree.yaml
   current_slice: docs/ai/tasks/current-slice.yaml
   requirements_ledger: docs/ai/requirements/ledger.yaml
   decision_records: docs/ai/decisions/records.md

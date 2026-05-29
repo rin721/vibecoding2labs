@@ -9,6 +9,7 @@ Agent 先读：
 ```text
 AGENTS.md
 docs/ai/status/current.yaml
+docs/ai/tasks/forest.yaml
 docs/ai/tasks/current-slice.yaml
 docs/ai/handoff/current.md
 ```
@@ -20,8 +21,17 @@ docs/ai/handoff/current.md
 3. 是否有返工项。
 4. 是否有当前进行中切片。
 5. 是否有满足条件的下一个未开始切片。
-6. 当前任务树是否可以关闭。
+6. 当前任务树或当前支线是否可以关闭。
 7. 是否可以进入下一轮想法入口。
+
+## 任务树林路由
+
+当前仓库使用任务树林：
+
+- `branch_vibe_coding_infra`：用于 Vibe Coding 仓库基建，例如 `AGENTS.md`、`docs/ai/*`、schema、脚本、质量门禁、知识库、skills、交接说明和状态恢复。
+- `branch_mainline_idea`：用于未来产品、业务、应用、功能或 bug 修复想法。
+
+如果任务是在改进这个仓库如何被 Agent 驱动、验证、恢复或交接，它属于 Vibe Coding 基建支线，不要放进主线想法任务树。
 
 ## 需求阶段
 
@@ -96,4 +106,3 @@ docs/ai/handoff/current.md
 ```text
 继续当前切片，完成后运行验证并更新证据。
 ```
-

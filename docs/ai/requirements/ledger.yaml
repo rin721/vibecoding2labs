@@ -23,7 +23,8 @@ requirements:
     next_action: "Verify bootstrap and then collect round_001 business goal."
     updated_at: "2026-05-29T17:18:17+08:00"
   - id: req_round_001_placeholder
-    round_id: round_001
+    round_id: infra_001
+    branch_id: branch_vibe_coding_infra
     source: superseded_by_user_goal
     raw_text: null
     normalized_text: "Superseded by req_round_001_docs."
@@ -40,7 +41,8 @@ requirements:
     next_action: "Track req_round_001_docs instead."
     updated_at: "2026-05-29T17:18:17+08:00"
   - id: req_round_001_docs
-    round_id: round_001
+    round_id: infra_001
+    branch_id: branch_vibe_coding_infra
     source: developer_message
     raw_text: "以及当前项目的食用（Tips：使用）教程等相关详细概述文件"
     normalized_text: "Create current project usage tutorial and related detailed overview documentation."
@@ -60,7 +62,8 @@ requirements:
     next_action: "Verify docs exist, runtime validation passes, then mark docs slice completed pending developer acceptance."
     updated_at: "2026-05-29T17:34:47+08:00"
   - id: req_round_001_python_scripts
-    round_id: round_001
+    round_id: infra_001
+    branch_id: branch_vibe_coding_infra
     source: developer_message
     raw_text: "将项目中脚本，替换成py"
     normalized_text: "Replace project scripts with Python equivalents."
@@ -79,3 +82,25 @@ requirements:
       - evidence_014
     next_action: "Run Python runtime validation and confirm no legacy validator script remains."
     updated_at: "2026-05-29T17:43:05+08:00"
+  - id: req_infra_003_task_forest_branching
+    round_id: infra_001
+    branch_id: branch_vibe_coding_infra
+    source: developer_message
+    raw_text: "请你先分析并优化下面这句话的逻辑能力，再使用沙盘能力推演，再实现其能力：将当前任务树林，实现新能力，像以上的操作实则是在迭代Vibe Coding仓库，而不是提出想法树建立主线任务树，所以应该为Vibe Coding建立一条单独的任务树支线，用于Vibe Coding仓库的基建设施建立"
+    normalized_text: "Introduce a task forest with a dedicated Vibe Coding infrastructure branch so repository infrastructure iterations are not mixed into the mainline idea task tree."
+    type: infrastructure_governance
+    priority_or_version: P0-infra_001
+    status: confirmed
+    decision: "Implement task forest routing and migrate current infrastructure tasks to branch_vibe_coding_infra."
+    related_research: []
+    related_task_analysis:
+      - task_003_task_forest_branching
+    related_architecture:
+      - docs/ai/analysis/task-forest-branching.md
+    related_slice:
+      - slice_003_task_forest_branching
+    conflicts: []
+    evidence:
+      - evidence_015
+    next_action: "Validate task forest consistency and mark the branch slice pending developer acceptance."
+    updated_at: "2026-05-29T17:54:03+08:00"

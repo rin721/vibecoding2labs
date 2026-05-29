@@ -15,6 +15,9 @@ REQUIRED_ARTIFACTS = [
     "docs/ai/status/current.yaml",
     "docs/ai/requirements/ledger.yaml",
     "docs/ai/tasks/bootstrap-tree.yaml",
+    "docs/ai/tasks/forest.yaml",
+    "docs/ai/tasks/main-tree.yaml",
+    "docs/ai/tasks/branches/vibe-coding-infra/tree.yaml",
     "docs/ai/tasks/current-slice.yaml",
     "docs/ai/evidence/index.md",
     "docs/ai/knowledge/index.md",
@@ -33,7 +36,9 @@ def fail(message: str) -> None:
 
 
 def extract_yaml_scalar(text: str, field: str, source: str) -> str:
-    match = re.search(rf"(?m)^{re.escape(field)}:\s*([A-Za-z0-9_\-\[\]]+)\s*$", text)
+    match = re.search(
+        rf"(?m)^{re.escape(field)}:\s*([A-Za-z0-9_./\-\[\]]+)\s*$", text
+    )
     if not match:
         fail(f"{source} must define {field}.")
     return match.group(1)
@@ -54,14 +59,39 @@ def main() -> None:
     status_slice = extract_yaml_scalar(
         status, "current_slice", "docs/ai/status/current.yaml"
     )
+    status_branch = extract_yaml_scalar(
+        status, "current_branch", "docs/ai/status/current.yaml"
+    )
+    status_tree = extract_yaml_scalar(
+        status, "current_tree", "docs/ai/status/current.yaml"
+    )
     slice_id = extract_yaml_scalar(
         current_slice, "id", "docs/ai/tasks/current-slice.yaml"
+    )
+    slice_branch = extract_yaml_scalar(
+        current_slice, "branch_id", "docs/ai/tasks/current-slice.yaml"
     )
     if status_slice != slice_id:
         fail(
             "docs/ai/status/current.yaml current_slice does not match "
             "docs/ai/tasks/current-slice.yaml id."
         )
+    if status_branch != slice_branch:
+        fail(
+            "docs/ai/status/current.yaml current_branch does not match "
+            "docs/ai/tasks/current-slice.yaml branch_id."
+        )
+    if not (ROOT / status_tree).exists():
+        fail(f"current_tree does not exist: {status_tree}")
+
+    forest = read_text("docs/ai/tasks/forest.yaml")
+    selected_tree = read_text(status_tree)
+    if status_branch not in forest:
+        fail("Task forest does not contain the current branch.")
+    if status_tree not in forest:
+        fail("Task forest does not reference the current tree path.")
+    if f"branch_id: {status_branch}" not in selected_tree:
+        fail("Current tree does not declare the current branch_id.")
 
     extract_yaml_scalar(
         status, "next_allowed_phase", "docs/ai/status/current.yaml"
@@ -86,4 +116,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

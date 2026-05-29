@@ -64,6 +64,20 @@ volatile_intake
 | `auto_recordable` | Low-risk details inside the current approved slice, state sync, docs sync, evidence updates | Proceed and record evidence. |
 | `pause_required` | P0 conflict, insufficient evidence, state conflict, third repeated failure, unsafe write location | Stop automatic execution and record `next_human_decision`. |
 
+## Task Forest Routing
+
+`docs/ai/tasks/forest.yaml` is the task forest entry.
+
+| Branch | Path | Owns | Does not own |
+| --- | --- | --- | --- |
+| `branch_mainline_idea` | `docs/ai/tasks/main-tree.yaml` | Future product, business, application, feature, or bugfix ideas after confirmation. | Vibe Coding runtime infrastructure work. |
+| `branch_vibe_coding_infra` | `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml` | `AGENTS.md`, `docs/ai/*`, schemas, scripts, quality gates, knowledge, skills, state, evidence, handoff, docs about the Vibe Coding workflow. | Future application or business implementation. |
+
+Routing rule: if the work changes how this repository is governed, recovered,
+validated, documented, or driven by agents, route it to
+`branch_vibe_coding_infra`. Do not create or pollute the mainline idea task tree
+for those infrastructure iterations.
+
 ## Forbidden Matrix
 
 | Category | Forbidden behavior |
@@ -76,9 +90,8 @@ volatile_intake
 
 ## Required Runtime Behavior
 
-- Read `docs/ai/status/current.yaml` and `docs/ai/tasks/current-slice.yaml` before "next step" execution.
+- Read `docs/ai/status/current.yaml`, `docs/ai/tasks/forest.yaml`, and `docs/ai/tasks/current-slice.yaml` before "next step" execution.
 - If state entries conflict, enter `state_recovery_patch`.
 - Keep stable facts in `docs/ai/knowledge/`; keep volatile status in `docs/ai/status/` and `docs/ai/tasks/`.
 - Use `docs/ai/evidence/index.md` for command, diff, validation, and human acceptance evidence.
 - Use project skills only within their declared boundaries.
-

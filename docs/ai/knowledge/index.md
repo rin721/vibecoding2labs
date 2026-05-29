@@ -21,3 +21,4 @@ confirmed mode requires it.
 | `kb_001` | high | runtime infrastructure | `docs/ai/knowledge/entries/kb_001_vibe_runtime.md` |
 | `kb_002` | high | human documentation | `docs/ai/knowledge/entries/kb_002_human_docs.md` |
 | `kb_003` | high | runtime validator script | `docs/ai/knowledge/entries/kb_003_python_runtime_script.md` |
+| `kb_004` | high | task forest branching | `docs/ai/knowledge/entries/kb_004_task_forest_branching.md` |

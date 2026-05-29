@@ -1,5 +1,6 @@
 schema_id: ExecutionSlice
 id: slice_000
+branch_id: branch_mainline_idea
 round_id: round_000
 task_id: task_000
 phase: not_started
@@ -29,4 +30,3 @@ knowledge_updates: []
 skill_updates: []
 next_condition: ""
 updated_at: "YYYY-MM-DDTHH:mm:ss+08:00"
-

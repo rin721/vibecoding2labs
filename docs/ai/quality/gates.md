@@ -11,7 +11,9 @@ python docs/ai/scripts/validate_runtime.py
 The gate checks:
 
 - Required runtime files exist.
+- Task forest, mainline idea tree, and Vibe Coding infrastructure branch exist.
 - Required minimum governance paths exist.
+- `docs/ai/status/current.yaml` branch and slice match `docs/ai/tasks/current-slice.yaml`.
 - `AGENTS.md` and runtime docs do not instruct agents to read the original
   compiler prompt as a normal recovery path.
 - The status file points to a current slice and next allowed phase.

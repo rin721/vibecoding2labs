@@ -1,6 +1,7 @@
 schema_id: ExecutionSlice
 id: slice_001_docs_guides
-round_id: round_001
+branch_id: branch_vibe_coding_infra
+round_id: infra_001
 task_id: task_001_human_docs
 phase: docs_knowledge_status_sync
 module: human_documentation
@@ -80,4 +81,4 @@ knowledge_updates:
   - kb_002
 skill_updates: []
 next_condition: "Wait for developer acceptance, requested documentation edits, or explicit migration before starting another task tree."
-updated_at: "2026-05-29T17:37:15+08:00"
+updated_at: "2026-05-29T17:54:03+08:00"

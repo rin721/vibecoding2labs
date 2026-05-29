@@ -1,0 +1,14 @@
+schema_id: TaskTree
+tree_id: task_tree_mainline_idea
+branch_id: branch_mainline_idea
+branch_type: mainline_idea
+round_id: mainline_pending
+created_at: "2026-05-29T17:54:03+08:00"
+updated_at: "2026-05-29T17:54:03+08:00"
+status: waiting_for_confirmed_idea
+purpose: "Reserved task tree for future developer product, business, application, or feature ideas."
+blocked_by: "No confirmed mainline product or business idea exists yet."
+tasks: []
+next_action: "When the developer provides a product or business idea, complete requirement confirmation, research, task analysis, architecture, and mode confirmation before creating mainline tasks."
+no_prompt_runtime_dependency: true
+

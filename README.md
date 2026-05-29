@@ -12,8 +12,8 @@
 ## 当前状态
 
 - 已完成：Vibe Coding 最小运行期基建。
-- 当前轮次：`round_001`。
-- 当前目标：补齐项目使用教程和详细概述文档。
+- 当前工作流：`branch_vibe_coding_infra`。
+- 当前目标：建立 Vibe Coding 仓库基建支线，避免把基建迭代混入未来业务主线任务树。
 - 当前模式：低风险文档治理，候选 `standard_light`。
 - 重要规则：运行期恢复不能依赖原始大提示词。缺什么文件就补什么文件。
 
@@ -39,6 +39,9 @@ git status --short --branch
 | `docs/` | 面向人的长期文档。 |
 | `docs/ai/` | 面向 Agent 的状态、证据、任务、知识库、skills 和交接资料。 |
 | `docs/ai/status/current.yaml` | 当前状态第一入口。 |
+| `docs/ai/tasks/forest.yaml` | 任务树林入口，用于区分业务主线和 Vibe Coding 基建支线。 |
+| `docs/ai/tasks/main-tree.yaml` | 未来业务/产品想法主线任务树。 |
+| `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml` | Vibe Coding 仓库基建支线任务树。 |
 | `docs/ai/tasks/current-slice.yaml` | 当前唯一合法执行切片。 |
 | `docs/ai/evidence/index.md` | 验证、命令和审计证据入口。 |
 

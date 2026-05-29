@@ -28,15 +28,15 @@
 ## Steps
 
 1. Confirm the slice goal and allowed files.
-2. Make the smallest useful change.
-3. Run declared validation commands or a documented alternative.
-4. Record evidence.
-5. Update status and handoff.
-6. Move to the next slice only when the current slice is completed or formally
+2. Confirm the slice `branch_id` matches `docs/ai/status/current.yaml`.
+3. Make the smallest useful change.
+4. Run declared validation commands or a documented alternative.
+5. Record evidence.
+6. Update status and handoff.
+7. Move to the next slice only when the current slice is completed or formally
    blocked, skipped, superseded, or moved with confirmation.
 
 ## Verification
 
 - The validation result supports the new status.
 - The slice remains inside its file and risk boundaries.
-

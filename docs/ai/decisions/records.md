@@ -54,3 +54,27 @@
   maintenance.
 - Evidence: `evidence_014`
 - No prompt runtime dependency: true
+
+## decision_004: Task Forest With Vibe Coding Infrastructure Branch
+
+- Date: `2026-05-29T17:54:03+08:00`
+- Status: `accepted_for_low_risk_execution`
+- Source: developer request to analyze, sandbox, and implement a separate Vibe
+  Coding task tree branch.
+- Decision: Introduce `docs/ai/tasks/forest.yaml`, reserve
+  `docs/ai/tasks/main-tree.yaml` for future product or business ideas, and route
+  Vibe Coding repository infrastructure work to
+  `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`.
+- Rationale: Documentation, runtime validation scripts, schemas, state, evidence,
+  knowledge, skills, and handoff changes iterate this repository's Vibe Coding
+  infrastructure. They should not pollute the future mainline idea task tree.
+- Alternatives:
+  - Keep one task tree: rejected because it mixes infrastructure maintenance
+    with product idea work.
+  - Create a new mainline round for every infrastructure edit: rejected because
+    these edits are not product idea rounds.
+- Confirmation level: `auto_recordable` because the developer explicitly asked
+  for this governance capability and the change is documentation/runtime-state
+  scoped.
+- Evidence: `evidence_015`
+- No prompt runtime dependency: true

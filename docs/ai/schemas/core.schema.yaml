@@ -21,6 +21,22 @@ schemas:
     enum_fields:
       node_statuses: [not_started, in_progress, pending_verification, completed, blocked, skipped]
     evidence_fields: [evidence_target, evidence_targets]
+  - schema_id: TaskForest
+    version: 0.1.0
+    required_fields: [forest_id, created_at, updated_at, purpose, current_branch, current_tree, branches, routing_rules, compatibility_entry, no_prompt_runtime_dependency]
+    optional_fields: []
+    enum_fields:
+      branch_type: [mainline_idea, vibe_coding_infra, custom]
+      no_prompt_runtime_dependency: [true]
+    evidence_fields: []
+  - schema_id: TaskTreeBranch
+    version: 0.1.0
+    required_fields: [branch_id, branch_type, tree_id, path, status, owns, does_not_own, next_allowed_phase]
+    optional_fields: []
+    enum_fields:
+      branch_type: [mainline_idea, vibe_coding_infra, custom]
+      status: [waiting_for_confirmed_idea, in_progress, pending_verification, pending_acceptance, completed, blocked, archived]
+    evidence_fields: []
   - schema_id: VolatileIntake
     version: 0.1.0
     required_fields: [intake_id, source, raw_text, captured_at, initial_goal_guess, initial_constraints, obvious_risks, authorization_hint, not_confirmed_notice, migration_target, discard_condition]
@@ -86,7 +102,7 @@ schemas:
     evidence_fields: [developer_confirmation]
   - schema_id: ExecutionSlice
     version: 0.1.0
-    required_fields: [id, round_id, task_id, phase, module, goal, inputs, outputs, allowed_files, forbidden_files, allowed_tools, approval_required_actions, risk_level, agency_level, verification_commands, manual_checks, acceptance_criteria, rollback_plan, max_iteration_count, max_retry_count, retry_count, last_failure_reason, next_human_decision, audit_evidence, human_override, status, knowledge_updates, skill_updates, next_condition, updated_at]
+    required_fields: [id, branch_id, round_id, task_id, phase, module, goal, inputs, outputs, allowed_files, forbidden_files, allowed_tools, approval_required_actions, risk_level, agency_level, verification_commands, manual_checks, acceptance_criteria, rollback_plan, max_iteration_count, max_retry_count, retry_count, last_failure_reason, next_human_decision, audit_evidence, human_override, status, knowledge_updates, skill_updates, next_condition, updated_at]
     optional_fields: []
     enum_fields:
       risk_level: [low, medium, high, critical]

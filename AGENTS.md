@@ -22,6 +22,9 @@ for the structured state under `docs/ai/`.
 - Runtime rule index: `docs/ai/runtime-rule-index.md`
 - Current state: `docs/ai/status/current.yaml`
 - Current slice: `docs/ai/tasks/current-slice.yaml`
+- Task forest: `docs/ai/tasks/forest.yaml`
+- Mainline idea tree: `docs/ai/tasks/main-tree.yaml`
+- Vibe Coding infrastructure tree: `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
 - Bootstrap tree: `docs/ai/tasks/bootstrap-tree.yaml`
 - Requirements: `docs/ai/requirements/ledger.yaml`
 - Decisions: `docs/ai/decisions/records.md`
@@ -35,4 +38,3 @@ for the structured state under `docs/ai/`.
 Do not require future agents to read the original compiler prompt or any raw
 chat prompt as a normal recovery path. If a runtime artifact is missing or too
 thin, create or run a repair slice that updates the physical artifact.
-

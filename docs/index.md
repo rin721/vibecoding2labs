@@ -18,6 +18,7 @@
 | [usage-guide.md](usage-guide.md) | 想直接使用仓库的人 | 给出从打开仓库到推进下一轮工作的步骤。 |
 | [maintenance-guide.md](maintenance-guide.md) | 长期维护者 | 说明怎么更新状态、证据、知识库、skills 和文档。 |
 | [agent-workflow-guide.md](agent-workflow-guide.md) | 人和 Agent | 说明协作顺序、确认点、下一步协议和禁止事项。 |
+| [ai/tasks/forest.yaml](ai/tasks/forest.yaml) | Agent、维护者 | 区分 Vibe Coding 基建支线和未来业务主线任务树。 |
 
 ## AI 运行期入口
 
@@ -37,4 +38,3 @@
 - 过程状态、证据和 Agent 工作文件放在 `docs/ai/`。
 - 外部资料只作为候选事实，验证后才能进入知识库。
 - 不要把“回读原始提示词”写成恢复路径。
-

@@ -14,6 +14,9 @@
 | 运行期规则索引 | `docs/ai/runtime-rule-index.md` |
 | 当前状态 | `docs/ai/status/current.yaml` |
 | 初始化任务树 | `docs/ai/tasks/bootstrap-tree.yaml` |
+| 任务树林 | `docs/ai/tasks/forest.yaml` |
+| 主线想法任务树 | `docs/ai/tasks/main-tree.yaml` |
+| Vibe Coding 基建支线 | `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml` |
 | 当前执行切片 | `docs/ai/tasks/current-slice.yaml` |
 | 需求入口 | `docs/ai/requirements/ledger.yaml` |
 | 决策记录 | `docs/ai/decisions/records.md` |
@@ -46,7 +49,7 @@
 -> 轮次关闭
 ```
 
-当前仓库刚完成初始化基建，正在 `round_001` 中补齐人类使用文档。
+当前仓库刚完成初始化基建，正在 `branch_vibe_coding_infra` 中迭代 Vibe Coding 仓库自身的基建设施。未来产品、业务或应用想法会进入 `branch_mainline_idea`，不会和仓库基建支线混在一起。
 
 ## 当前不是做什么
 
@@ -65,4 +68,3 @@
 2. 切片约束：每次执行都有允许文件、验证命令和回滚方式。
 3. 证据记录：命令、验证和关键判断写入 `docs/ai/evidence/index.md`。
 4. 人类确认：需求、架构、模式、风险和验收仍由开发者最终确认。
-

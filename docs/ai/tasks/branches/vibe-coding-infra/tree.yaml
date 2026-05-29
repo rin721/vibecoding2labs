@@ -1,0 +1,49 @@
+schema_id: TaskTree
+tree_id: task_tree_vibe_coding_infra
+branch_id: branch_vibe_coding_infra
+branch_type: vibe_coding_infra
+round_id: infra_001
+created_at: "2026-05-29T17:54:03+08:00"
+updated_at: "2026-05-29T17:58:59+08:00"
+status: pending_acceptance
+purpose: "Task tree branch for building and iterating this repository's Vibe Coding infrastructure."
+tasks:
+  - id: task_001_human_docs
+    title: "Create usage tutorial and detailed overview documentation"
+    status: pending_acceptance
+    requirements:
+      - req_round_001_docs
+    slices:
+      - slice_001_docs_guides
+    acceptance_criteria:
+      - "README.md gives a fast project overview."
+      - "docs/index.md indexes human-facing docs."
+      - "Detailed usage, overview, maintenance, and Agent workflow docs exist."
+      - "Runtime validation passes and evidence is recorded."
+  - id: task_002_python_scripts
+    title: "Replace runtime scripts with Python"
+    status: pending_acceptance
+    requirements:
+      - req_round_001_python_scripts
+    slices:
+      - slice_002_python_scripts
+    acceptance_criteria:
+      - "Runtime validator exists as a Python script."
+      - "Legacy PowerShell validator file is removed."
+      - "Runtime validation passes through Python."
+      - "Command references point to the Python script."
+  - id: task_003_task_forest_branching
+    title: "Introduce task forest and Vibe Coding infrastructure branch"
+    status: pending_acceptance
+    requirements:
+      - req_infra_003_task_forest_branching
+    slices:
+      - slice_003_task_forest_branching
+    acceptance_criteria:
+      - "Task forest entry exists."
+      - "Mainline idea tree exists and is reserved for future product or business ideas."
+      - "Vibe Coding infrastructure branch owns current infrastructure tasks."
+      - "Current state points to the infrastructure branch."
+      - "Runtime validation passes."
+next_action: "Wait for developer acceptance or requested edits for the Vibe Coding infrastructure branch changes."
+no_prompt_runtime_dependency: true

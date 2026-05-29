@@ -95,3 +95,29 @@
   - script inventory check under `docs/ai/scripts` -> only `validate_runtime.py` found.
   - Markdown local link check -> `Markdown local links OK`.
 - Summary: Runtime validator was replaced with Python and command references were updated.
+
+## evidence_015: Task Forest Branching
+
+- Date: `2026-05-29T17:58:59+08:00`
+- Type: `runtime_task_governance_update`
+- Status: `completed`
+- Requirement: `req_infra_003_task_forest_branching`
+- Slice: `slice_003_task_forest_branching`
+- Analysis:
+  - `docs/ai/analysis/task-forest-branching.md`
+- Sandbox:
+  - `docs/ai/sandbox/sandbox_001_task_forest_branching.yaml`
+- Files:
+  - `docs/ai/tasks/forest.yaml`
+  - `docs/ai/tasks/main-tree.yaml`
+  - `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
+  - `docs/ai/tasks/tree.yaml`
+  - `docs/ai/tasks/current-slice.yaml`
+  - `docs/ai/tasks/slices/slice_003_task_forest_branching.yaml`
+  - `docs/ai/status/current.yaml`
+  - `docs/ai/runtime-rule-index.md`
+  - `docs/ai/scripts/validate_runtime.py`
+- Validation:
+  - `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
+  - task forest routing search for `branch_vibe_coding_infra`, `branch_mainline_idea`, and `TaskForest` -> matched status, task forest, branch tree, main tree, compatibility pointer, slices, and runtime rule index.
+- Summary: Task forest and Vibe Coding infrastructure branch are implemented and validated.

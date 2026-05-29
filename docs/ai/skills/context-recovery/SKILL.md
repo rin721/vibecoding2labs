@@ -11,6 +11,7 @@
 
 - `AGENTS.md`
 - `docs/ai/status/current.yaml`
+- `docs/ai/tasks/forest.yaml`
 - `docs/ai/tasks/current-slice.yaml`
 - `docs/ai/tasks/bootstrap-tree.yaml`
 - `docs/ai/requirements/ledger.yaml`
@@ -29,15 +30,16 @@
 
 1. Read `AGENTS.md`.
 2. Read `docs/ai/status/current.yaml`.
-3. Read `docs/ai/tasks/current-slice.yaml`.
-4. Check `docs/ai/evidence/index.md` and `docs/ai/handoff/current.md`.
-5. Run `git status --short --branch`.
-6. If entries conflict, enter `state_recovery_patch` and update only runtime
+3. Read `docs/ai/tasks/forest.yaml`.
+4. Read `docs/ai/tasks/current-slice.yaml`.
+5. Confirm the status `current_branch` matches the slice `branch_id`.
+6. Check `docs/ai/evidence/index.md` and `docs/ai/handoff/current.md`.
+7. Run `git status --short --branch`.
+8. If entries conflict, enter `state_recovery_patch` and update only runtime
    state artifacts.
-7. If entries are consistent, choose the next action from current slice status.
+9. If entries are consistent, choose the next action from current slice status.
 
 ## Verification
 
 - State and current slice point to the same phase or a documented transition.
 - Evidence entry exists for any state mutation.
-

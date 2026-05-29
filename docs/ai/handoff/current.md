@@ -3,10 +3,12 @@
 - Project: `vibecoding2labs`
 - Runtime version: `vibe-runtime-0.1.0`
 - Current phase: `acceptance`
-- Current round: `round_001`
+- Current round: `infra_001`
+- Current branch: `branch_vibe_coding_infra`
+- Current tree: `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
 - Current mode: `pending_confirmation`
 - Agency level: `controlled_execution`
-- Current slice: `slice_002_python_scripts` pending developer acceptance
+- Current slice: `slice_003_task_forest_branching` pending developer acceptance
 
 ## Completed
 
@@ -17,10 +19,14 @@
 - Human-facing docs were created for project overview, usage, maintenance, and Agent workflow.
 - Runtime validation passed after the documentation slice.
 - Runtime validator was replaced with `docs/ai/scripts/validate_runtime.py`.
+- Task forest branching was introduced so Vibe Coding infrastructure work
+  lives in `branch_vibe_coding_infra`, while future product or business ideas
+  use `branch_mainline_idea`.
 
 ## Unfinished
 
-- Developer acceptance of the documentation and script replacement slices is pending.
+- Developer acceptance of the documentation, script replacement, and task forest
+  branching slices is pending.
 - Mode selection for future business implementation is still pending.
 
 ## Key Files
@@ -41,17 +47,24 @@
 - `docs/maintenance-guide.md`
 - `docs/agent-workflow-guide.md`
 - `docs/ai/scripts/validate_runtime.py`
+- `docs/ai/tasks/forest.yaml`
+- `docs/ai/tasks/main-tree.yaml`
+- `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
+- `docs/ai/analysis/task-forest-branching.md`
+- `docs/ai/sandbox/sandbox_001_task_forest_branching.yaml`
 
 ## Next Condition
 
-Ask the developer to accept the documentation and script replacement slices or
-request edits. Do not start a new task tree until active slices are accepted,
-edited, migrated, or explicitly closed.
+Ask the developer to accept the Vibe Coding infrastructure branch changes or
+request edits. Do not start a mainline idea task tree until the active Vibe
+Coding infrastructure branch slices are accepted, edited, migrated, or
+explicitly closed.
 
 ## Forbidden Actions
 
 - Do not read the original compiler prompt as a normal recovery path.
-- Do not start `round_002` until `round_001` is closed, migrated, discarded, or
-  partially closed with confirmation.
+- Do not start a mainline idea task tree until `branch_vibe_coding_infra` active
+  slices are accepted, migrated, discarded, or partially closed with
+  confirmation.
 - Do not create business implementation before requirement, research, task
   analysis, architecture, and mode confirmation.
