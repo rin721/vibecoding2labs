@@ -31,6 +31,9 @@ round `n+1` until the task tree is closed or the developer redirects it.
 - `docs/ai/evidence/index.md`
 - `docs/ai/handoff/current.md`
 - `docs/ai/templates/full-project-lifecycle-workflow-sop.md`
+- `docs/ai/skills/project-requirement-discovery/SKILL.md`
+- `docs/ai/templates/project-requirement-discovery-sop.md`
+- `docs/ai/templates/project-requirement-discovery-record.yaml`
 
 ## Gate Order
 
@@ -38,33 +41,38 @@ round `n+1` until the task tree is closed or the developer redirects it.
    `branch_vibe_coding_infra`, `branch_mainline_idea`, or another confirmed
    branch.
 2. Capture the developer's target idea for the current round.
-3. Analyze requirements into problem, users, scope, non-goals, constraints,
+3. Run project requirement discovery before treating the idea as a requirement
+   baseline candidate: interpret the idea, map requirement domains, inventory
+   developer-stated and AI-inferred requirements, build a question backlog,
+   collect answers across rounds, persist the discovery record, plan remaining
+   requirement work, and check baseline readiness.
+4. Analyze requirements into problem, users, scope, non-goals, constraints,
    risks, acceptance criteria, and open questions.
-4. Stop for hard confirmation of the requirement baseline.
-5. Perform current-source research when technology stack, APIs, libraries,
+5. Stop for hard confirmation of the requirement baseline.
+6. Perform current-source research when technology stack, APIs, libraries,
    regulations, pricing, schedules, model choices, or other unstable facts
    affect the project. Use official or primary sources where possible.
-6. Stop for research and technology-stack confirmation.
-7. Analyze tasks into a complete work breakdown, dependency order, test plan,
+7. Stop for research and technology-stack confirmation.
+8. Analyze tasks into a complete work breakdown, dependency order, test plan,
    documentation plan, and closure criteria.
-8. Stop for task-analysis confirmation.
-9. Design architecture and stack, including data model, integration boundaries,
+9. Stop for task-analysis confirmation.
+10. Design architecture and stack, including data model, integration boundaries,
    risks, rollback, and quality gates.
-10. Stop for architecture and stack confirmation.
-11. Recommend an infrastructure mode:
+11. Stop for architecture and stack confirmation.
+12. Recommend an infrastructure mode:
    `standard_light_risk_escalated` or `enterprise_high_assurance`.
-12. Explain why the recommendation fits the risk profile and stop for
+13. Explain why the recommendation fits the risk profile and stop for
     developer confirmation. Also explain why the other mode is not the best
     default for the current round and what would cause escalation.
-13. Establish or update the Agent Vibe Coding driving facilities required for
+14. Establish or update the Agent Vibe Coding driving facilities required for
     this round: skills, knowledge, context/rules, prompt surfaces, schemas,
     status, evidence, and handoff.
-14. Create or update the task tree and execution slices.
-15. For each slice, implement code, write and run tests, document changes,
+15. Create or update the task tree and execution slices.
+16. For each slice, implement code, write and run tests, document changes,
     update state, record evidence, and expose the next allowed step.
-16. When all slices are complete, close the task tree with validation and
+17. When all slices are complete, close the task tree with validation and
     acceptance evidence.
-17. Re-enter the lifecycle as `next_round_intake[n+1]` for the next developer
+18. Re-enter the lifecycle as `next_round_intake[n+1]` for the next developer
     idea, iteration, upgrade, expansion, or refactor.
 
 ## Hard Stops

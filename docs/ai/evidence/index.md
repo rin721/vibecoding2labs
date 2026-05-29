@@ -316,3 +316,50 @@
   distilling compiler, generator, or macro governance specifications into local
   runtime artifacts without creating `prompt.md` or restoring raw compiler
   prompt dependency.
+
+## evidence_021: Project Requirement Discovery Workflow
+
+- Date: `2026-05-29T21:48:21+08:00`
+- Type: `runtime_requirement_discovery_workflow_update`
+- Status: `completed`
+- Requirement: `req_infra_008_project_requirement_discovery`
+- Slice: `slice_008_project_requirement_discovery`
+- Analysis:
+  - `docs/ai/analysis/project-requirement-discovery-gap-analysis.md`
+- Architecture:
+  - `docs/ai/architecture/project-requirement-discovery-workflow.md`
+- Files:
+  - `docs/ai/skills/project-requirement-discovery/SKILL.md`
+  - `docs/ai/templates/project-requirement-discovery-sop.md`
+  - `docs/ai/templates/project-requirement-discovery-record.yaml`
+  - `docs/ai/requirements/intake/README.md`
+  - `docs/ai/knowledge/entries/kb_009_project_requirement_discovery.md`
+  - `docs/ai/skills/full-project-lifecycle/SKILL.md`
+  - `docs/ai/templates/full-project-lifecycle-workflow-sop.md`
+  - `docs/ai/knowledge/entries/kb_007_full_project_lifecycle.md`
+  - `docs/ai/skills/index.md`
+  - `docs/ai/knowledge/index.md`
+  - `docs/ai/architecture/index.md`
+  - `docs/ai/runtime-rule-index.md`
+  - `docs/ai/schemas/core.schema.yaml`
+  - `docs/ai/tasks/slices/slice_008_project_requirement_discovery.yaml`
+  - `docs/ai/tasks/current-slice.yaml`
+  - `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
+  - `docs/ai/tasks/main-tree.yaml`
+  - `docs/ai/tasks/forest.yaml`
+  - `docs/ai/requirements/ledger.yaml`
+  - `docs/ai/decisions/records.md`
+  - `docs/ai/status/current.yaml`
+  - `docs/ai/manifest.yaml`
+  - `docs/ai/handoff/current.md`
+  - `docs/ai/changelog.md`
+  - `docs/ai/scripts/validate_runtime.py`
+- Validation:
+  - `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
+  - `python -m py_compile docs/ai/scripts/validate_runtime.py` -> passed.
+  - `rg -n "project_requirement_discovery|idea_seed_intake_gate|domain_surface_mapping_gate|question_backlog_gate|requirement_discovery_record|skill_project_requirement_discovery|kb_009" docs/ai` -> matched the runtime rule index, manifest, status, requirements, task tree, current slice, slice file, analysis, architecture, skill index, project skill, SOP, record template, knowledge index, knowledge entry, evidence, handoff, and validator.
+  - `Test-Path prompt.md, package.json, package-lock.json, pnpm-lock.yaml, yarn.lock, pyproject.toml, requirements.txt, src, app, components, tools` -> all returned `False`.
+- Summary: The repository now has a project requirement discovery task line for
+  turning raw ideas into persistent requirement discovery records, domain maps,
+  question backlogs, requirement plans, and baseline readiness checks before
+  requirement confirmation.

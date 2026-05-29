@@ -6,9 +6,9 @@
 - Current round: `infra_001`
 - Current branch: `branch_vibe_coding_infra`
 - Current tree: `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
-- Current mode: `compiler_runtime_assimilation_completed_pending_acceptance`
+- Current mode: `project_requirement_discovery_completed_pending_acceptance`
 - Agency level: `controlled_execution`
-- Current slice: `slice_007_compiler_runtime_assimilation` pending developer acceptance
+- Current slice: `slice_008_project_requirement_discovery` pending developer acceptance
 
 ## Completed
 
@@ -52,13 +52,18 @@
   macro governance specifications are routed to `branch_vibe_coding_infra` and
   distilled into local runtime artifacts instead of becoming `prompt.md` or a
   raw prompt runtime dependency.
+- Added a project requirement discovery gap analysis, architecture note,
+  project skill, canonical SOP, durable intake record template, and knowledge
+  entry so future raw project ideas are interpreted, mapped into requirement
+  domains, guided through question backlogs, persisted, planned, and checked for
+  baseline readiness before requirement-baseline confirmation.
 
 ## Unfinished
 
 - Developer acceptance of the documentation, script replacement, task forest
   branching, refreshed catalog-only capability, trigger-bound workflow SOP,
-  full-project lifecycle workflow, and compiler-runtime assimilation slices is
-  pending.
+  full-project lifecycle workflow, compiler-runtime assimilation, and project
+  requirement discovery slices is pending.
 - No future mainline product implementation has started. A future mainline idea
   must use the full-project lifecycle workflow before implementation.
 
@@ -105,10 +110,17 @@
 - `docs/ai/skills/compiler-runtime-assimilation/SKILL.md`
 - `docs/ai/templates/compiler-runtime-assimilation-sop.md`
 - `docs/ai/knowledge/entries/kb_008_compiler_runtime_assimilation.md`
+- `docs/ai/analysis/project-requirement-discovery-gap-analysis.md`
+- `docs/ai/architecture/project-requirement-discovery-workflow.md`
+- `docs/ai/skills/project-requirement-discovery/SKILL.md`
+- `docs/ai/templates/project-requirement-discovery-sop.md`
+- `docs/ai/templates/project-requirement-discovery-record.yaml`
+- `docs/ai/requirements/intake/README.md`
+- `docs/ai/knowledge/entries/kb_009_project_requirement_discovery.md`
 
 ## Next Condition
 
-Ask the developer to accept the compiler-runtime assimilation workflow or
+Ask the developer to accept the project requirement discovery workflow or
 request edits. Do not start a mainline idea task tree until the active Vibe
 Coding infrastructure branch slices are accepted, edited, migrated, or
 explicitly closed.
@@ -137,3 +149,7 @@ explicitly closed.
   task-line routing, requirement confirmation, current-source research,
   task-analysis confirmation, architecture confirmation, and mode confirmation
   must happen before implementation.
+- Do not let a future raw project idea skip the project requirement discovery
+  skill: idea interpretation, domain mapping, requirement inventory, question
+  backlog, persistent intake record, requirement planning, and baseline
+  readiness must happen before requirement-baseline confirmation.

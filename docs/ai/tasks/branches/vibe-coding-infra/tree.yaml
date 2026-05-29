@@ -4,7 +4,7 @@ branch_id: branch_vibe_coding_infra
 branch_type: vibe_coding_infra
 round_id: infra_001
 created_at: "2026-05-29T17:54:03+08:00"
-updated_at: "2026-05-29T21:30:00+08:00"
+updated_at: "2026-05-29T21:48:21+08:00"
 status: pending_acceptance
 purpose: "Task tree branch for building and iterating this repository's Vibe Coding infrastructure."
 tasks:
@@ -98,5 +98,20 @@ tasks:
       - "Runtime rule index adds `INV-18-COMPILER-CONTEXT-ASSIMILATION` and assimilation gates."
       - "Knowledge, architecture, task slice, status, evidence, validator, and handoff references are synchronized."
       - "Runtime validation passes."
-next_action: "Wait for developer acceptance or requested edits for the compiler-runtime assimilation workflow."
+  - id: task_008_project_requirement_discovery
+    title: "Add persistent project requirement discovery workflow"
+    status: pending_acceptance
+    requirements:
+      - req_infra_008_project_requirement_discovery
+    slices:
+      - slice_008_project_requirement_discovery
+    acceptance_criteria:
+      - "A gap analysis explains why idea-to-MVP summarization is still too shallow for complete projects."
+      - "A project skill and canonical SOP exist for detailed requirement discovery."
+      - "A durable requirement discovery record template exists for future mainline rounds."
+      - "A requirement intake directory guide exists for future per-round records."
+      - "The full-project lifecycle points to requirement discovery before baseline confirmation."
+      - "Knowledge, task slice, status, evidence, validator, and handoff references are synchronized."
+      - "Runtime validation passes."
+next_action: "Wait for developer acceptance or requested edits for the project requirement discovery workflow."
 no_prompt_runtime_dependency: true

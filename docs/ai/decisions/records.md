@@ -224,3 +224,39 @@
   implementation.
 - Evidence: `evidence_020`
 - No prompt runtime dependency: true
+
+## decision_010: Project Requirement Discovery Workflow
+
+- Date: `2026-05-29T21:48:21+08:00`
+- Status: `accepted_for_low_risk_execution`
+- Source: developer request to add a Vibe Coding infrastructure task line that
+  refines the idea-to-requirement flow because the Go + Nuxt commerce example
+  was still too summarized and did not fully guide complete project
+  requirements.
+- Decision: Add a project requirement discovery skill, canonical SOP, durable
+  intake record template, gap analysis, architecture note, knowledge entry,
+  slice, validator coverage, and runtime state updates. Future raw project
+  ideas must be interpreted, mapped into requirement domains, inventoried into
+  developer-stated and AI-inferred candidates, guided through question
+  backlogs, persisted, planned, and checked for baseline readiness before
+  requirement-baseline confirmation.
+- Rationale: The existing full-project lifecycle names the early gates, but
+  the repository still needed an engineering-grade sub-procedure for collecting
+  requirements across turns. The new workflow prevents a raw idea from being
+  prematurely converted into a generic MVP list or a single broad confirmation
+  request.
+- Alternatives:
+  - Keep only the full-project lifecycle SOP: rejected because it did not
+    define the detailed requirement discovery record, question backlog, and
+    readiness checks.
+  - Start the Go + Nuxt commerce project now: rejected because this request is
+    an infrastructure workflow repair and no mainline requirement baseline has
+    been confirmed.
+  - Store requirement discovery only in chat: rejected because future agents
+    need physical recovery artifacts and ledger links.
+- Confirmation level: `auto_recordable` for docs/ai runtime artifacts inside
+  the developer's infrastructure workflow request; `hard_confirmation` remains
+  required for future mainline requirement baselines, stack choices,
+  architecture, and implementation mode.
+- Evidence: `evidence_021`
+- No prompt runtime dependency: true

@@ -36,6 +36,17 @@ Required output:
 - Known constraints.
 - Unknowns that must be resolved before implementation.
 
+Before moving to requirement baseline work, run the project requirement
+discovery SOP:
+
+- `docs/ai/skills/project-requirement-discovery/SKILL.md`
+- `docs/ai/templates/project-requirement-discovery-sop.md`
+- `docs/ai/templates/project-requirement-discovery-record.yaml`
+
+The discovery sub-procedure must produce idea interpretation, domain surface
+mapping, requirement inventory, question backlog, requirement collection rounds,
+requirement planning, persistence sync, and baseline readiness evidence.
+
 ## 2. Requirement Analysis Gate
 
 Turn the idea into an implementation-ready requirement candidate.
@@ -56,6 +67,9 @@ Hard stop:
 
 - Ask for requirement-baseline confirmation before research or architecture is
   treated as committed.
+- Do not ask for a single broad confirmation if the requirement discovery
+  record still contains unresolved critical domains or unmarked AI-inferred
+  candidates.
 
 ## 3. Research And Technology Validation Gate
 

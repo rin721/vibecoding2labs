@@ -9,7 +9,7 @@
   `docs/ai/templates/full-project-lifecycle-workflow-sop.md`,
   `docs/ai/runtime-rule-index.md`
 - Version: `0.1.0`
-- Updated at: `2026-05-29T21:04:30+08:00`
+- Updated at: `2026-05-29T21:48:21+08:00`
 - Deprecated: `false`
 
 ## Fact
@@ -29,12 +29,19 @@ The workflow explicitly distinguishes the two infrastructure modes:
 recommend a mode and explain the risk rationale, but the developer must confirm
 the mode before implementation work proceeds.
 
+The lifecycle now delegates raw idea elaboration to
+`skill_project_requirement_discovery` before requirement-baseline confirmation.
+That sub-procedure requires idea interpretation, domain surface mapping,
+requirement inventory, question backlog creation, collection rounds,
+requirement planning, durable intake records, and baseline readiness checks.
+
 ## Evidence
 
 - `docs/ai/analysis/mainline-full-project-lifecycle-gap-analysis.md`
 - `docs/ai/architecture/full-project-lifecycle-workflow.md`
 - `docs/ai/skills/full-project-lifecycle/SKILL.md`
 - `docs/ai/templates/full-project-lifecycle-workflow-sop.md`
+- `docs/ai/templates/project-requirement-discovery-sop.md`
 - `docs/ai/evidence/index.md`
 
 ## Checks
@@ -44,4 +51,4 @@ the mode before implementation work proceeds.
 - No prompt runtime dependency check: `passed`
 - Related requirements: `req_infra_006_full_project_lifecycle`
 - Related tasks: `task_006_full_project_lifecycle`
-- Related skills: `skill_full_project_lifecycle`
+- Related skills: `skill_full_project_lifecycle`, `skill_project_requirement_discovery`

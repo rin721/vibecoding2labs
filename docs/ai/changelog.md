@@ -17,6 +17,11 @@
   infrastructure mode, create Agent driving facilities, slice work, implement,
   test, document, update state/evidence, use `next step`, close, and continue
   into round `n+1`.
+- Added a project requirement discovery workflow skill, SOP, and durable intake
+  record template so raw project ideas are not collapsed into generic MVP
+  summaries; future ideas must be interpreted, mapped into requirement domains,
+  inventoried, guided through question backlogs, persisted, planned, and checked
+  for baseline readiness before confirmation.
 - Added a compiler-runtime assimilation workflow skill and SOP so future Vibe
   Coding compiler or generator specifications can be deeply distilled into the
   existing repository infrastructure without creating `prompt.md` or restoring

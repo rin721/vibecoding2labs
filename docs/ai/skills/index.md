@@ -10,6 +10,7 @@ expand agency level unless a decision record explicitly says so.
 | `skill_capability_selection` | Capability selection | A future confirmed slice asks whether to add UI libraries, architecture helpers, AI Agent tooling, Python tools, or quality tooling. | `docs/ai/skills/capability-selection/SKILL.md` |
 | `skill_vibe_infra_action_workflow` | Vibe infrastructure action workflow | User input starts with `新增 Vibe Coding 仓库基建设施建立任务线：`. | `docs/ai/skills/vibe-infra-action-workflow/SKILL.md` |
 | `skill_full_project_lifecycle` | Full project lifecycle | A future mainline or project task line needs to move from idea through detailed gates, slices, tests, docs, state sync, closure, and round `n+1`. | `docs/ai/skills/full-project-lifecycle/SKILL.md` |
+| `skill_project_requirement_discovery` | Project requirement discovery | A raw or compact project idea needs idea interpretation, requirement domain mapping, question backlog, persistent intake, requirement planning, and baseline readiness before confirmation. | `docs/ai/skills/project-requirement-discovery/SKILL.md` |
 | `skill_compiler_runtime_assimilation` | Compiler runtime assimilation | A compiler, generator, or major Vibe Coding governance specification must be distilled into this already-initialized repository. | `docs/ai/skills/compiler-runtime-assimilation/SKILL.md` |
 
 ## Skill Rules

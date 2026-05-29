@@ -64,6 +64,14 @@ schemas:
     enum_fields:
       status: [confirmed, confirmed_for_bootstrap, pending_confirmation, ai_inferred, research_needed, rejected, deferred, out_of_scope, backlog, decision_needed, superseded_by_next_round]
     evidence_fields: [evidence]
+  - schema_id: ProjectRequirementDiscoveryRecord
+    version: 0.1.0
+    required_fields: [record_id, round_id, branch_id, status, source, storage_rules, idea_interpretation, domain_surface_map, requirement_inventory, question_backlog, requirement_plan, baseline_readiness, ledger_sync, evidence, next_action, updated_at]
+    optional_fields: [created_at]
+    enum_fields:
+      status: [discovery, collecting_answers, ready_for_baseline_confirmation, blocked, archived]
+      baseline_status: [not_ready, ready, blocked]
+    evidence_fields: [evidence]
   - schema_id: ResearchNote
     version: 0.1.0
     required_fields: [id, round_id, question, trigger, search_paths, knowledge_hits, sources, trust_level, checked_at, key_evidence, conclusion, confidence, applies_to, risks, needs_developer_confirmation, knowledge_import_status, options_considered, pros_cons_summary, updated_at]

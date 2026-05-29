@@ -29,6 +29,13 @@ REQUIRED_ARTIFACTS = [
     "docs/ai/analysis/mainline-full-project-lifecycle-gap-analysis.md",
     "docs/ai/architecture/full-project-lifecycle-workflow.md",
     "docs/ai/knowledge/entries/kb_007_full_project_lifecycle.md",
+    "docs/ai/skills/project-requirement-discovery/SKILL.md",
+    "docs/ai/templates/project-requirement-discovery-sop.md",
+    "docs/ai/templates/project-requirement-discovery-record.yaml",
+    "docs/ai/requirements/intake/README.md",
+    "docs/ai/analysis/project-requirement-discovery-gap-analysis.md",
+    "docs/ai/architecture/project-requirement-discovery-workflow.md",
+    "docs/ai/knowledge/entries/kb_009_project_requirement_discovery.md",
     "docs/ai/skills/compiler-runtime-assimilation/SKILL.md",
     "docs/ai/templates/compiler-runtime-assimilation-sop.md",
     "docs/ai/analysis/compiler-runtime-assimilation.md",
@@ -162,6 +169,42 @@ def main() -> None:
             + ", ".join(missing_lifecycle_terms)
         )
 
+    discovery_text = "\n".join(
+        [
+            read_text("docs/ai/runtime-rule-index.md"),
+            read_text("docs/ai/skills/project-requirement-discovery/SKILL.md"),
+            read_text("docs/ai/templates/project-requirement-discovery-sop.md"),
+            read_text("docs/ai/templates/project-requirement-discovery-record.yaml"),
+            read_text(
+                "docs/ai/knowledge/entries/kb_009_project_requirement_discovery.md"
+            ),
+            read_text("docs/ai/architecture/project-requirement-discovery-workflow.md"),
+        ]
+    )
+    required_discovery_terms = [
+        "project_requirement_discovery",
+        "idea_seed_intake_gate",
+        "idea_interpretation_gate",
+        "domain_surface_mapping_gate",
+        "requirement_inventory_gate",
+        "question_backlog_gate",
+        "requirement_collection_round_gate",
+        "requirement_plan_gate",
+        "requirement_persistence_sync_gate",
+        "baseline_readiness_gate",
+        "requirement_discovery_record",
+        "skill_project_requirement_discovery",
+        "kb_009",
+    ]
+    missing_discovery_terms = [
+        term for term in required_discovery_terms if term not in discovery_text
+    ]
+    if missing_discovery_terms:
+        fail(
+            "Project requirement discovery artifacts are missing required terms: "
+            + ", ".join(missing_discovery_terms)
+        )
+
     assimilation_text = "\n".join(
         [
             read_text("docs/ai/runtime-rule-index.md"),
@@ -201,6 +244,10 @@ def main() -> None:
         fail("Skill index must reference skill_full_project_lifecycle.")
     if "kb_007" not in knowledge_index:
         fail("Knowledge index must reference kb_007.")
+    if "skill_project_requirement_discovery" not in skills_index:
+        fail("Skill index must reference skill_project_requirement_discovery.")
+    if "kb_009" not in knowledge_index:
+        fail("Knowledge index must reference kb_009.")
     if "skill_compiler_runtime_assimilation" not in skills_index:
         fail("Skill index must reference skill_compiler_runtime_assimilation.")
     if "kb_008" not in knowledge_index:

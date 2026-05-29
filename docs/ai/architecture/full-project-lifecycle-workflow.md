@@ -20,7 +20,9 @@ upgrade, expand, or refactor.
 | --- | --- | --- |
 | Runtime rule index | `docs/ai/runtime-rule-index.md` | Declares the mandatory full-project lifecycle gates. |
 | Project skill | `docs/ai/skills/full-project-lifecycle/SKILL.md` | Tells agents when and how to run the lifecycle. |
+| Requirement discovery skill | `docs/ai/skills/project-requirement-discovery/SKILL.md` | Expands raw ideas into domain scans, question backlogs, persistent intake records, and baseline readiness checks before requirement confirmation. |
 | SOP template | `docs/ai/templates/full-project-lifecycle-workflow-sop.md` | Defines gate-by-gate required outputs, confirmations, and stop conditions. |
+| Requirement discovery SOP | `docs/ai/templates/project-requirement-discovery-sop.md` | Defines the detailed idea-to-requirement sub-procedure used inside the lifecycle. |
 | Task forest | `docs/ai/tasks/forest.yaml` | Routes work to the right task line before mainline execution. |
 | Mainline tree | `docs/ai/tasks/main-tree.yaml` | Holds future product or business task trees after confirmation. |
 | Infrastructure tree | `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml` | Holds workflow and governance changes like this one. |
