@@ -1,7 +1,7 @@
 schema_id: TaskForest
 forest_id: task_forest_001
 created_at: "2026-05-29T17:54:03+08:00"
-updated_at: "2026-05-29T19:32:05+08:00"
+updated_at: "2026-05-29T21:04:30+08:00"
 purpose: "Separate product or business idea task trees from Vibe Coding repository infrastructure task trees."
 current_branch: branch_vibe_coding_infra
 current_tree: docs/ai/tasks/branches/vibe-coding-infra/tree.yaml
@@ -13,6 +13,7 @@ branches:
     status: waiting_for_confirmed_idea
     owns:
       - "Developer product, application, feature, bugfix, or business goals after requirement confirmation."
+      - "Future full-project lifecycle task trees after task-line routing, requirements, research, task analysis, architecture, and mode confirmation."
     does_not_own:
       - "Vibe Coding runtime infrastructure edits."
       - "AGENTS.md, docs/ai/*, schemas, skills, knowledge, evidence, quality gates, and handoff maintenance."
@@ -25,6 +26,7 @@ branches:
     owns:
       - "Vibe Coding runtime infrastructure establishment and upgrades."
       - "Documentation, schemas, scripts, quality gates, knowledge entries, project skills, state, evidence, and handoff maintenance."
+      - "Workflow governance that controls how future mainline ideas become complete project rounds."
     does_not_own:
       - "Future product or business idea implementation."
       - "Application feature code unrelated to repository governance."
@@ -47,5 +49,13 @@ routing_rules:
       - "user-facing implementation"
     route_to: branch_mainline_idea
     reason: "These tasks belong to the future mainline idea task tree after confirmation."
+  - id: route_003
+    if_task_represents:
+      - "repairing how ideas flow through Vibe Coding"
+      - "adding lifecycle gates"
+      - "changing the next-step protocol"
+      - "changing task-line routing rules"
+    route_to: branch_vibe_coding_infra
+    reason: "These tasks change repository governance and agent driving workflow."
 compatibility_entry: docs/ai/tasks/tree.yaml
 no_prompt_runtime_dependency: true

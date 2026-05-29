@@ -24,6 +24,11 @@ REQUIRED_ARTIFACTS = [
     "docs/ai/evidence/index.md",
     "docs/ai/knowledge/index.md",
     "docs/ai/skills/index.md",
+    "docs/ai/skills/full-project-lifecycle/SKILL.md",
+    "docs/ai/templates/full-project-lifecycle-workflow-sop.md",
+    "docs/ai/analysis/mainline-full-project-lifecycle-gap-analysis.md",
+    "docs/ai/architecture/full-project-lifecycle-workflow.md",
+    "docs/ai/knowledge/entries/kb_007_full_project_lifecycle.md",
     "docs/ai/handoff/current.md",
 ]
 
@@ -112,6 +117,52 @@ def main() -> None:
             "Catalog-only strategy forbids these root artifacts: "
             + ", ".join(forbidden_existing)
         )
+
+    lifecycle_text = "\n".join(
+        [
+            read_text("docs/ai/runtime-rule-index.md"),
+            read_text("docs/ai/skills/full-project-lifecycle/SKILL.md"),
+            read_text("docs/ai/templates/full-project-lifecycle-workflow-sop.md"),
+            read_text("docs/ai/knowledge/entries/kb_007_full_project_lifecycle.md"),
+        ]
+    )
+    required_lifecycle_terms = [
+        "task_line_routing_gate",
+        "idea_intake_gate",
+        "requirement_analysis_gate",
+        "requirement_baseline_confirmation_gate",
+        "current_source_research_gate",
+        "research_confirmation_gate",
+        "task_analysis_gate",
+        "task_analysis_confirmation_gate",
+        "architecture_and_stack_design_gate",
+        "architecture_confirmation_gate",
+        "infra_mode_recommendation_gate",
+        "infra_mode_confirmation_gate",
+        "agent_driving_infra_gate",
+        "task_tree_and_slice_gate",
+        "standard_light_risk_escalated",
+        "enterprise_high_assurance",
+        "implementation_test_docs_state_loop",
+        "next_step_protocol_gate",
+        "round_closure_gate",
+        "next_round_intake[n+1]",
+    ]
+    missing_lifecycle_terms = [
+        term for term in required_lifecycle_terms if term not in lifecycle_text
+    ]
+    if missing_lifecycle_terms:
+        fail(
+            "Full-project lifecycle artifacts are missing required terms: "
+            + ", ".join(missing_lifecycle_terms)
+        )
+
+    skills_index = read_text("docs/ai/skills/index.md")
+    knowledge_index = read_text("docs/ai/knowledge/index.md")
+    if "skill_full_project_lifecycle" not in skills_index:
+        fail("Skill index must reference skill_full_project_lifecycle.")
+    if "kb_007" not in knowledge_index:
+        fail("Knowledge index must reference kb_007.")
 
     forest = read_text("docs/ai/tasks/forest.yaml")
     selected_tree = read_text(status_tree)

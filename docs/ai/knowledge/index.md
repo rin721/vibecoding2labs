@@ -24,3 +24,4 @@ confirmed mode requires it.
 | `kb_004` | high | task forest branching | `docs/ai/knowledge/entries/kb_004_task_forest_branching.md` |
 | `kb_005` | high | capability candidate catalog | `docs/ai/knowledge/entries/kb_005_capability_groups.md` |
 | `kb_006` | high | Vibe infrastructure action workflow SOP | `docs/ai/knowledge/entries/kb_006_vibe_infra_action_workflow.md` |
+| `kb_007` | high | full-project lifecycle workflow | `docs/ai/knowledge/entries/kb_007_full_project_lifecycle.md` |

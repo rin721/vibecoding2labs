@@ -24,6 +24,7 @@ Generated: `2026-05-29T17:18:17+08:00`
 | `INV-14` | Minimum governance keeps status, requirements, bootstrap tree, current slice, evidence, and handoff. |
 | `INV-15` | Escape hatches are governed states, not bypasses. |
 | `INV-16` | Runtime artifacts must be physically readable across common tools. |
+| `INV-17` | Future mainline or project task lines must use the detailed full-project lifecycle gates; phase names alone are not sufficient. |
 
 ## State Machine
 
@@ -33,6 +34,7 @@ volatile_intake
 -> bootstrap_write_authorization
 -> bootstrap_task_tree
 -> minimum_viable_governance
+-> task_line_routing[n]
 -> round_intake[n]
 -> requirement_analysis[n]
 -> requirement_baseline_confirmation[n]
@@ -63,6 +65,43 @@ volatile_intake
 | `soft_confirmation` | Low or medium risk tradeoffs, research conclusions, task analysis candidates, doc depth | Recommend a default but keep a developer pullback point. |
 | `auto_recordable` | Low-risk details inside the current approved slice, state sync, docs sync, evidence updates | Proceed and record evidence. |
 | `pause_required` | P0 conflict, insufficient evidence, state conflict, third repeated failure, unsafe write location | Stop automatic execution and record `next_human_decision`. |
+
+## Full-Project Lifecycle Gates
+
+`docs/ai/skills/full-project-lifecycle/SKILL.md` and
+`docs/ai/templates/full-project-lifecycle-workflow-sop.md` are the canonical
+runtime procedure for future mainline or other confirmed project task lines.
+
+The lifecycle must not be collapsed into a short requirement summary. The
+required gates are:
+
+1. `task_line_routing_gate`
+2. `idea_intake_gate`
+3. `requirement_analysis_gate`
+4. `requirement_baseline_confirmation_gate`
+5. `current_source_research_gate`
+6. `research_confirmation_gate`
+7. `task_analysis_gate`
+8. `task_analysis_confirmation_gate`
+9. `architecture_and_stack_design_gate`
+10. `architecture_confirmation_gate`
+11. `infra_mode_recommendation_gate`
+12. `infra_mode_confirmation_gate`
+13. `agent_driving_infra_gate`
+14. `task_tree_and_slice_gate`
+15. `implementation_test_docs_state_loop`
+16. `next_step_protocol_gate`
+17. `round_closure_gate`
+18. `next_round_intake[n+1]`
+
+Technology stack, API, library, model, hosting, pricing, regulation, and other
+unstable or current-source-sensitive choices require internet-backed research
+with official or primary sources where possible before the stack is confirmed.
+
+The agent may recommend either `standard_light_risk_escalated` or
+`enterprise_high_assurance`, but the developer must confirm the mode before
+implementation. The recommendation must explain why the selected mode fits the
+project risk and what conditions would require escalation.
 
 ## Task Forest Routing
 
@@ -125,3 +164,6 @@ authorization and must record validation, evidence, state, and handoff updates.
 - Keep stable facts in `docs/ai/knowledge/`; keep volatile status in `docs/ai/status/` and `docs/ai/tasks/`.
 - Use `docs/ai/evidence/index.md` for command, diff, validation, and human acceptance evidence.
 - Use project skills only within their declared boundaries.
+- For mainline or project work, load the full-project lifecycle skill and do
+  not skip requirement, research, task analysis, architecture, or mode
+  confirmation gates.

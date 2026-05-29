@@ -230,3 +230,48 @@
 - Summary: A trigger-bound project skill and canonical Markdown SOP template now
   enforce phase-one four-dimensional diagnosis, a red-light hard stop, and
   phase-two physical output only after explicit human authorization.
+
+## evidence_019: Full-Project Lifecycle Workflow
+
+- Date: `2026-05-29T21:12:37+08:00`
+- Type: `runtime_lifecycle_workflow_update`
+- Status: `completed`
+- Requirement: `req_infra_006_full_project_lifecycle`
+- Slice: `slice_006_full_project_lifecycle`
+- Analysis:
+  - `docs/ai/analysis/mainline-full-project-lifecycle-gap-analysis.md`
+- Architecture:
+  - `docs/ai/architecture/full-project-lifecycle-workflow.md`
+- Files:
+  - `docs/ai/skills/full-project-lifecycle/SKILL.md`
+  - `docs/ai/templates/full-project-lifecycle-workflow-sop.md`
+  - `docs/ai/knowledge/entries/kb_007_full_project_lifecycle.md`
+  - `docs/ai/skills/index.md`
+  - `docs/ai/knowledge/index.md`
+  - `docs/ai/runtime-rule-index.md`
+  - `docs/ai/schemas/core.schema.yaml`
+  - `docs/ai/tasks/slices/slice_006_full_project_lifecycle.yaml`
+  - `docs/ai/tasks/current-slice.yaml`
+  - `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
+  - `docs/ai/tasks/main-tree.yaml`
+  - `docs/ai/tasks/forest.yaml`
+  - `docs/ai/requirements/ledger.yaml`
+  - `docs/ai/decisions/records.md`
+  - `docs/ai/status/current.yaml`
+  - `docs/ai/manifest.yaml`
+  - `docs/ai/handoff/current.md`
+  - `docs/ai/changelog.md`
+  - `docs/ai/scripts/validate_runtime.py`
+- Validation:
+  - `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
+  - `rg -n "full_project_lifecycle|task_006_full_project_lifecycle|kb_007|skill_full_project_lifecycle|standard_light_risk_escalated|enterprise_high_assurance" docs/ai` -> matched the status, manifest, requirements, runtime rule index, schema, skill index, knowledge index, slice, task tree, analysis, architecture, SOP, knowledge entry, and validator.
+  - Validator coverage now checks all 18 lifecycle gate identifiers, the two
+    mode identifiers, and the round `n+1` loop identifier.
+  - `Test-Path package.json, package-lock.json, pnpm-lock.yaml, yarn.lock, pyproject.toml, requirements.txt, src, app, components, tools` -> all returned `False`.
+- Summary: A full-project lifecycle workflow now requires future mainline or
+  project task lines to pass through task-line routing, requirement analysis and
+  confirmation, current-source research and technology confirmation, task
+  analysis and confirmation, architecture and stack confirmation, infrastructure
+  mode recommendation and confirmation, Agent driving infrastructure, task tree
+  and execution slices, implementation, tests, documentation, state/evidence
+  sync, next-step continuation, closure, and round `n+1`.

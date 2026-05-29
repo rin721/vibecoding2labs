@@ -10,3 +10,10 @@
   and a reserved mainline idea task tree.
 - Added a trigger-bound Vibe infrastructure action workflow SOP skill with a
   mandatory phase-one red-light fuse and phase-two human authorization gate.
+- Added a full-project lifecycle workflow skill and SOP so future mainline or
+  project task lines must route the work, analyze and confirm requirements,
+  perform current-source technology research, confirm research, analyze and
+  confirm tasks, design and confirm architecture, recommend and confirm
+  infrastructure mode, create Agent driving facilities, slice work, implement,
+  test, document, update state/evidence, use `next step`, close, and continue
+  into round `n+1`.

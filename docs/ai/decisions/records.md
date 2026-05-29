@@ -153,3 +153,39 @@
   physical output generated through that workflow.
 - Evidence: `evidence_018`
 - No prompt runtime dependency: true
+
+## decision_008: Full-Project Lifecycle Workflow
+
+- Date: `2026-05-29T21:04:30+08:00`
+- Status: `accepted_for_low_risk_execution`
+- Source: developer request to add a Vibe Coding repository infrastructure
+  task line that explains and repairs why mainline ideas were only summarized
+  into requirements instead of being driven through a complete project.
+- Decision: Add a full-project lifecycle project skill, canonical SOP, gap
+  analysis, architecture note, knowledge entry, slice, validator coverage, and
+  runtime state updates. Future mainline or confirmed project task lines must
+  route the task line, analyze and confirm requirements, perform current-source
+  research and technology validation, confirm research, analyze and confirm
+  tasks, design and confirm architecture and stack, recommend and confirm
+  infrastructure mode, establish Agent Vibe Coding driving facilities, create
+  task trees and slices, implement, test, document, update state/evidence, use
+  the next-step protocol, close the task tree, and re-enter round `n+1`.
+- Rationale: The existing state machine listed the phases but did not provide a
+  detailed physical SOP that prevents skipped or over-summarized gates. A
+  dedicated workflow makes future recovery and execution depend on local
+  artifacts rather than chat memory.
+- Alternatives:
+  - Keep only the existing state machine: rejected because phase labels alone
+    did not force detailed outputs, confirmations, or next-step behavior.
+  - Start a mainline product implementation now: rejected because this task
+    changes Vibe Coding infrastructure and no product idea has passed the
+    lifecycle gates yet.
+  - Treat the existing trigger-bound infrastructure SOP as enough: rejected
+    because it governs two-stage infrastructure actions, not the complete
+    mainline project lifecycle and round `n+1` loop.
+- Confirmation level: `auto_recordable` for docs/ai runtime artifacts;
+  `hard_confirmation` remains required for future requirement baselines,
+  research/technology stack choices, task analysis, architecture, and mode
+  selection before business implementation.
+- Evidence: `evidence_019`
+- No prompt runtime dependency: true

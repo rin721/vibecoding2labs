@@ -6,22 +6,24 @@
 - Current round: `infra_001`
 - Current branch: `branch_vibe_coding_infra`
 - Current tree: `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
-- Current mode: `vibe_infra_action_workflow_completed_pending_acceptance`
+- Current mode: `full_project_lifecycle_workflow_completed_pending_acceptance`
 - Agency level: `controlled_execution`
-- Current slice: `slice_005_vibe_infra_action_workflow` pending developer acceptance
+- Current slice: `slice_006_full_project_lifecycle` pending developer acceptance
 
 ## Completed
 
 - Readonly preflight found an empty repository except `.git`.
 - Core runtime entries were created under `AGENTS.md` and `docs/ai/*`.
 - Minimum knowledge and skills entries were created.
-- Bootstrap verification passed; the legacy validator command has since been superseded by the Python validator.
-- Human-facing docs were created for project overview, usage, maintenance, and Agent workflow.
+- Bootstrap verification passed; the legacy validator command has since been
+  superseded by the Python validator.
+- Human-facing docs were created for project overview, usage, maintenance, and
+  Agent workflow.
 - Runtime validation passed after the documentation slice.
 - Runtime validator was replaced with `docs/ai/scripts/validate_runtime.py`.
-- Task forest branching was introduced so Vibe Coding infrastructure work
-  lives in `branch_vibe_coding_infra`, while future product or business ideas
-  use `branch_mainline_idea`.
+- Task forest branching was introduced so Vibe Coding infrastructure work lives
+  in `branch_vibe_coding_infra`, while future product or business ideas use
+  `branch_mainline_idea`.
 - The developer confirmed strategy A for capability infrastructure: create only
   capability directories, skills, knowledge, and dependency candidate lists; do
   not create an engineering skeleton or install dependencies.
@@ -32,18 +34,27 @@
   records `uv`, `Zod 4`, current shadcn/ui install paths, OpenAI Agents SDK
   sessions/tracing, and LangGraph persistence as candidate-only details.
 - Added a trigger-bound Vibe infrastructure action workflow skill and canonical
-  SOP template for messages that start with
-  `新增 Vibe Coding 仓库基建设施建立任务线：`; the workflow binds the suffix to
-  `{{ 优化动作 }}`, enforces phase-one four-dimensional diagnosis and red-light
-  stop, and allows phase-two physical output only after explicit human
-  authorization.
+  SOP template; the workflow binds the trigger suffix to
+  `{{ optimization_action }}`, enforces phase-one four-dimensional diagnosis and
+  red-light stop, and allows phase-two physical output only after explicit
+  human authorization.
+- Added a full-project lifecycle gap analysis, architecture note, project skill,
+  canonical SOP, and knowledge entry so future mainline or project task lines
+  must route the task line, analyze and confirm requirements, perform
+  current-source research for technology choices, confirm research, analyze and
+  confirm tasks, design and confirm architecture/stack, recommend and confirm
+  infrastructure mode, establish Agent Vibe Coding driving infrastructure,
+  create task trees and slices, implement, test, document, update state and
+  evidence, use the `next step` protocol, close the task tree, and continue into
+  round `n+1`.
 
 ## Unfinished
 
 - Developer acceptance of the documentation, script replacement, task forest
-  branching, refreshed catalog-only capability, and trigger-bound workflow SOP
-  slices is pending.
-- Mode selection for future business implementation is still pending.
+  branching, refreshed catalog-only capability, trigger-bound workflow SOP, and
+  full-project lifecycle workflow slices is pending.
+- No future mainline product implementation has started. A future mainline idea
+  must use the full-project lifecycle workflow before implementation.
 
 ## Key Files
 
@@ -77,19 +88,24 @@
 - `docs/ai/templates/vibe-infra-action-workflow-sop.md`
 - `docs/ai/knowledge/entries/kb_005_capability_groups.md`
 - `docs/ai/knowledge/entries/kb_006_vibe_infra_action_workflow.md`
+- `docs/ai/analysis/mainline-full-project-lifecycle-gap-analysis.md`
+- `docs/ai/architecture/full-project-lifecycle-workflow.md`
+- `docs/ai/skills/full-project-lifecycle/SKILL.md`
+- `docs/ai/templates/full-project-lifecycle-workflow-sop.md`
+- `docs/ai/knowledge/entries/kb_007_full_project_lifecycle.md`
 
 ## Next Condition
 
-Ask the developer to accept the trigger-bound Vibe infrastructure action
-workflow SOP or request edits. Do not start a mainline idea task tree until the
-active Vibe Coding infrastructure branch slices are accepted, edited, migrated,
-or explicitly closed.
+Ask the developer to accept the full-project lifecycle workflow or request
+edits. Do not start a mainline idea task tree until the active Vibe Coding
+infrastructure branch slices are accepted, edited, migrated, or explicitly
+closed.
 
 ## Forbidden Actions
 
 - Do not read the original compiler prompt as a normal recovery path.
-- Do not start a mainline idea task tree until `branch_vibe_coding_infra` active
-  slices are accepted, migrated, discarded, or partially closed with
+- Do not start a mainline idea task tree until `branch_vibe_coding_infra`
+  active slices are accepted, migrated, discarded, or partially closed with
   confirmation.
 - Do not create business implementation before requirement, research, task
   analysis, architecture, and mode confirmation.
@@ -99,6 +115,10 @@ or explicitly closed.
   confirmed execution slice.
 - Do not hard-code a calendar year into future capability research prompts; use
   runtime date or source refresh timestamp.
-- Do not treat the new `新增 Vibe Coding 仓库基建设施建立任务线：` trigger as
+- Do not treat the Vibe infrastructure action workflow trigger as
   authorization for phase-two physical output; it only starts phase-one
   diagnosis until explicit human confirmation is received.
+- Do not let a future mainline idea skip the full-project lifecycle skill:
+  task-line routing, requirement confirmation, current-source research,
+  task-analysis confirmation, architecture confirmation, and mode confirmation
+  must happen before implementation.

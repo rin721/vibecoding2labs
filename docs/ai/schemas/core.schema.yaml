@@ -97,8 +97,8 @@ schemas:
     required_fields: [candidate_mode, why_this_mode, why_not_lighter, why_not_heavier, risk_drivers, cost_impact, artifact_depth, knowledgebase_depth, skills_depth, developer_confirmation, confirmed_mode, confirmed_at]
     optional_fields: []
     enum_fields:
-      candidate_mode: [standard_light, risk_scaled_strict, enterprise_high_assurance, custom]
-      confirmed_mode: [standard_light, risk_scaled_strict, enterprise_high_assurance, custom, null]
+      candidate_mode: [standard_light, risk_scaled_strict, standard_light_risk_escalated, enterprise_high_assurance, custom]
+      confirmed_mode: [standard_light, risk_scaled_strict, standard_light_risk_escalated, enterprise_high_assurance, custom, null]
     evidence_fields: [developer_confirmation]
   - schema_id: ExecutionSlice
     version: 0.1.0
