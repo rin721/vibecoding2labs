@@ -2,7 +2,7 @@ schema_id: StatusReport
 project_id: vibecoding2labs
 compiler_version: vibe-coding-infra-compiler-v1.8.0
 runtime_version: vibe-runtime-0.1.0
-updated_at: "2026-05-29T21:48:21+08:00"
+updated_at: "2026-05-29T22:00:59+08:00"
 lifecycle_phase: acceptance
 state: pending_acceptance
 state_machine_version: vibe-state-machine-0.1.0
@@ -12,15 +12,15 @@ current_branch: branch_vibe_coding_infra
 current_tree: docs/ai/tasks/branches/vibe-coding-infra/tree.yaml
 task_forest: docs/ai/tasks/forest.yaml
 mainline_idea_tree: docs/ai/tasks/main-tree.yaml
-current_mode: project_requirement_discovery_completed_pending_acceptance
+current_mode: project_lifecycle_downstream_detail_completed_pending_acceptance
 candidate_mode: null
 agency_level: controlled_execution
 current_bootstrap_node: null
-current_slice: slice_008_project_requirement_discovery
+current_slice: slice_009_project_lifecycle_downstream_detail
 requirement_baseline_status: confirmed
 research_status: not_required_for_runtime_workflow_update
 task_analysis_status: confirmed
-architecture_status: confirmed_project_requirement_discovery
+architecture_status: confirmed_project_lifecycle_downstream_detail
 infra_mode_status: standard_light_for_repository_infra
 task_tree_status: pending_acceptance
 acceptance_status: pending_developer_acceptance
@@ -29,7 +29,7 @@ next_allowed_phase: acceptance[infra_001]
 blocked: false
 retry_count: 0
 last_failure_reason: null
-next_human_decision: "Developer can accept the project requirement discovery workflow or request edits."
+next_human_decision: "Developer can accept the downstream lifecycle detailing workflow or request edits."
 memory_anchor_files:
   - AGENTS.md
   - docs/ai/runtime-rule-index.md
@@ -59,6 +59,13 @@ memory_anchor_files:
   - docs/ai/templates/project-requirement-discovery-record.yaml
   - docs/ai/requirements/intake/README.md
   - docs/ai/knowledge/entries/kb_009_project_requirement_discovery.md
+  - docs/ai/analysis/project-lifecycle-downstream-gap-analysis.md
+  - docs/ai/architecture/project-lifecycle-downstream-workflow.md
+  - docs/ai/skills/project-lifecycle-downstream-detailing/SKILL.md
+  - docs/ai/templates/project-lifecycle-downstream-gates-sop.md
+  - docs/ai/templates/project-lifecycle-downstream-record.yaml
+  - docs/ai/lifecycle/README.md
+  - docs/ai/knowledge/entries/kb_010_project_lifecycle_downstream.md
   - docs/ai/skills/vibe-infra-action-workflow/SKILL.md
   - docs/ai/templates/vibe-infra-action-workflow-sop.md
 no_prompt_runtime_dependency: true

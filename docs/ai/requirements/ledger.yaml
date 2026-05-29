@@ -1,6 +1,6 @@
 schema_id: RequirementLedger
 ledger_id: req_ledger_001
-updated_at: "2026-05-29T21:48:21+08:00"
+updated_at: "2026-05-29T22:00:59+08:00"
 requirements:
   - id: req_bootstrap_001
     round_id: bootstrap
@@ -215,3 +215,25 @@ requirements:
       - evidence_021
     next_action: "Validate the project requirement discovery workflow and request developer acceptance or edits."
     updated_at: "2026-05-29T21:48:21+08:00"
+  - id: req_infra_009_project_lifecycle_downstream_detail
+    round_id: infra_001
+    branch_id: branch_vibe_coding_infra
+    source: developer_message
+    raw_text: "Developer asked to analyze the current Vibe Coding flow and make the later process follow the same detailed engineering approach as the requirement discovery repair, without drifting focus or reducing it to a few summary sentences."
+    normalized_text: "Add a downstream lifecycle detailing workflow so future project rounds after requirement-baseline confirmation must use detailed gates, durable records, evidence packets, confirmation packets, and next conditions for research, task analysis, architecture, mode, Agent driving infrastructure, slice contracts, implementation, verification, closure, and n+1 reentry."
+    type: infrastructure_downstream_lifecycle_workflow
+    priority_or_version: P0-infra_001
+    status: confirmed
+    decision: "Proceed with docs/ai runtime artifacts only: gap analysis, architecture note, project skill, canonical SOP, durable downstream record template, lifecycle record guide, knowledge entry, task slice, validator, status, evidence, and handoff updates."
+    related_research: []
+    related_task_analysis:
+      - task_009_project_lifecycle_downstream_detail
+    related_architecture:
+      - docs/ai/architecture/project-lifecycle-downstream-workflow.md
+    related_slice:
+      - slice_009_project_lifecycle_downstream_detail
+    conflicts: []
+    evidence:
+      - evidence_022
+    next_action: "Validate the downstream lifecycle detailing workflow and request developer acceptance or edits."
+    updated_at: "2026-05-29T22:00:59+08:00"

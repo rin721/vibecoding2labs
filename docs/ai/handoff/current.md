@@ -6,9 +6,9 @@
 - Current round: `infra_001`
 - Current branch: `branch_vibe_coding_infra`
 - Current tree: `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
-- Current mode: `project_requirement_discovery_completed_pending_acceptance`
+- Current mode: `project_lifecycle_downstream_detail_completed_pending_acceptance`
 - Agency level: `controlled_execution`
-- Current slice: `slice_008_project_requirement_discovery` pending developer acceptance
+- Current slice: `slice_009_project_lifecycle_downstream_detail` pending developer acceptance
 
 ## Completed
 
@@ -57,13 +57,19 @@
   entry so future raw project ideas are interpreted, mapped into requirement
   domains, guided through question backlogs, persisted, planned, and checked for
   baseline readiness before requirement-baseline confirmation.
+- Added a project lifecycle downstream gap analysis, architecture note, project
+  skill, canonical SOP, durable downstream record template, lifecycle record
+  guide, and knowledge entry so post-baseline research, task analysis,
+  architecture, mode selection, Agent driving infrastructure, slice contracts,
+  implementation ledgers, verification evidence, closure, and n+1 reentry are
+  detailed, evidence-backed, and recoverable.
 
 ## Unfinished
 
 - Developer acceptance of the documentation, script replacement, task forest
   branching, refreshed catalog-only capability, trigger-bound workflow SOP,
   full-project lifecycle workflow, compiler-runtime assimilation, and project
-  requirement discovery slices is pending.
+  requirement discovery, and downstream lifecycle detailing slices is pending.
 - No future mainline product implementation has started. A future mainline idea
   must use the full-project lifecycle workflow before implementation.
 
@@ -117,10 +123,17 @@
 - `docs/ai/templates/project-requirement-discovery-record.yaml`
 - `docs/ai/requirements/intake/README.md`
 - `docs/ai/knowledge/entries/kb_009_project_requirement_discovery.md`
+- `docs/ai/analysis/project-lifecycle-downstream-gap-analysis.md`
+- `docs/ai/architecture/project-lifecycle-downstream-workflow.md`
+- `docs/ai/skills/project-lifecycle-downstream-detailing/SKILL.md`
+- `docs/ai/templates/project-lifecycle-downstream-gates-sop.md`
+- `docs/ai/templates/project-lifecycle-downstream-record.yaml`
+- `docs/ai/lifecycle/README.md`
+- `docs/ai/knowledge/entries/kb_010_project_lifecycle_downstream.md`
 
 ## Next Condition
 
-Ask the developer to accept the project requirement discovery workflow or
+Ask the developer to accept the downstream lifecycle detailing workflow or
 request edits. Do not start a mainline idea task tree until the active Vibe
 Coding infrastructure branch slices are accepted, edited, migrated, or
 explicitly closed.
@@ -153,3 +166,7 @@ explicitly closed.
   skill: idea interpretation, domain mapping, requirement inventory, question
   backlog, persistent intake record, requirement planning, and baseline
   readiness must happen before requirement-baseline confirmation.
+- Do not let a future post-baseline project round skip the downstream
+  lifecycle detailing skill: research, task analysis, architecture, mode,
+  Agent infrastructure, slice contracts, implementation ledger, verification
+  packet, closure packet, and n+1 reentry must use durable records and evidence.

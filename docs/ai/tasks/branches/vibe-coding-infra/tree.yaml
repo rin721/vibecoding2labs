@@ -4,7 +4,7 @@ branch_id: branch_vibe_coding_infra
 branch_type: vibe_coding_infra
 round_id: infra_001
 created_at: "2026-05-29T17:54:03+08:00"
-updated_at: "2026-05-29T21:48:21+08:00"
+updated_at: "2026-05-29T22:00:59+08:00"
 status: pending_acceptance
 purpose: "Task tree branch for building and iterating this repository's Vibe Coding infrastructure."
 tasks:
@@ -113,5 +113,20 @@ tasks:
       - "The full-project lifecycle points to requirement discovery before baseline confirmation."
       - "Knowledge, task slice, status, evidence, validator, and handoff references are synchronized."
       - "Runtime validation passes."
-next_action: "Wait for developer acceptance or requested edits for the project requirement discovery workflow."
+  - id: task_009_project_lifecycle_downstream_detail
+    title: "Add detailed downstream project lifecycle gates"
+    status: pending_acceptance
+    requirements:
+      - req_infra_009_project_lifecycle_downstream_detail
+    slices:
+      - slice_009_project_lifecycle_downstream_detail
+    acceptance_criteria:
+      - "A gap analysis explains why downstream stages after requirement discovery were still too summarized."
+      - "A project skill and canonical SOP exist for detailed downstream lifecycle gates."
+      - "A durable downstream lifecycle record template exists for future mainline rounds."
+      - "A lifecycle record directory guide exists for future per-round downstream records."
+      - "The full-project lifecycle points to downstream detailing after requirement-baseline confirmation."
+      - "Knowledge, task slice, status, evidence, validator, and handoff references are synchronized."
+      - "Runtime validation passes."
+next_action: "Wait for developer acceptance or requested edits for the downstream lifecycle detailing workflow."
 no_prompt_runtime_dependency: true

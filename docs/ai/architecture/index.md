@@ -12,3 +12,4 @@ confirmation chain before implementation.
 | `architecture_002_full_project_lifecycle_workflow` | full-project lifecycle workflow | `docs/ai/architecture/full-project-lifecycle-workflow.md` |
 | `architecture_003_compiler_runtime_assimilation` | compiler runtime assimilation | `docs/ai/architecture/compiler-runtime-assimilation.md` |
 | `architecture_004_project_requirement_discovery_workflow` | project requirement discovery | `docs/ai/architecture/project-requirement-discovery-workflow.md` |
+| `architecture_005_project_lifecycle_downstream_workflow` | project lifecycle downstream detailing | `docs/ai/architecture/project-lifecycle-downstream-workflow.md` |

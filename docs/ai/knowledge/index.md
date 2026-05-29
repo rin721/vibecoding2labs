@@ -27,3 +27,4 @@ confirmed mode requires it.
 | `kb_007` | high | full-project lifecycle workflow | `docs/ai/knowledge/entries/kb_007_full_project_lifecycle.md` |
 | `kb_008` | high | compiler runtime assimilation | `docs/ai/knowledge/entries/kb_008_compiler_runtime_assimilation.md` |
 | `kb_009` | high | project requirement discovery | `docs/ai/knowledge/entries/kb_009_project_requirement_discovery.md` |
+| `kb_010` | high | project lifecycle downstream detailing | `docs/ai/knowledge/entries/kb_010_project_lifecycle_downstream.md` |

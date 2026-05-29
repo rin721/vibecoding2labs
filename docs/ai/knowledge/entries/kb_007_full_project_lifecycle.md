@@ -9,7 +9,7 @@
   `docs/ai/templates/full-project-lifecycle-workflow-sop.md`,
   `docs/ai/runtime-rule-index.md`
 - Version: `0.1.0`
-- Updated at: `2026-05-29T21:48:21+08:00`
+- Updated at: `2026-05-29T22:00:59+08:00`
 - Deprecated: `false`
 
 ## Fact
@@ -35,6 +35,15 @@ That sub-procedure requires idea interpretation, domain surface mapping,
 requirement inventory, question backlog creation, collection rounds,
 requirement planning, durable intake records, and baseline readiness checks.
 
+After requirement-baseline confirmation, the lifecycle delegates post-baseline
+execution to `skill_project_lifecycle_downstream_detailing`. That sub-procedure
+requires research planning, current-source research execution, research
+confirmation packet, task graph analysis, task-analysis confirmation packet,
+architecture dossier, architecture confirmation packet, mode risk matrix, mode
+confirmation packet, Agent driving infrastructure plan, slice contracts,
+implementation iteration ledger, verification evidence packet, acceptance
+closure packet, and next-round reentry state.
+
 ## Evidence
 
 - `docs/ai/analysis/mainline-full-project-lifecycle-gap-analysis.md`
@@ -42,6 +51,7 @@ requirement planning, durable intake records, and baseline readiness checks.
 - `docs/ai/skills/full-project-lifecycle/SKILL.md`
 - `docs/ai/templates/full-project-lifecycle-workflow-sop.md`
 - `docs/ai/templates/project-requirement-discovery-sop.md`
+- `docs/ai/templates/project-lifecycle-downstream-gates-sop.md`
 - `docs/ai/evidence/index.md`
 
 ## Checks
@@ -51,4 +61,4 @@ requirement planning, durable intake records, and baseline readiness checks.
 - No prompt runtime dependency check: `passed`
 - Related requirements: `req_infra_006_full_project_lifecycle`
 - Related tasks: `task_006_full_project_lifecycle`
-- Related skills: `skill_full_project_lifecycle`, `skill_project_requirement_discovery`
+- Related skills: `skill_full_project_lifecycle`, `skill_project_requirement_discovery`, `skill_project_lifecycle_downstream_detailing`

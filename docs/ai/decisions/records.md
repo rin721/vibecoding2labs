@@ -260,3 +260,38 @@
   architecture, and implementation mode.
 - Evidence: `evidence_021`
 - No prompt runtime dependency: true
+
+## decision_011: Project Lifecycle Downstream Detailing Workflow
+
+- Date: `2026-05-29T22:00:59+08:00`
+- Status: `accepted_for_low_risk_execution`
+- Source: developer request to analyze the current Vibe Coding flow and make
+  later stages follow the same detailed engineering process as the requirement
+  discovery repair.
+- Decision: Add a downstream lifecycle detailing skill, canonical SOP, durable
+  downstream record template, lifecycle record guide, gap analysis,
+  architecture note, knowledge entry, slice, validator coverage, and runtime
+  state updates. Future project rounds after requirement-baseline confirmation
+  must run detailed gates for research, task analysis, architecture, mode,
+  Agent driving infrastructure, slice contracts, implementation ledger,
+  verification evidence, closure, and next-round reentry.
+- Rationale: The lifecycle and requirement discovery repairs prevent shallow
+  intake, but post-baseline stages still needed a physical operating procedure
+  and record shape. The new workflow prevents research, task planning,
+  architecture, mode selection, execution, and closure from becoming brief
+  narrative summaries.
+- Alternatives:
+  - Keep only the full-project lifecycle SOP: rejected because it named the
+    stages but did not define downstream records, packets, and iteration
+    ledgers.
+  - Start a business project now: rejected because this request changes Vibe
+    Coding infrastructure and no mainline requirement baseline has been
+    confirmed.
+  - Store downstream detail only in chat: rejected because future agents need
+    recoverable physical artifacts and evidence links.
+- Confirmation level: `auto_recordable` for docs/ai runtime artifacts inside
+  the developer's infrastructure workflow request; `hard_confirmation` remains
+  required for future mainline research conclusions, architecture, mode, and
+  implementation choices.
+- Evidence: `evidence_022`
+- No prompt runtime dependency: true

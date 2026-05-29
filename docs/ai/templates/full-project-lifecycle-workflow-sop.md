@@ -77,6 +77,19 @@ Research is mandatory when current technology stack, APIs, library versions,
 pricing, regulations, models, hosting behavior, or other unstable facts affect
 the project.
 
+Before running downstream research and subsequent post-baseline stages, load:
+
+- `docs/ai/skills/project-lifecycle-downstream-detailing/SKILL.md`
+- `docs/ai/templates/project-lifecycle-downstream-gates-sop.md`
+- `docs/ai/templates/project-lifecycle-downstream-record.yaml`
+
+The downstream sub-procedure must produce research plan, source matrix,
+research confirmation packet, task graph, task-analysis confirmation packet,
+architecture dossier, architecture confirmation packet, mode risk matrix, mode
+confirmation packet, Agent driving infrastructure plan, slice contracts,
+implementation iteration ledger, verification evidence packet, acceptance
+closure packet, and next-round reentry state.
+
 Required output:
 
 - Research questions.

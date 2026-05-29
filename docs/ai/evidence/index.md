@@ -363,3 +363,49 @@
   turning raw ideas into persistent requirement discovery records, domain maps,
   question backlogs, requirement plans, and baseline readiness checks before
   requirement confirmation.
+
+## evidence_022: Project Lifecycle Downstream Detailing Workflow
+
+- Date: `2026-05-29T22:00:59+08:00`
+- Type: `runtime_downstream_lifecycle_workflow_update`
+- Status: `completed`
+- Requirement: `req_infra_009_project_lifecycle_downstream_detail`
+- Slice: `slice_009_project_lifecycle_downstream_detail`
+- Analysis:
+  - `docs/ai/analysis/project-lifecycle-downstream-gap-analysis.md`
+- Architecture:
+  - `docs/ai/architecture/project-lifecycle-downstream-workflow.md`
+- Files:
+  - `docs/ai/skills/project-lifecycle-downstream-detailing/SKILL.md`
+  - `docs/ai/templates/project-lifecycle-downstream-gates-sop.md`
+  - `docs/ai/templates/project-lifecycle-downstream-record.yaml`
+  - `docs/ai/lifecycle/README.md`
+  - `docs/ai/knowledge/entries/kb_010_project_lifecycle_downstream.md`
+  - `docs/ai/skills/full-project-lifecycle/SKILL.md`
+  - `docs/ai/templates/full-project-lifecycle-workflow-sop.md`
+  - `docs/ai/knowledge/entries/kb_007_full_project_lifecycle.md`
+  - `docs/ai/skills/index.md`
+  - `docs/ai/knowledge/index.md`
+  - `docs/ai/architecture/index.md`
+  - `docs/ai/runtime-rule-index.md`
+  - `docs/ai/schemas/core.schema.yaml`
+  - `docs/ai/tasks/slices/slice_009_project_lifecycle_downstream_detail.yaml`
+  - `docs/ai/tasks/current-slice.yaml`
+  - `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
+  - `docs/ai/tasks/main-tree.yaml`
+  - `docs/ai/tasks/forest.yaml`
+  - `docs/ai/requirements/ledger.yaml`
+  - `docs/ai/decisions/records.md`
+  - `docs/ai/status/current.yaml`
+  - `docs/ai/manifest.yaml`
+  - `docs/ai/handoff/current.md`
+  - `docs/ai/changelog.md`
+  - `docs/ai/scripts/validate_runtime.py`
+- Validation:
+  - `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
+  - `rg -n "project_lifecycle_downstream|research_plan_gate|task_graph_analysis_gate|architecture_dossier_gate|implementation_iteration_ledger_gate|acceptance_closure_packet_gate|skill_project_lifecycle_downstream_detailing|kb_010" docs/ai` -> matched the runtime rule index, manifest, requirements, status, task tree, current slice, slice file, analysis, architecture, skill index, project skill, SOP, record template, knowledge index, knowledge entry, evidence, handoff, and validator.
+  - `Test-Path prompt.md, package.json, package-lock.json, pnpm-lock.yaml, yarn.lock, pyproject.toml, requirements.txt, src, app, components, tools` -> all returned `False`.
+- Summary: The repository now has a downstream lifecycle detailing task line for
+  turning post-baseline stages into durable research, task analysis,
+  architecture, mode, Agent infrastructure, slice, implementation, verification,
+  closure, and next-round records instead of narrative summaries.

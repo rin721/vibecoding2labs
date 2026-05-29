@@ -36,6 +36,13 @@ REQUIRED_ARTIFACTS = [
     "docs/ai/analysis/project-requirement-discovery-gap-analysis.md",
     "docs/ai/architecture/project-requirement-discovery-workflow.md",
     "docs/ai/knowledge/entries/kb_009_project_requirement_discovery.md",
+    "docs/ai/skills/project-lifecycle-downstream-detailing/SKILL.md",
+    "docs/ai/templates/project-lifecycle-downstream-gates-sop.md",
+    "docs/ai/templates/project-lifecycle-downstream-record.yaml",
+    "docs/ai/lifecycle/README.md",
+    "docs/ai/analysis/project-lifecycle-downstream-gap-analysis.md",
+    "docs/ai/architecture/project-lifecycle-downstream-workflow.md",
+    "docs/ai/knowledge/entries/kb_010_project_lifecycle_downstream.md",
     "docs/ai/skills/compiler-runtime-assimilation/SKILL.md",
     "docs/ai/templates/compiler-runtime-assimilation-sop.md",
     "docs/ai/analysis/compiler-runtime-assimilation.md",
@@ -205,6 +212,49 @@ def main() -> None:
             + ", ".join(missing_discovery_terms)
         )
 
+    downstream_text = "\n".join(
+        [
+            read_text("docs/ai/runtime-rule-index.md"),
+            read_text("docs/ai/skills/project-lifecycle-downstream-detailing/SKILL.md"),
+            read_text("docs/ai/templates/project-lifecycle-downstream-gates-sop.md"),
+            read_text("docs/ai/templates/project-lifecycle-downstream-record.yaml"),
+            read_text("docs/ai/lifecycle/README.md"),
+            read_text(
+                "docs/ai/knowledge/entries/kb_010_project_lifecycle_downstream.md"
+            ),
+            read_text("docs/ai/architecture/project-lifecycle-downstream-workflow.md"),
+        ]
+    )
+    required_downstream_terms = [
+        "project_lifecycle_downstream",
+        "research_plan_gate",
+        "current_source_research_execution_gate",
+        "research_synthesis_confirmation_gate",
+        "task_graph_analysis_gate",
+        "task_analysis_confirmation_packet_gate",
+        "architecture_dossier_gate",
+        "architecture_confirmation_packet_gate",
+        "infra_mode_risk_matrix_gate",
+        "infra_mode_confirmation_packet_gate",
+        "agent_driving_infra_plan_gate",
+        "task_tree_slice_contract_gate",
+        "implementation_iteration_ledger_gate",
+        "verification_evidence_packet_gate",
+        "acceptance_closure_packet_gate",
+        "next_round_reentry_gate",
+        "project_lifecycle_downstream_record",
+        "skill_project_lifecycle_downstream_detailing",
+        "kb_010",
+    ]
+    missing_downstream_terms = [
+        term for term in required_downstream_terms if term not in downstream_text
+    ]
+    if missing_downstream_terms:
+        fail(
+            "Project lifecycle downstream artifacts are missing required terms: "
+            + ", ".join(missing_downstream_terms)
+        )
+
     assimilation_text = "\n".join(
         [
             read_text("docs/ai/runtime-rule-index.md"),
@@ -248,6 +298,13 @@ def main() -> None:
         fail("Skill index must reference skill_project_requirement_discovery.")
     if "kb_009" not in knowledge_index:
         fail("Knowledge index must reference kb_009.")
+    if "skill_project_lifecycle_downstream_detailing" not in skills_index:
+        fail(
+            "Skill index must reference "
+            "skill_project_lifecycle_downstream_detailing."
+        )
+    if "kb_010" not in knowledge_index:
+        fail("Knowledge index must reference kb_010.")
     if "skill_compiler_runtime_assimilation" not in skills_index:
         fail("Skill index must reference skill_compiler_runtime_assimilation.")
     if "kb_008" not in knowledge_index:

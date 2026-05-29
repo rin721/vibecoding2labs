@@ -22,6 +22,11 @@
   summaries; future ideas must be interpreted, mapped into requirement domains,
   inventoried, guided through question backlogs, persisted, planned, and checked
   for baseline readiness before confirmation.
+- Added a project lifecycle downstream detailing workflow skill, SOP, and
+  durable record template so post-baseline research, task analysis,
+  architecture, mode selection, Agent infrastructure, slice contracts,
+  implementation ledgers, verification packets, closure packets, and n+1
+  reentry cannot collapse into narrative summaries.
 - Added a compiler-runtime assimilation workflow skill and SOP so future Vibe
   Coding compiler or generator specifications can be deeply distilled into the
   existing repository infrastructure without creating `prompt.md` or restoring
