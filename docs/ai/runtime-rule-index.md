@@ -78,6 +78,18 @@ validated, documented, or driven by agents, route it to
 `branch_vibe_coding_infra`. Do not create or pollute the mainline idea task tree
 for those infrastructure iterations.
 
+## Capability Catalog Boundary
+
+`docs/ai/capabilities/index.md` and
+`docs/ai/capabilities/dependency-candidates.yaml` are developer choice surfaces,
+not installation authorization. Candidate UI libraries, architecture helpers,
+Agent frameworks, Python tools, and verification tools must remain catalog
+entries until a future confirmed execution slice selects them.
+
+Catalog-only rule for strategy A: do not create `package.json`,
+`pyproject.toml`, lockfiles, `src/`, `app/`, `components/`, or `tools/`; do not
+install dependencies; do not mark any candidate as adopted technology.
+
 ## Forbidden Matrix
 
 | Category | Forbidden behavior |

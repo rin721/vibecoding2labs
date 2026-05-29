@@ -4,7 +4,7 @@ branch_id: branch_vibe_coding_infra
 branch_type: vibe_coding_infra
 round_id: infra_001
 created_at: "2026-05-29T17:54:03+08:00"
-updated_at: "2026-05-29T17:58:59+08:00"
+updated_at: "2026-05-29T18:54:51+08:00"
 status: pending_acceptance
 purpose: "Task tree branch for building and iterating this repository's Vibe Coding infrastructure."
 tasks:
@@ -45,5 +45,18 @@ tasks:
       - "Vibe Coding infrastructure branch owns current infrastructure tasks."
       - "Current state points to the infrastructure branch."
       - "Runtime validation passes."
-next_action: "Wait for developer acceptance or requested edits for the Vibe Coding infrastructure branch changes."
+  - id: task_004_capability_groups
+    title: "Create capability catalog, skills, knowledge, and dependency candidates without scaffolding"
+    status: pending_acceptance
+    requirements:
+      - req_infra_004_capability_groups
+    slices:
+      - slice_004_capability_groups
+    acceptance_criteria:
+      - "Capability directory and grouped candidate lists exist."
+      - "Knowledge and skill entries describe how to use the catalog later."
+      - "Dependency candidates are only candidates and are not installed."
+      - "No application skeleton, package manifest, Python project skeleton, or lockfile is created."
+      - "Runtime validation passes."
+next_action: "Wait for developer acceptance or requested edits for the catalog-only A strategy."
 no_prompt_runtime_dependency: true

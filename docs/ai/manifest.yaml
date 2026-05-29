@@ -16,6 +16,8 @@ runtime_artifacts:
   evidence_index: docs/ai/evidence/index.md
   knowledgebase_entry: docs/ai/knowledge/index.md
   skills_entry: docs/ai/skills/index.md
+  capability_catalog: docs/ai/capabilities/index.md
+  capability_candidates: docs/ai/capabilities/dependency-candidates.yaml
   handoff_entry: docs/ai/handoff/current.md
 required_artifacts:
   - AGENTS.md
@@ -24,14 +26,17 @@ required_artifacts:
   - docs/ai/tasks/bootstrap-tree.yaml
   - docs/ai/tasks/current-slice.yaml
   - docs/ai/evidence/index.md
+  - docs/ai/capabilities/index.md
+  - docs/ai/capabilities/dependency-candidates.yaml
   - docs/ai/handoff/current.md
 knowledgebase_entry: docs/ai/knowledge/index.md
 skills_entry: docs/ai/skills/index.md
 validation:
   current_status: passed
   validation_command_or_manual_check: python docs/ai/scripts/validate_runtime.py
-  validated_at: "2026-05-29T17:43:05+08:00"
+  validated_at: "2026-05-29T18:54:51+08:00"
 migration_notes:
   - Initial runtime infrastructure compiled into physical artifacts.
   - Runtime artifacts must be repaired directly instead of falling back to the original compiler prompt.
+  - Capability candidates are catalog-only until a future confirmed slice selects and installs them.
 no_prompt_runtime_dependency: true

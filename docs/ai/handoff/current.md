@@ -8,7 +8,7 @@
 - Current tree: `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
 - Current mode: `pending_confirmation`
 - Agency level: `controlled_execution`
-- Current slice: `slice_003_task_forest_branching` pending developer acceptance
+- Current slice: `slice_004_capability_groups` pending developer acceptance
 
 ## Completed
 
@@ -22,11 +22,14 @@
 - Task forest branching was introduced so Vibe Coding infrastructure work
   lives in `branch_vibe_coding_infra`, while future product or business ideas
   use `branch_mainline_idea`.
+- The developer confirmed strategy A for capability infrastructure: create only
+  capability directories, skills, knowledge, and dependency candidate lists; do
+  not create an engineering skeleton or install dependencies.
 
 ## Unfinished
 
-- Developer acceptance of the documentation, script replacement, and task forest
-  branching slices is pending.
+- Developer acceptance of the documentation, script replacement, task forest
+  branching, and catalog-only capability slices is pending.
 - Mode selection for future business implementation is still pending.
 
 ## Key Files
@@ -52,13 +55,19 @@
 - `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
 - `docs/ai/analysis/task-forest-branching.md`
 - `docs/ai/sandbox/sandbox_001_task_forest_branching.yaml`
+- `docs/ai/capabilities/index.md`
+- `docs/ai/capabilities/dependency-candidates.yaml`
+- `docs/ai/architecture/capability-group-strategy.md`
+- `docs/ai/research/research_001_capability_groups.md`
+- `docs/ai/skills/capability-selection/SKILL.md`
+- `docs/ai/knowledge/entries/kb_005_capability_groups.md`
 
 ## Next Condition
 
-Ask the developer to accept the Vibe Coding infrastructure branch changes or
-request edits. Do not start a mainline idea task tree until the active Vibe
-Coding infrastructure branch slices are accepted, edited, migrated, or
-explicitly closed.
+Ask the developer to accept the catalog-only A strategy outputs or request
+edits. Do not start a mainline idea task tree until the active Vibe Coding
+infrastructure branch slices are accepted, edited, migrated, or explicitly
+closed.
 
 ## Forbidden Actions
 
@@ -68,3 +77,7 @@ explicitly closed.
   confirmation.
 - Do not create business implementation before requirement, research, task
   analysis, architecture, and mode confirmation.
+- Do not create `package.json`, `pyproject.toml`, lockfiles, `src/`, `app/`,
+  `components/`, or `tools/` from the capability catalog alone.
+- Do not install dependencies from the candidate catalog without a future
+  confirmed execution slice.

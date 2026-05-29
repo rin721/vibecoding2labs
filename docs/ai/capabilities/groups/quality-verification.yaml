@@ -1,0 +1,27 @@
+schema_id: CapabilityGroup
+id: cap_quality_001
+name: "Quality and verification"
+status: candidate
+default_recommendation: "Every adopted capability must add or map to repeatable validation."
+required_checks_before_adoption:
+  - "source trust review"
+  - "supply-chain risk note"
+  - "install command preview"
+  - "rollback plan"
+required_checks_after_adoption:
+  - "runtime validation"
+  - "lint or format check when applicable"
+  - "unit or smoke test when applicable"
+  - "docs/ai evidence update"
+candidate_tools:
+  - python-runtime-validator
+  - pytest
+  - ruff
+  - storybook
+  - playwright
+source_urls:
+  - https://docs.pytest.org/en/stable/getting-started.html
+  - https://docs.astral.sh/ruff/linter/
+  - https://storybook.js.org/docs/10/get-started
+  - https://playwright.dev/python/docs/intro
+

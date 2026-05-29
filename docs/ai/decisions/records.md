@@ -78,3 +78,26 @@
   scoped.
 - Evidence: `evidence_015`
 - No prompt runtime dependency: true
+
+## decision_005: Catalog-Only Capability Groups
+
+- Date: `2026-05-29T18:53:11+08:00`
+- Status: `accepted_for_confirmed_A_execution`
+- Source: developer confirmation, "确认 A，进入阶段二，只建立能力目录、skills、知识库、依赖候选清单，不创建工程骨架，不安装依赖。"
+- Decision: Create `docs/ai/capabilities/`, grouped capability candidate
+  files, a capability-selection skill, a knowledge entry, research notes, and
+  architecture strategy notes as catalog-only infrastructure.
+- Rationale: The developer confirmed the conservative A route: preserve
+  future choice surfaces without committing the repository to a UI library,
+  framework, Python toolchain, package manifest, lockfile, or application
+  skeleton.
+- Alternatives:
+  - Create an engineering skeleton now: rejected by explicit developer
+    constraint.
+  - Install dependencies now: rejected by explicit developer constraint.
+  - Keep only a chat recommendation: rejected because runtime recovery needs
+    physical docs, skills, knowledge, and evidence.
+- Confirmation level: `hard_confirmation` for the A strategy boundary,
+  `auto_recordable` for low-risk docs/ai runtime artifacts inside that boundary.
+- Evidence: `evidence_016`
+- No prompt runtime dependency: true

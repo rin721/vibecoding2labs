@@ -19,10 +19,25 @@ REQUIRED_ARTIFACTS = [
     "docs/ai/tasks/main-tree.yaml",
     "docs/ai/tasks/branches/vibe-coding-infra/tree.yaml",
     "docs/ai/tasks/current-slice.yaml",
+    "docs/ai/capabilities/index.md",
+    "docs/ai/capabilities/dependency-candidates.yaml",
     "docs/ai/evidence/index.md",
     "docs/ai/knowledge/index.md",
     "docs/ai/skills/index.md",
     "docs/ai/handoff/current.md",
+]
+
+CATALOG_ONLY_FORBIDDEN_ARTIFACTS = [
+    "package.json",
+    "package-lock.json",
+    "pnpm-lock.yaml",
+    "yarn.lock",
+    "pyproject.toml",
+    "requirements.txt",
+    "src",
+    "app",
+    "components",
+    "tools",
 ]
 
 
@@ -83,6 +98,20 @@ def main() -> None:
         )
     if not (ROOT / status_tree).exists():
         fail(f"current_tree does not exist: {status_tree}")
+
+    candidates = read_text("docs/ai/capabilities/dependency-candidates.yaml")
+    if "install_allowed: false" not in candidates:
+        fail("Capability candidates must keep install_allowed: false.")
+    if "scaffold_allowed: false" not in candidates:
+        fail("Capability candidates must keep scaffold_allowed: false.")
+    forbidden_existing = [
+        path for path in CATALOG_ONLY_FORBIDDEN_ARTIFACTS if (ROOT / path).exists()
+    ]
+    if forbidden_existing:
+        fail(
+            "Catalog-only strategy forbids these root artifacts: "
+            + ", ".join(forbidden_existing)
+        )
 
     forest = read_text("docs/ai/tasks/forest.yaml")
     selected_tree = read_text(status_tree)

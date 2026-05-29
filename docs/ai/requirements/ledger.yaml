@@ -1,6 +1,6 @@
 schema_id: RequirementLedger
 ledger_id: req_ledger_001
-updated_at: "2026-05-29T17:18:17+08:00"
+updated_at: "2026-05-29T18:53:11+08:00"
 requirements:
   - id: req_bootstrap_001
     round_id: bootstrap
@@ -104,3 +104,26 @@ requirements:
       - evidence_015
     next_action: "Validate task forest consistency and mark the branch slice pending developer acceptance."
     updated_at: "2026-05-29T17:54:03+08:00"
+  - id: req_infra_004_capability_groups
+    round_id: infra_001
+    branch_id: branch_vibe_coding_infra
+    source: developer_message
+    raw_text: "确认 A，进入阶段二，只建立能力目录、skills、知识库、依赖候选清单，不创建工程骨架，不安装依赖。"
+    normalized_text: "Implement strategy A as a catalog-only Vibe Coding infrastructure capability layer: create capability directories, project skills, knowledge entries, and dependency candidate lists; do not create an engineering skeleton and do not install dependencies."
+    type: infrastructure_capability_catalog
+    priority_or_version: P0-infra_001
+    status: confirmed
+    decision: "Proceed with catalog-only physical artifacts under docs/ai, with no package manifests, lockfiles, src/app/components/tools skeletons, or dependency installation."
+    related_research:
+      - docs/ai/research/research_001_capability_groups.md
+    related_task_analysis:
+      - task_004_capability_groups
+    related_architecture:
+      - docs/ai/architecture/capability-group-strategy.md
+    related_slice:
+      - slice_004_capability_groups
+    conflicts: []
+    evidence:
+      - evidence_016
+    next_action: "Validate catalog-only constraints and request developer acceptance or edits."
+    updated_at: "2026-05-29T18:53:11+08:00"

@@ -8,24 +8,14 @@ module: capability_catalog
 goal: "Build a catalog-only capability layer with skills, knowledge entries, and dependency candidates for future developer selection, without creating an engineering skeleton or installing dependencies."
 inputs:
   - "Developer confirmation: A strategy, catalog only, no skeleton, no dependency installation."
-  - docs/ai/tasks/branches/vibe-coding-infra/tree.yaml
-  - docs/ai/status/current.yaml
 outputs:
   - docs/ai/capabilities/index.md
   - docs/ai/capabilities/dependency-candidates.yaml
-  - docs/ai/capabilities/groups/ui-library.yaml
-  - docs/ai/capabilities/groups/frontend-architecture.yaml
-  - docs/ai/capabilities/groups/agent-script-tools.yaml
-  - docs/ai/capabilities/groups/python-tooling.yaml
-  - docs/ai/capabilities/groups/agent-frameworks.yaml
-  - docs/ai/capabilities/groups/quality-verification.yaml
+  - docs/ai/capabilities/groups/*.yaml
   - docs/ai/research/research_001_capability_groups.md
   - docs/ai/architecture/capability-group-strategy.md
   - docs/ai/skills/capability-selection/SKILL.md
   - docs/ai/knowledge/entries/kb_005_capability_groups.md
-  - docs/ai/tasks/slices/slice_004_capability_groups.yaml
-  - docs/ai/tasks/current-slice.yaml
-  - docs/ai/scripts/validate_runtime.py
 allowed_files:
   - docs/ai/capabilities/**
   - docs/ai/research/research_001_capability_groups.md

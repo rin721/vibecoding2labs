@@ -1,0 +1,23 @@
+schema_id: CapabilityGroup
+id: cap_agent_frameworks_001
+name: "Agent framework candidates"
+status: candidate
+default_recommendation: "Start with direct tool scripts and structured prompts; consider OpenAI Agents SDK or Pydantic AI only when product requirements justify an agent runtime."
+candidate_tools:
+  - openai-agents-python
+  - pydantic-ai
+  - langgraph
+selection_guidance:
+  - "Use OpenAI Agents SDK when OpenAI-native tool orchestration, guardrails, handoffs, and sessions are needed."
+  - "Use Pydantic AI when Python-first structured validation and typed agent IO are central."
+  - "Use LangGraph when stateful graph workflows, persistence, and long-running agent state become explicit requirements."
+requires_before_install:
+  - "Confirmed agent use case."
+  - "Confirmed model/provider boundary."
+  - "Confirmed secret management plan."
+  - "Confirmed evaluation and HITL strategy."
+source_urls:
+  - https://openai.github.io/openai-agents-python/agents/
+  - https://pydantic.dev/docs/ai/overview/
+  - https://docs.langchain.com/oss/python/langgraph/workflows-agents
+

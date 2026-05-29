@@ -1,0 +1,28 @@
+schema_id: CapabilityGroup
+id: cap_py_tools_001
+name: "Python engineering tools"
+status: candidate
+default_recommendation: "pytest + ruff + typer + pydantic; Playwright Python only when browser automation is needed."
+candidate_tools:
+  - pytest
+  - ruff
+  - typer
+  - pydantic
+  - playwright-python
+adoption_order:
+  - "pytest for tests"
+  - "ruff for lint/format"
+  - "typer for CLI tools"
+  - "pydantic for structured validation"
+  - "playwright-python for browser automation only after UI exists"
+requires_before_install:
+  - "Confirmed Python project boundary."
+  - "Confirmed pyproject or requirements strategy."
+  - "Confirmed browser automation need before Playwright install."
+source_urls:
+  - https://docs.pytest.org/en/stable/getting-started.html
+  - https://docs.astral.sh/ruff/formatter/
+  - https://typer.tiangolo.com/
+  - https://docs.pydantic.dev/latest/concepts/models/
+  - https://playwright.dev/python/docs/intro
+

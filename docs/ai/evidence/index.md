@@ -121,3 +121,33 @@
   - `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
   - task forest routing search for `branch_vibe_coding_infra`, `branch_mainline_idea`, and `TaskForest` -> matched status, task forest, branch tree, main tree, compatibility pointer, slices, and runtime rule index.
 - Summary: Task forest and Vibe Coding infrastructure branch are implemented and validated.
+
+## evidence_016: Catalog-Only Capability Groups
+
+- Date: `2026-05-29T18:53:11+08:00`
+- Type: `runtime_capability_catalog_update`
+- Status: `completed`
+- Requirement: `req_infra_004_capability_groups`
+- Slice: `slice_004_capability_groups`
+- Research:
+  - `docs/ai/research/research_001_capability_groups.md`
+- Architecture:
+  - `docs/ai/architecture/capability-group-strategy.md`
+- Files:
+  - `docs/ai/capabilities/index.md`
+  - `docs/ai/capabilities/dependency-candidates.yaml`
+  - `docs/ai/capabilities/groups/ui-library.yaml`
+  - `docs/ai/capabilities/groups/frontend-architecture.yaml`
+  - `docs/ai/capabilities/groups/agent-script-tools.yaml`
+  - `docs/ai/capabilities/groups/python-tooling.yaml`
+  - `docs/ai/capabilities/groups/agent-frameworks.yaml`
+  - `docs/ai/capabilities/groups/quality-verification.yaml`
+  - `docs/ai/skills/capability-selection/SKILL.md`
+  - `docs/ai/knowledge/entries/kb_005_capability_groups.md`
+- Validation:
+  - `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
+  - `Test-Path package.json, pyproject.toml, requirements.txt, src, app, components, tools` -> all returned `False`.
+  - `rg -n "capability_catalog_001|req_infra_004_capability_groups|slice_004_capability_groups|skill_capability_selection|kb_005" docs/ai` -> matched catalog, requirement, slice, skill, and knowledge entries.
+  - Markdown local link check -> `Markdown local links OK`.
+- Summary: Catalog-only capability groups were added without dependency
+  installation, package manifests, lockfiles, or engineering skeleton creation.
