@@ -2,7 +2,7 @@ schema_id: StatusReport
 project_id: vibecoding2labs
 compiler_version: vibe-coding-infra-compiler-v1.8.0
 runtime_version: vibe-runtime-0.1.0
-updated_at: "2026-05-29T18:54:51+08:00"
+updated_at: "2026-05-29T19:32:05+08:00"
 lifecycle_phase: acceptance
 state: pending_acceptance
 state_machine_version: vibe-state-machine-0.1.0
@@ -12,15 +12,15 @@ current_branch: branch_vibe_coding_infra
 current_tree: docs/ai/tasks/branches/vibe-coding-infra/tree.yaml
 task_forest: docs/ai/tasks/forest.yaml
 mainline_idea_tree: docs/ai/tasks/main-tree.yaml
-current_mode: pending_confirmation
+current_mode: vibe_infra_action_workflow_completed_pending_acceptance
 candidate_mode: null
 agency_level: controlled_execution
 current_bootstrap_node: null
-current_slice: slice_004_capability_groups
+current_slice: slice_005_vibe_infra_action_workflow
 requirement_baseline_status: confirmed
-research_status: completed_for_capability_candidates
+research_status: not_required_for_workflow_sop_update
 task_analysis_status: confirmed
-architecture_status: confirmed_catalog_only_strategy_A
+architecture_status: confirmed_trigger_bound_two_stage_sop
 infra_mode_status: standard_light_for_repository_infra
 task_tree_status: pending_acceptance
 acceptance_status: pending_developer_acceptance
@@ -29,7 +29,7 @@ next_allowed_phase: acceptance[infra_001]
 blocked: false
 retry_count: 0
 last_failure_reason: null
-next_human_decision: "Developer can accept the catalog-only A strategy outputs or request edits."
+next_human_decision: "Developer can accept the trigger-bound Vibe infrastructure action workflow SOP or request edits."
 memory_anchor_files:
   - AGENTS.md
   - docs/ai/runtime-rule-index.md
@@ -41,4 +41,6 @@ memory_anchor_files:
   - docs/ai/requirements/ledger.yaml
   - docs/ai/evidence/index.md
   - docs/ai/handoff/current.md
+  - docs/ai/skills/vibe-infra-action-workflow/SKILL.md
+  - docs/ai/templates/vibe-infra-action-workflow-sop.md
 no_prompt_runtime_dependency: true

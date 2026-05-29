@@ -1,6 +1,6 @@
 schema_id: RequirementLedger
 ledger_id: req_ledger_001
-updated_at: "2026-05-29T18:53:11+08:00"
+updated_at: "2026-05-29T19:32:05+08:00"
 requirements:
   - id: req_bootstrap_001
     round_id: bootstrap
@@ -109,7 +109,7 @@ requirements:
     branch_id: branch_vibe_coding_infra
     source: developer_message
     raw_text: "确认 A，进入阶段二，只建立能力目录、skills、知识库、依赖候选清单，不创建工程骨架，不安装依赖。"
-    normalized_text: "Implement strategy A as a catalog-only Vibe Coding infrastructure capability layer: create capability directories, project skills, knowledge entries, and dependency candidate lists; do not create an engineering skeleton and do not install dependencies."
+    normalized_text: "Implement and refresh strategy A as a catalog-only Vibe Coding infrastructure capability layer: create or update capability directories, project skills, knowledge entries, and dependency candidate lists; do not create an engineering skeleton and do not install dependencies; verify current official sources using runtime-derived current-year wording instead of hard-coding a year."
     type: infrastructure_capability_catalog
     priority_or_version: P0-infra_001
     status: confirmed
@@ -125,5 +125,27 @@ requirements:
     conflicts: []
     evidence:
       - evidence_016
-    next_action: "Validate catalog-only constraints and request developer acceptance or edits."
-    updated_at: "2026-05-29T18:53:11+08:00"
+      - evidence_017
+    next_action: "Validate refreshed catalog-only constraints and request developer acceptance or edits."
+    updated_at: "2026-05-29T19:07:53+08:00"
+  - id: req_infra_005_vibe_infra_action_workflow
+    round_id: infra_001
+    branch_id: branch_vibe_coding_infra
+    source: developer_message
+    raw_text: "新增 Vibe Coding 仓库基建设施建立任务线：为建立 Vibe Coding 仓库基建设施任务新增触发式双阶段 SOP，强制阶段一四维 X 光扫描、红绿灯熔断、阶段二仅在人工明确授权后物理产出。"
+    normalized_text: "Add a trigger-bound Vibe Coding repository infrastructure action workflow SOP that extracts `{{ 优化动作 }}` from the trigger prefix, performs phase-one four-dimensional diagnosis and strategy selection, hard-stops for human confirmation, and permits phase-two physical output only after explicit authorization."
+    type: infrastructure_workflow_sop
+    priority_or_version: P0-infra_001
+    status: confirmed
+    decision: "Proceed with docs/ai runtime artifacts only: a project skill, canonical SOP template, knowledge entry, task slice, status, evidence, and handoff updates."
+    related_research: []
+    related_task_analysis:
+      - task_005_vibe_infra_action_workflow
+    related_architecture: []
+    related_slice:
+      - slice_005_vibe_infra_action_workflow
+    conflicts: []
+    evidence:
+      - evidence_018
+    next_action: "Validate the new trigger-bound SOP skill and request developer acceptance or edits."
+    updated_at: "2026-05-29T19:32:05+08:00"

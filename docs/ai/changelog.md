@@ -8,3 +8,5 @@
 - Established no-prompt-runtime-dependency rule.
 - Added task forest routing with a dedicated Vibe Coding infrastructure branch
   and a reserved mainline idea task tree.
+- Added a trigger-bound Vibe infrastructure action workflow SOP skill with a
+  mandatory phase-one red-light fuse and phase-two human authorization gate.

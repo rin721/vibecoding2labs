@@ -90,6 +90,24 @@ Catalog-only rule for strategy A: do not create `package.json`,
 `pyproject.toml`, lockfiles, `src/`, `app/`, `components/`, or `tools/`; do not
 install dependencies; do not mark any candidate as adopted technology.
 
+Current-source rule: if a capability selection or refresh asks for current-year
+technology research, derive the current year from the runtime date or source
+refresh timestamp. Do not hard-code a calendar year into reusable prompts,
+skills, or catalog protocols.
+
+## Vibe Infrastructure Action Workflow Trigger
+
+If a user message starts exactly with
+`新增 Vibe Coding 仓库基建设施建立任务线：`, load
+`docs/ai/skills/vibe-infra-action-workflow/SKILL.md` and bind the text after
+the first full-width colon to `{{ 优化动作 }}`.
+
+This trigger authorizes only phase-one diagnosis by default. The canonical SOP
+is `docs/ai/templates/vibe-infra-action-workflow-sop.md`; it requires the
+four-dimensional X-ray scan, selected strategy output, and a red-light hard stop
+before any physical output. Phase-two writes require explicit human
+authorization and must record validation, evidence, state, and handoff updates.
+
 ## Forbidden Matrix
 
 | Category | Forbidden behavior |

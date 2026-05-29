@@ -3,7 +3,10 @@ id: cap_quality_001
 name: "Quality and verification"
 status: candidate
 default_recommendation: "Every adopted capability must add or map to repeatable validation."
+official_source_refresh: "2026-05-29T19:07:53+08:00"
+current_year_policy: "Use the runtime date/current checked_at for current-year official source refreshes; do not hard-code a year in reusable prompts."
 required_checks_before_adoption:
+  - "official source refresh using runtime date/current year"
   - "source trust review"
   - "supply-chain risk note"
   - "install command preview"
@@ -19,9 +22,11 @@ candidate_tools:
   - ruff
   - storybook
   - playwright
+  - uv-audit-candidate
+  - biome-candidate
 source_urls:
   - https://docs.pytest.org/en/stable/getting-started.html
   - https://docs.astral.sh/ruff/linter/
+  - https://docs.astral.sh/uv/
   - https://storybook.js.org/docs/10/get-started
   - https://playwright.dev/python/docs/intro
-

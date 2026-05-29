@@ -8,6 +8,7 @@ module: capability_catalog
 goal: "Build a catalog-only capability layer with skills, knowledge entries, and dependency candidates for future developer selection, without creating an engineering skeleton or installing dependencies."
 inputs:
   - "Developer confirmation: A strategy, catalog only, no skeleton, no dependency installation."
+  - "Developer green-light A confirmation: enter phase two, update only catalog-only infrastructure, and verify current official sources using current year dynamically rather than hard-coding it."
 outputs:
   - docs/ai/capabilities/index.md
   - docs/ai/capabilities/dependency-candidates.yaml
@@ -62,9 +63,11 @@ verification_commands:
   - "python docs/ai/scripts/validate_runtime.py"
   - "Test-Path package.json, pyproject.toml, requirements.txt, src, app, components, tools"
   - "rg -n \"capability_catalog_001|req_infra_004_capability_groups|slice_004_capability_groups|skill_capability_selection|kb_005\" docs/ai"
+  - "rg -n \"current_year_policy|Current-Year Policy|official_source_refresh|last_official_source_refresh|uv|zod|ui.shadcn.com\" docs/ai"
 manual_checks:
   - "Capability catalog remains a developer choice surface, not an implementation decision."
   - "No dependency installation, package manifest, lockfile, or application skeleton exists."
+  - "Current-year research wording is dynamic and derived from runtime/source-refresh time."
 acceptance_criteria:
   - "Capability directory and grouped candidate lists exist."
   - "Knowledge and skill entries describe future catalog usage."
@@ -79,11 +82,12 @@ last_failure_reason: null
 next_human_decision: null
 audit_evidence:
   - evidence_016
+  - evidence_017
 human_override: null
 status: pending_acceptance
 knowledge_updates:
   - kb_005
 skill_updates:
   - skill_capability_selection
-next_condition: "Wait for developer acceptance or requested edits for the catalog-only A strategy."
-updated_at: "2026-05-29T18:54:51+08:00"
+next_condition: "Wait for developer acceptance or requested edits for the refreshed catalog-only A strategy."
+updated_at: "2026-05-29T19:07:53+08:00"

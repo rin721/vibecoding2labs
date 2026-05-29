@@ -6,9 +6,9 @@
 - Current round: `infra_001`
 - Current branch: `branch_vibe_coding_infra`
 - Current tree: `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
-- Current mode: `pending_confirmation`
+- Current mode: `vibe_infra_action_workflow_completed_pending_acceptance`
 - Agency level: `controlled_execution`
-- Current slice: `slice_004_capability_groups` pending developer acceptance
+- Current slice: `slice_005_vibe_infra_action_workflow` pending developer acceptance
 
 ## Completed
 
@@ -25,11 +25,24 @@
 - The developer confirmed strategy A for capability infrastructure: create only
   capability directories, skills, knowledge, and dependency candidate lists; do
   not create an engineering skeleton or install dependencies.
+- The developer green-lit phase two for strategy A with the added rule that
+  current official source research must derive the current year dynamically
+  instead of hard-coding it.
+- The capability catalog was refreshed against current official docs and now
+  records `uv`, `Zod 4`, current shadcn/ui install paths, OpenAI Agents SDK
+  sessions/tracing, and LangGraph persistence as candidate-only details.
+- Added a trigger-bound Vibe infrastructure action workflow skill and canonical
+  SOP template for messages that start with
+  `新增 Vibe Coding 仓库基建设施建立任务线：`; the workflow binds the suffix to
+  `{{ 优化动作 }}`, enforces phase-one four-dimensional diagnosis and red-light
+  stop, and allows phase-two physical output only after explicit human
+  authorization.
 
 ## Unfinished
 
 - Developer acceptance of the documentation, script replacement, task forest
-  branching, and catalog-only capability slices is pending.
+  branching, refreshed catalog-only capability, and trigger-bound workflow SOP
+  slices is pending.
 - Mode selection for future business implementation is still pending.
 
 ## Key Files
@@ -60,14 +73,17 @@
 - `docs/ai/architecture/capability-group-strategy.md`
 - `docs/ai/research/research_001_capability_groups.md`
 - `docs/ai/skills/capability-selection/SKILL.md`
+- `docs/ai/skills/vibe-infra-action-workflow/SKILL.md`
+- `docs/ai/templates/vibe-infra-action-workflow-sop.md`
 - `docs/ai/knowledge/entries/kb_005_capability_groups.md`
+- `docs/ai/knowledge/entries/kb_006_vibe_infra_action_workflow.md`
 
 ## Next Condition
 
-Ask the developer to accept the catalog-only A strategy outputs or request
-edits. Do not start a mainline idea task tree until the active Vibe Coding
-infrastructure branch slices are accepted, edited, migrated, or explicitly
-closed.
+Ask the developer to accept the trigger-bound Vibe infrastructure action
+workflow SOP or request edits. Do not start a mainline idea task tree until the
+active Vibe Coding infrastructure branch slices are accepted, edited, migrated,
+or explicitly closed.
 
 ## Forbidden Actions
 
@@ -81,3 +97,8 @@ closed.
   `components/`, or `tools/` from the capability catalog alone.
 - Do not install dependencies from the candidate catalog without a future
   confirmed execution slice.
+- Do not hard-code a calendar year into future capability research prompts; use
+  runtime date or source refresh timestamp.
+- Do not treat the new `新增 Vibe Coding 仓库基建设施建立任务线：` trigger as
+  authorization for phase-two physical output; it only starts phase-one
+  diagnosis until explicit human confirmation is received.

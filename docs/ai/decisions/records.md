@@ -101,3 +101,55 @@
   `auto_recordable` for low-risk docs/ai runtime artifacts inside that boundary.
 - Evidence: `evidence_016`
 - No prompt runtime dependency: true
+
+## decision_006: Dynamic Current-Year Capability Refresh
+
+- Date: `2026-05-29T19:07:53+08:00`
+- Status: `accepted_for_confirmed_A_refresh`
+- Source: developer confirmation, "绿灯 A：进入阶段二，只更新 catalog-only 基建产物，不安装依赖、不建工程骨架，应当“请先联网核验 {当前年份，不能写死} 年当前官方资料”"
+- Decision: Refresh the catalog-only capability groups against current official
+  sources and add a dynamic current-year rule: future research wording must
+  derive the current year from runtime/source-refresh time instead of hard-coding
+  a calendar year.
+- Rationale: Capability choices change over time, but this repository should not
+  bake stale date wording into reusable skills or prompts. The catalog remains a
+  developer choice surface and must stay separate from installation or
+  scaffolding authorization.
+- Alternatives:
+  - Hard-code the current calendar year: rejected because the developer
+    explicitly requested a non-hard-coded current-year policy.
+  - Install refreshed candidate dependencies: rejected because strategy A only
+    allows catalog-only infrastructure.
+  - Defer all source refresh to a future mainline slice: rejected because the
+    developer explicitly green-lit phase-two catalog updates now.
+- Confirmation level: `hard_confirmation` for the strategy A refresh boundary,
+  `auto_recordable` for docs/ai updates inside that boundary.
+- Evidence: `evidence_017`
+- No prompt runtime dependency: true
+
+## decision_007: Trigger-Bound Vibe Infrastructure Action Workflow SOP
+
+- Date: `2026-05-29T19:32:05+08:00`
+- Status: `accepted_for_low_risk_execution`
+- Source: developer request to add an action workflow for
+  `新增 Vibe Coding 仓库基建设施建立任务线：[具体动作]`.
+- Decision: Add a project skill and canonical Markdown SOP template that bind
+  the trigger payload to `{{ 优化动作 }}`, enforce phase-one four-dimensional
+  diagnosis and red-light confirmation, and allow phase-two physical output only
+  after explicit human authorization.
+- Rationale: The workflow itself governs repository infrastructure changes and
+  must be recoverable from physical runtime artifacts rather than chat memory.
+  A project skill plus template gives future agents a precise trigger surface
+  and a hard confirmation gate.
+- Alternatives:
+  - Keep the SOP only in chat: rejected because runtime recovery requires
+    physical artifacts.
+  - Put the whole rule only in `AGENTS.md`: rejected because project skills are
+    the existing catalog for repeatable or fragile workflows.
+  - Let the trigger authorize immediate writes: rejected because the requested
+    SOP requires an absolute phase-one/phase-two separation.
+- Confirmation level: `auto_recordable` for docs/ai runtime artifacts;
+  `hard_confirmation` remains required by the SOP before any future phase-two
+  physical output generated through that workflow.
+- Evidence: `evidence_018`
+- No prompt runtime dependency: true

@@ -4,6 +4,12 @@ name: "UI library and design system"
 status: candidate
 default_recommendation: "React + TypeScript + Vite + Tailwind CSS + shadcn/ui + Radix UI"
 why_default: "Good for copy-owned components, accessible primitives, and flexible product-specific design systems."
+official_source_refresh: "2026-05-29T19:07:53+08:00"
+current_year_policy: "Use the runtime date or source refresh timestamp for current-year wording; do not hard-code the year in future prompts."
+source_findings:
+  - "React official docs recommend starting new apps with a framework; Vite remains suitable when a scratch SPA or local web tool is the chosen boundary."
+  - "shadcn/ui current docs support shadcn/create, CLI templates, and existing-project setup; the Vite path uses Tailwind CSS with @tailwindcss/vite."
+  - "Radix Primitives remain the accessibility-focused primitive layer behind many copy-owned component systems."
 alternatives:
   - id: ui_mui
     name: "MUI"
@@ -30,9 +36,9 @@ forbidden_in_strategy_A:
   - "Do not create frontend source directories."
   - "Do not create lockfiles."
 source_urls:
-  - https://v3.shadcn.com/docs/installation/vite
+  - https://ui.shadcn.com/docs/installation
+  - https://ui.shadcn.com/docs/installation/vite
   - https://www.radix-ui.com/primitives/docs
-  - https://tailwindcss.com/docs/installation
+  - https://tailwindcss.com/docs/installation/using-vite
   - https://mui.com/material-ui/
   - https://ant.design/docs/react/introduce/
-

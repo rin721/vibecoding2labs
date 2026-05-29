@@ -151,3 +151,82 @@
   - Markdown local link check -> `Markdown local links OK`.
 - Summary: Catalog-only capability groups were added without dependency
   installation, package manifests, lockfiles, or engineering skeleton creation.
+
+## evidence_017: Dynamic Current-Year Capability Refresh
+
+- Date: `2026-05-29T19:07:53+08:00`
+- Type: `runtime_capability_catalog_refresh`
+- Status: `completed`
+- Requirement: `req_infra_004_capability_groups`
+- Slice: `slice_004_capability_groups`
+- Trigger: Developer green-lighted phase two strategy A and required official
+  source verification with current-year wording derived dynamically rather than
+  hard-coded.
+- Official source refresh:
+  - React, Vite, shadcn/ui, Tailwind CSS, Radix UI, React Router, TanStack Query, Storybook
+  - pnpm, Zod, Biome
+  - uv, pytest, Ruff, Typer, Pydantic, Playwright Python
+  - OpenAI Agents SDK, Pydantic AI, LangGraph
+- Files:
+  - `docs/ai/capabilities/index.md`
+  - `docs/ai/capabilities/dependency-candidates.yaml`
+  - `docs/ai/capabilities/groups/ui-library.yaml`
+  - `docs/ai/capabilities/groups/frontend-architecture.yaml`
+  - `docs/ai/capabilities/groups/agent-script-tools.yaml`
+  - `docs/ai/capabilities/groups/python-tooling.yaml`
+  - `docs/ai/capabilities/groups/agent-frameworks.yaml`
+  - `docs/ai/capabilities/groups/quality-verification.yaml`
+  - `docs/ai/research/research_001_capability_groups.md`
+  - `docs/ai/architecture/capability-group-strategy.md`
+  - `docs/ai/skills/capability-selection/SKILL.md`
+  - `docs/ai/knowledge/entries/kb_005_capability_groups.md`
+  - `docs/ai/runtime-rule-index.md`
+  - `docs/ai/status/current.yaml`
+  - `docs/ai/tasks/current-slice.yaml`
+  - `docs/ai/tasks/slices/slice_004_capability_groups.yaml`
+  - `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
+  - `docs/ai/requirements/ledger.yaml`
+  - `docs/ai/decisions/records.md`
+  - `docs/ai/handoff/current.md`
+  - `docs/ai/manifest.yaml`
+- Validation:
+  - `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
+  - `Test-Path package.json, package-lock.json, pnpm-lock.yaml, yarn.lock, pyproject.toml, requirements.txt, src, app, components, tools, tests` -> all returned `False`.
+  - `rg -n "current_year_policy|Current-Year Policy|official_source_refresh|last_official_source_refresh|uv|zod|ui.shadcn.com" docs/ai` -> matched refreshed catalog, group, research, architecture, knowledge, status, and slice entries.
+  - `rg -n "v3.shadcn.com|2026 年当前官方资料|2026年当前官方资料" docs/ai/capabilities docs/ai/research docs/ai/architecture docs/ai/skills docs/ai/knowledge` -> no matches.
+- Summary: Catalog-only capability groups were refreshed against current
+  official sources, dynamic current-year wording was encoded in the runtime
+  artifacts, and no dependency installation, package manifest, lockfile, or
+  engineering skeleton was created.
+
+## evidence_018: Trigger-Bound Vibe Infrastructure Action Workflow SOP
+
+- Date: `2026-05-29T19:32:05+08:00`
+- Type: `runtime_workflow_sop_update`
+- Status: `completed`
+- Requirement: `req_infra_005_vibe_infra_action_workflow`
+- Slice: `slice_005_vibe_infra_action_workflow`
+- Files:
+  - `docs/ai/skills/vibe-infra-action-workflow/SKILL.md`
+  - `docs/ai/templates/vibe-infra-action-workflow-sop.md`
+  - `docs/ai/knowledge/entries/kb_006_vibe_infra_action_workflow.md`
+  - `docs/ai/skills/index.md`
+  - `docs/ai/knowledge/index.md`
+  - `docs/ai/runtime-rule-index.md`
+  - `docs/ai/tasks/slices/slice_005_vibe_infra_action_workflow.yaml`
+  - `docs/ai/tasks/current-slice.yaml`
+  - `docs/ai/tasks/branches/vibe-coding-infra/tree.yaml`
+  - `docs/ai/tasks/forest.yaml`
+  - `docs/ai/requirements/ledger.yaml`
+  - `docs/ai/decisions/records.md`
+  - `docs/ai/status/current.yaml`
+  - `docs/ai/manifest.yaml`
+  - `docs/ai/handoff/current.md`
+  - `docs/ai/changelog.md`
+- Validation:
+  - `python docs/ai/scripts/validate_runtime.py` -> `Runtime validation passed.`
+  - `rg -n "新增 Vibe Coding 仓库基建设施建立任务线|\\{\\{ 优化动作 \\}\\}|强制红绿灯|阶段二：物理产出" docs/ai/skills docs/ai/templates docs/ai/runtime-rule-index.md` -> matched the runtime rule index, project skill, skill index, and SOP template.
+  - `Test-Path package.json, package-lock.json, pnpm-lock.yaml, yarn.lock, pyproject.toml, requirements.txt, src, app, components, tools` -> all returned `False`.
+- Summary: A trigger-bound project skill and canonical Markdown SOP template now
+  enforce phase-one four-dimensional diagnosis, a red-light hard stop, and
+  phase-two physical output only after explicit human authorization.

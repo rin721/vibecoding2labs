@@ -4,7 +4,7 @@ branch_id: branch_vibe_coding_infra
 branch_type: vibe_coding_infra
 round_id: infra_001
 created_at: "2026-05-29T17:54:03+08:00"
-updated_at: "2026-05-29T18:54:51+08:00"
+updated_at: "2026-05-29T19:32:05+08:00"
 status: pending_acceptance
 purpose: "Task tree branch for building and iterating this repository's Vibe Coding infrastructure."
 tasks:
@@ -57,6 +57,20 @@ tasks:
       - "Knowledge and skill entries describe how to use the catalog later."
       - "Dependency candidates are only candidates and are not installed."
       - "No application skeleton, package manifest, Python project skeleton, or lockfile is created."
+      - "Current official sources are refreshed with dynamic current-year wording."
       - "Runtime validation passes."
-next_action: "Wait for developer acceptance or requested edits for the catalog-only A strategy."
+  - id: task_005_vibe_infra_action_workflow
+    title: "Add trigger-bound Vibe infrastructure action workflow SOP"
+    status: pending_acceptance
+    requirements:
+      - req_infra_005_vibe_infra_action_workflow
+    slices:
+      - slice_005_vibe_infra_action_workflow
+    acceptance_criteria:
+      - "A project skill exists for the exact trigger prefix."
+      - "A canonical Markdown SOP template exists and binds `{{ 优化动作 }}`."
+      - "The SOP preserves the four-dimensional X-ray scan framework and red-light fuse."
+      - "Phase two requires explicit human authorization before physical output."
+      - "Runtime validation passes."
+next_action: "Wait for developer acceptance or requested edits for the new trigger-bound Vibe infrastructure action workflow SOP."
 no_prompt_runtime_dependency: true
