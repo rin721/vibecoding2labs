@@ -1,0 +1,36 @@
+schema_id: StatusReport
+project_id: vibecoding2labs
+compiler_version: vibe-coding-infra-compiler-v1.8.0
+runtime_version: vibe-runtime-0.1.0
+updated_at: "2026-05-29T17:37:15+08:00"
+lifecycle_phase: acceptance
+state: pending_acceptance
+state_machine_version: vibe-state-machine-0.1.0
+current_round: round_001
+current_mode: pending_confirmation
+candidate_mode: null
+agency_level: controlled_execution
+current_bootstrap_node: null
+current_slice: slice_001_docs_guides
+requirement_baseline_status: confirmed
+research_status: not_required_for_low_risk_docs
+task_analysis_status: confirmed
+architecture_status: not_required_for_docs_slice
+infra_mode_status: pending_confirmation
+task_tree_status: in_progress
+acceptance_status: pending_developer_acceptance
+task_tree_closure_status: pending_acceptance
+next_allowed_phase: acceptance[round_001]
+blocked: false
+retry_count: 0
+last_failure_reason: null
+next_human_decision: "Developer can accept the documentation slice, request edits, or provide the next round_001 goal after accepting or migrating this slice."
+memory_anchor_files:
+  - AGENTS.md
+  - docs/ai/runtime-rule-index.md
+  - docs/ai/tasks/bootstrap-tree.yaml
+  - docs/ai/tasks/current-slice.yaml
+  - docs/ai/requirements/ledger.yaml
+  - docs/ai/evidence/index.md
+  - docs/ai/handoff/current.md
+no_prompt_runtime_dependency: true

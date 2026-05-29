@@ -1,0 +1,61 @@
+schema_id: RequirementLedger
+ledger_id: req_ledger_001
+updated_at: "2026-05-29T17:18:17+08:00"
+requirements:
+  - id: req_bootstrap_001
+    round_id: bootstrap
+    source: developer_message
+    raw_text: "Establish Vibe Coding runtime infrastructure before business work."
+    normalized_text: "Create core runtime artifacts: AGENTS.md, status, requirements, bootstrap task tree, current slice, evidence, knowledge, skills, and handoff."
+    type: infrastructure
+    priority_or_version: P0-runtime
+    status: confirmed_for_bootstrap
+    decision: "Proceed within AGENTS.md and docs/ai/* only."
+    related_research: []
+    related_task_analysis:
+      - task_bootstrap_001
+    related_architecture: []
+    related_slice:
+      - slice_bootstrap_B9
+    conflicts: []
+    evidence:
+      - evidence_001
+    next_action: "Verify bootstrap and then collect round_001 business goal."
+    updated_at: "2026-05-29T17:18:17+08:00"
+  - id: req_round_001_placeholder
+    round_id: round_001
+    source: superseded_by_user_goal
+    raw_text: null
+    normalized_text: "Superseded by req_round_001_docs."
+    type: placeholder
+    priority_or_version: superseded
+    status: superseded_by_next_round
+    decision: "Replaced by explicit documentation goal in the active round."
+    related_research: []
+    related_task_analysis: []
+    related_architecture: []
+    related_slice: []
+    conflicts: []
+    evidence: []
+    next_action: "Track req_round_001_docs instead."
+    updated_at: "2026-05-29T17:18:17+08:00"
+  - id: req_round_001_docs
+    round_id: round_001
+    source: developer_message
+    raw_text: "以及当前项目的食用（Tips：使用）教程等相关详细概述文件"
+    normalized_text: "Create current project usage tutorial and related detailed overview documentation."
+    type: documentation
+    priority_or_version: P0-round_001
+    status: confirmed
+    decision: "Proceed as a low-risk documentation slice within README.md and docs/*, while syncing docs/ai status and evidence."
+    related_research: []
+    related_task_analysis:
+      - task_001_human_docs
+    related_architecture: []
+    related_slice:
+      - slice_001_docs_guides
+    conflicts: []
+    evidence:
+      - evidence_012
+    next_action: "Verify docs exist, runtime validation passes, then mark docs slice completed pending developer acceptance."
+    updated_at: "2026-05-29T17:34:47+08:00"

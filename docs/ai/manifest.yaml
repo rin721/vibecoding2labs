@@ -1,0 +1,34 @@
+project_id: vibecoding2labs
+compiler_version: vibe-coding-infra-compiler-v1.8.0
+runtime_version: vibe-runtime-0.1.0
+generated_at: "2026-05-29T17:18:17+08:00"
+runtime_artifacts:
+  agent_entry: AGENTS.md
+  runtime_rule_index: docs/ai/runtime-rule-index.md
+  status_entry: docs/ai/status/current.yaml
+  bootstrap_task_tree: docs/ai/tasks/bootstrap-tree.yaml
+  current_slice: docs/ai/tasks/current-slice.yaml
+  requirements_ledger: docs/ai/requirements/ledger.yaml
+  decision_records: docs/ai/decisions/records.md
+  evidence_index: docs/ai/evidence/index.md
+  knowledgebase_entry: docs/ai/knowledge/index.md
+  skills_entry: docs/ai/skills/index.md
+  handoff_entry: docs/ai/handoff/current.md
+required_artifacts:
+  - AGENTS.md
+  - docs/ai/status/current.yaml
+  - docs/ai/requirements/ledger.yaml
+  - docs/ai/tasks/bootstrap-tree.yaml
+  - docs/ai/tasks/current-slice.yaml
+  - docs/ai/evidence/index.md
+  - docs/ai/handoff/current.md
+knowledgebase_entry: docs/ai/knowledge/index.md
+skills_entry: docs/ai/skills/index.md
+validation:
+  current_status: passed
+  validation_command_or_manual_check: powershell -NoProfile -ExecutionPolicy Bypass -File docs/ai/scripts/validate-runtime.ps1
+  validated_at: "2026-05-29T17:29:21+08:00"
+migration_notes:
+  - Initial runtime infrastructure compiled into physical artifacts.
+  - Runtime artifacts must be repaired directly instead of falling back to the original compiler prompt.
+no_prompt_runtime_dependency: true

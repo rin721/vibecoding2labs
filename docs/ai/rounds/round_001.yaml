@@ -1,0 +1,23 @@
+schema_id: RoundLedger
+round_id: round_001
+round_type: documentation_governance
+goal_summary: "Create current project usage tutorial and related detailed overview documentation."
+status: pending_acceptance
+confirmed_requirement_baseline:
+  - req_round_001_docs
+research_status: not_required_for_low_risk_docs
+task_analysis_status: confirmed
+architecture_status: not_required_for_docs_slice
+infra_mode_status: pending_confirmation
+task_tree_status: pending_acceptance
+acceptance_status: pending_developer_acceptance
+task_tree_closure_status: pending_acceptance
+next_round_trigger: "Only after round_001 task tree is completed, accepted, archived, explicitly discarded, migrated, or partially closed with confirmation."
+developer_participation:
+  requirement_analysis: confirmed_by_user_goal
+  research_validation: not_required_for_low_risk_docs
+  task_analysis: agent_recorded_low_risk_docs_slice
+  architecture_design: not_required_for_docs_slice
+  infra_mode_selection: pending
+  acceptance: pending
+updated_at: "2026-05-29T17:37:15+08:00"
